@@ -8,6 +8,7 @@
 #include "Strategies/MeanReversion.mqh"
 #include "Strategies/Pullback.mqh"
 #include "Strategies/Breakout.mqh"
+#include "Strategies/KamaMomentumTrend.mqh"
 
 CPositionInfo entry_pos;
 
@@ -47,15 +48,19 @@ ENUM_SIGNAL GetSignal()
 {
    ENUM_SIGNAL s;
 
-   s = SignalMeanReversion();
+   /*s = SignalMeanReversion();
    if(s != SIGNAL_NONE)
-      return s;
+      return s;*/
 
    s = SignalPullback();
    if(s != SIGNAL_NONE)
       return s;
 
    s = SignalBreakout();
+   if(s != SIGNAL_NONE)
+      return s;
+   
+   s = SignalKamaMomentumTrend();
    if(s != SIGNAL_NONE)
       return s;
 
