@@ -1,7 +1,7 @@
 //+------------------------------------------------------------------+
 //|                                           EA_KingofModules.mq5   |
 //+------------------------------------------------------------------+
-#property copyright   "Daniel Pereira"
+#property copyright   "Daniel Pereira & Lucas Mattos"
 #property link        ""
 #property description "EA based on multiple modules of code, so it can operate with multiple strategies"
 #property version     "1.00"

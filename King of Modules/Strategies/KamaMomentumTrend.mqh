@@ -3,134 +3,69 @@
 
 #include "../Indicators.mqh"
 
-//------------------------------------------------
-// INDICATOR HANDLES
-//------------------------------------------------
-
-static int g_handleMomentum = INVALID_HANDLE;
-static int g_handleATR50    = INVALID_HANDLE;
+#define KAMA_FLIP_LOOKBACK 3
 
 //------------------------------------------------
-// INITIALIZATION
+// Detect KAMA regime flip within last N candles
 //------------------------------------------------
 
-bool InitKamaMomentumTrend()
+bool GetKamaFlip(bool &bullishFlip, bool &bearishFlip)
 {
-   if(g_handleMomentum == INVALID_HANDLE)
-   {
-      g_handleMomentum = iMomentum(_Symbol, _Period, 14, PRICE_CLOSE);
-      if(g_handleMomentum == INVALID_HANDLE)
-      {
-         Print("KamaMomentumTrend: Momentum handle creation failed");
-         return false;
-      }
-   }
+   double regimeBuf[KAMA_FLIP_LOOKBACK + 1];
 
-   if(g_handleATR50 == INVALID_HANDLE)
+   if(CopyBuffer(g_handleKAMA, 1, 1, KAMA_FLIP_LOOKBACK + 1, regimeBuf) < KAMA_FLIP_LOOKBACK + 1)
+      return false;
+
+   bullishFlip = false;
+   bearishFlip = false;
+
+   for(int i = 0; i < KAMA_FLIP_LOOKBACK; i++)
    {
-      g_handleATR50 = iATR(_Symbol, _Period, 50);
-      if(g_handleATR50 == INVALID_HANDLE)
-      {
-         Print("KamaMomentumTrend: ATR(50) handle creation failed");
-         return false;
-      }
+      int current  = (int)MathRound(regimeBuf[i]);
+      int previous = (int)MathRound(regimeBuf[i + 1]);
+
+      if(previous == 1 && current == 2) bullishFlip = true;
+      if(previous == 2 && current == 1) bearishFlip = true;
    }
 
    return true;
 }
 
 //------------------------------------------------
-// INDICATOR DATA FETCH
+// Get Momentum
 //------------------------------------------------
 
-bool GetKamaMomentumTrendData(int    &kamaColor,
-                               double &momentum,
-                               double &atr50)
+bool GetMomentum(double &momNow, double &momPrev)
 {
-   double kamaColorBuf[1];
-   if(CopyBuffer(g_handleKAMA, 1, 1, 1, kamaColorBuf) < 1)
+   static int hMomentum = INVALID_HANDLE;
+
+   if(hMomentum == INVALID_HANDLE)
+   {
+      hMomentum = iMomentum(_Symbol, _Period, 14, PRICE_CLOSE);
+
+      if(hMomentum == INVALID_HANDLE)
+         return false;
+   }
+
+   double buf[2];
+
+   if(CopyBuffer(hMomentum, 0, 1, 2, buf) < 2)
       return false;
 
-   double momentumBuf[1];
-   if(CopyBuffer(g_handleMomentum, 0, 1, 1, momentumBuf) < 1)
-      return false;
-
-   double atr50Buf[1];
-   if(CopyBuffer(g_handleATR50, 0, 1, 1, atr50Buf) < 1)
-      return false;
-
-   kamaColor = (int)MathRound(kamaColorBuf[0]);
-   momentum  = momentumBuf[0];
-   atr50     = atr50Buf[0];
+   momNow  = buf[0];
+   momPrev = buf[1];
 
    return true;
 }
 
 //------------------------------------------------
-// FILTER 1 — KAMA SLOPE FILTER
-//------------------------------------------------
-
-bool PassKamaSlopeFilter()
-{
-   const int lookback = 10;
-
-   double kamaBuf[11];
-   if(CopyBuffer(g_handleKAMA, 0, 1, lookback + 1, kamaBuf) < lookback + 1)
-      return false;
-
-   double atrVal, atrAvg;
-   if(!GetATR(atrVal, atrAvg))
-      return false;
-
-   double slope     = MathAbs(kamaBuf[lookback] - kamaBuf[0]);
-   double threshold = atrVal * 1.2;
-
-   return(slope >= threshold);
-}
-
-//------------------------------------------------
-// FILTER 2 — DISTANCE FROM KAMA FILTER
-//------------------------------------------------
-
-bool PassDistanceFromKamaFilter()
-{
-   double kamaBuf[1];
-   if(CopyBuffer(g_handleKAMA, 0, 1, 1, kamaBuf) < 1)
-      return false;
-
-   double atrVal, atrAvg;
-   if(!GetATR(atrVal, atrAvg))
-      return false;
-
-   double close     = iClose(_Symbol, _Period, 1);
-   double distance  = MathAbs(close - kamaBuf[0]);
-   double threshold = atrVal * 1.0;
-
-   return(distance >= threshold);
-}
-
-//------------------------------------------------
-// SIGNAL EVALUATION
-//------------------------------------------------
-
-ENUM_SIGNAL EvaluateKamaMomentumTrend(int kamaColor, double momentum, double atr50)
-{
-   if(kamaColor == 1 && momentum > atr50)
-      return SIGNAL_SELL;
-
-   if(kamaColor == 2 && atr50 > momentum)
-      return SIGNAL_BUY;
-
-   return SIGNAL_NONE;
-}
-
-//------------------------------------------------
-// SIGNAL FUNCTION
+// SIGNAL FUNCTION (orchestrator)
 //------------------------------------------------
 
 ENUM_SIGNAL SignalKamaMomentumTrend()
 {
    static datetime lastBar = 0;
+
    datetime bar = iTime(_Symbol, _Period, 0);
 
    if(bar == lastBar)
@@ -138,23 +73,29 @@ ENUM_SIGNAL SignalKamaMomentumTrend()
 
    lastBar = bar;
 
-   if(!InitKamaMomentumTrend())
+   //------------------------------------------------
+   // KAMA flip
+   //------------------------------------------------
+
+   bool bullishFlip, bearishFlip;
+
+   if(!GetKamaFlip(bullishFlip, bearishFlip))
       return SIGNAL_NONE;
 
-   int    kamaColor;
-   double momentum;
-   double atr50;
-
-   if(!GetKamaMomentumTrendData(kamaColor, momentum, atr50))
+   if(!bullishFlip && !bearishFlip)
       return SIGNAL_NONE;
 
-   if(!PassKamaSlopeFilter())
-      return SIGNAL_NONE;
+   //------------------------------------------------
+   // Signals
+   //------------------------------------------------
 
-   if(!PassDistanceFromKamaFilter())
-      return SIGNAL_NONE;
+   if(bullishFlip)
+      return SIGNAL_SELL;
 
-   return EvaluateKamaMomentumTrend(kamaColor, momentum, atr50);
+   if(bearishFlip)
+      return SIGNAL_BUY;
+
+   return SIGNAL_NONE;
 }
 
 #endif
