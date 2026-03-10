@@ -88,7 +88,7 @@ bool PassMRKAMASlopeFilter(double slope)
 
 bool PassMRATRCompressionFilter()
 {
-    if(!InpUseATRStrongTrendFilter)
+    if(!InpUseATRMRTrendFilter)
       return true;
 
    static int hATR50 = INVALID_HANDLE;
@@ -107,7 +107,7 @@ bool PassMRATRCompressionFilter()
    if(CopyBuffer(g_handleATR, 0, 1, 1, atrFast) < 1) return false;
    if(CopyBuffer(hATR50,      0, 1, 1, atrSlow) < 1) return false;
 
-   return(atrFast[0] < atrSlow[0] * InpATRStrongTrendMultiplier);
+   return(atrFast[0] < atrSlow[0] * InpATRMRTrendMultiplier);
 }
 
 //------------------------------------------------

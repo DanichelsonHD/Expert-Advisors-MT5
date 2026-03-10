@@ -200,8 +200,6 @@ void ManageTrailingStop(double atr)
       if(currentSL == 0.0 || newSL < currentSL - point)
          g_trade.PositionModify(_Symbol, newSL, currentTP);
    }
-
-   Print("Trailing engine running");
 }
 
 

@@ -112,8 +112,6 @@ void TakeKAMA()
 
 void ManageTakes()
 {
-   Print("Take engine running");
-
    if(!take_pos.Select(_Symbol))
       return;
 
