@@ -36,7 +36,7 @@ int CountOpenPositions()
       if(PositionGetString(POSITION_SYMBOL) != _Symbol)
          continue;
 
-      if((int)PositionGetInteger(POSITION_MAGIC) != InpMagicNumber)
+      if((int)PositionGetInteger(POSITION_MAGIC) != InpLongMagicNumber)
          continue;
 
       count++;
@@ -61,7 +61,7 @@ void ExecuteEntry(ENUM_SIGNAL signal, double atr)
    ENUM_ORDER_TYPE orderType = (signal == SIGNAL_BUY) ? ORDER_TYPE_BUY : ORDER_TYPE_SELL;
 
    double sl  = GetStopLoss(orderType, atr);
-   double lot = InpLotSize;
+   double lot = CalculateLotSize();
 
    if(orderType == ORDER_TYPE_BUY)
    {
@@ -73,6 +73,26 @@ void ExecuteEntry(ENUM_SIGNAL signal, double atr)
       double bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
       g_trade.Sell(lot, _Symbol, bid, sl, 0);
    }
+}
+
+double CalculateLotSize()
+{
+   if(!InpUseStepLotScaling)
+      return g_currentScaledLot;
+
+   double balance = AccountInfoDouble(ACCOUNT_BALANCE);
+
+   double steps = MathFloor(balance / InpStepCapital);
+
+   double lot = InpLotSize + steps * InpStepLot;
+
+   double minLot = SymbolInfoDouble(_Symbol,SYMBOL_VOLUME_MIN);
+   double maxLot = SymbolInfoDouble(_Symbol,SYMBOL_VOLUME_MAX);
+
+   lot = MathMax(lot,minLot);
+   lot = MathMin(lot,maxLot);
+
+   return NormalizeDouble(lot,2);
 }
 
 //------------------------------------------------

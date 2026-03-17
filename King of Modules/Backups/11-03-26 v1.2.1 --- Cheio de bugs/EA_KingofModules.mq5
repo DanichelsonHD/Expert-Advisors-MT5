@@ -4,7 +4,7 @@
 #property copyright   "Daniel Pereira & Lucas Mattos"
 #property link        ""
 #property description "EA based on multiple modules of code, so it can operate with multiple strategies"
-#property version     "1.20"
+#property version     "1.30"
 #property strict
 
 #include <Trade\Trade.mqh>
@@ -20,6 +20,10 @@
 CTrade        g_trade;
 CPositionInfo g_position;
 
+//--- Lot scaling globals
+double g_initialBalance    = 0.0;
+double g_currentScaledLot  = 0.0;
+
 //+------------------------------------------------------------------+
 //| Syncs CPositionInfo and validates EA magic.                      |
 //| Returns true only when an EA-owned position exists on _Symbol.   |
@@ -28,7 +32,7 @@ bool SelectEAPosition()
 {
    if(!g_position.Select(_Symbol))
       return false;
-   if(g_position.Magic() != (ulong)InpLongMagicNumber)
+   if(g_position.Magic() != (ulong)InpMagicNumber)
       return false;
    return true;
 }
@@ -43,10 +47,13 @@ int OnInit()
 
    // Initialize globals of lot scaling
    g_initialBalance   = AccountInfoDouble(ACCOUNT_BALANCE);
-   g_currentScaledLot = InpLotSize;
+   g_currentScaledLot = InpInitialLot;
 
-   // Configure g_trade (magic, slippage, filling)
-   g_trade.SetExpertMagicNumber(InpLongMagicNumber);
+   // Initialize per-strategy CTrade objects with their magic numbers
+   InitStrategyTrades();
+
+   // Configure g_trade for trailing stop management (uses InpMagicNumber as base)
+   g_trade.SetExpertMagicNumber(InpMagicNumber);
    g_trade.SetDeviationInPoints(10);
    g_trade.SetTypeFilling(ORDER_FILLING_IOC);
 

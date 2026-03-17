@@ -115,10 +115,10 @@ void ManageTakes()
    if(!take_pos.Select(_Symbol))
       return;
 
-   if(take_pos.Magic() != (ulong)InpMagicNumber)
+   if(take_pos.Magic() != (ulong)InpLongMagicNumber)
       return;
 
-   if(InpTakeMode==TAKE_KAMA)
+   if(InpLongTakeMode==TAKE_KAMA)
       TakeKAMA();
 }
 

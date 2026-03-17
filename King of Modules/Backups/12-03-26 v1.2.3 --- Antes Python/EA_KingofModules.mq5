@@ -4,7 +4,7 @@
 #property copyright   "Daniel Pereira & Lucas Mattos"
 #property link        ""
 #property description "EA based on multiple modules of code, so it can operate with multiple strategies"
-#property version     "1.20"
+#property version     "1.30"
 #property strict
 
 #include <Trade\Trade.mqh>
@@ -17,12 +17,17 @@
 #include "Stops.mqh"
 
 //--- Global trade objects (shared across all modules)
-CTrade        g_trade;
+CTrade        g_trade;        // LONG engine trade object
+CTrade        g_trade_short;  // SHORT engine trade object
 CPositionInfo g_position;
+
+//--- Lot scaling globals
+double g_initialBalance    = 0.0;
+double g_currentScaledLot  = 0.0;
 
 //+------------------------------------------------------------------+
 //| Syncs CPositionInfo and validates EA magic.                      |
-//| Returns true only when an EA-owned position exists on _Symbol.   |
+//| Returns true only when a LONG-engine position exists on _Symbol. |
 //+------------------------------------------------------------------+
 bool SelectEAPosition()
 {
@@ -43,12 +48,17 @@ int OnInit()
 
    // Initialize globals of lot scaling
    g_initialBalance   = AccountInfoDouble(ACCOUNT_BALANCE);
-   g_currentScaledLot = InpLotSize;
+   g_currentScaledLot = InpInitialLot;
 
-   // Configure g_trade (magic, slippage, filling)
+   // Configure g_trade (LONG engine)
    g_trade.SetExpertMagicNumber(InpLongMagicNumber);
    g_trade.SetDeviationInPoints(10);
    g_trade.SetTypeFilling(ORDER_FILLING_IOC);
+
+   // Configure g_trade_short (SHORT engine)
+   g_trade_short.SetExpertMagicNumber(InpShortMagicNumber);
+   g_trade_short.SetDeviationInPoints(10);
+   g_trade_short.SetTypeFilling(ORDER_FILLING_IOC);
 
    Print("OnInit OK");
 
@@ -64,15 +74,14 @@ void OnDeinit(const int reason)
 
 void OnTick()
 {
-   // Gestão de posições roda SEMPRE (sem filtro de horário)
+   // Position management runs on every tick (no time filter)
    double atr, avg;
    if(GetATR(atr, avg))
       ManageTrailingStop(atr);
    ManageTakes();
 
-   // Entradas respeitam filtro de horário
+   // Entries respect time filter
    if(InpUseTimeFilter && !IsWithinTradingHours()) return;
-
 
    EntriesEngine();
 }

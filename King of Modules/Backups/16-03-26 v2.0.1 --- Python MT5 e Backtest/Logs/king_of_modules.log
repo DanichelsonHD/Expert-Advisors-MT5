@@ -1,0 +1,1165 @@
+2026-03-16 18:43:45 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 18:43:45 | INFO     | __main__                  | Loaded 63954 bars from c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\XAUUSD_H1.csv | 2010-02-22 00:00 → 2026-03-16 04:00
+2026-03-16 18:45:47 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 18:45:47 | INFO     | __main__                  | Loaded 63954 bars from c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\XAUUSD_H1.csv | 2010-02-22 00:00 → 2026-03-16 04:00
+2026-03-16 19:05:37 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 19:05:37 | INFO     | __main__                  | Loaded 63954 bars from c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\XAUUSD_H1.csv | 2010-02-22 00:00 → 2026-03-16 04:00
+2026-03-16 19:05:40 | INFO     | BacktestEngine            | OPEN BUY | time=2015-03-10 07:00:00 | price=1160.93000 | sl=1144.34000 | tp=1174.48000 | lot=0.10
+2026-03-16 19:05:45 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-03-17 14:00:00 | price=1144.34000 | pnl=-166.60 | equity=9833.40
+2026-03-16 19:05:45 | INFO     | BacktestEngine            | OPEN BUY | time=2015-03-17 15:00:00 | price=1151.78000 | sl=1137.03000 | tp=1172.32000 | lot=0.10
+2026-03-16 19:05:46 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-03-18 19:00:00 | price=1172.32000 | pnl=204.70 | equity=10038.10
+2026-03-16 19:05:49 | INFO     | BacktestEngine            | OPEN SELL | time=2015-03-25 07:00:00 | price=1188.42000 | sl=1206.51000 | tp=1178.44000 | lot=0.10
+2026-03-16 19:05:50 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-03-26 08:00:00 | price=1206.51000 | pnl=-181.60 | equity=9856.50
+2026-03-16 19:05:53 | INFO     | BacktestEngine            | OPEN BUY | time=2015-03-31 07:00:00 | price=1183.18000 | sl=1165.18000 | tp=1192.81000 | lot=0.10
+2026-03-16 19:05:54 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-04-01 14:00:00 | price=1192.81000 | pnl=95.60 | equity=9952.10
+2026-03-16 19:05:54 | INFO     | BacktestEngine            | OPEN BUY | time=2015-04-01 15:00:00 | price=1197.58000 | sl=1175.14000 | tp=1205.55000 | lot=0.10
+2026-03-16 19:05:54 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-04-01 18:00:00 | price=1205.55000 | pnl=79.00 | equity=10031.10
+2026-03-16 19:06:02 | INFO     | BacktestEngine            | OPEN SELL | time=2015-04-15 11:00:00 | price=1192.22000 | sl=1207.12000 | tp=1179.48000 | lot=0.10
+2026-03-16 19:06:03 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-04-16 02:00:00 | price=1207.12000 | pnl=-149.70 | equity=9881.40
+2026-03-16 19:06:04 | INFO     | BacktestEngine            | OPEN BUY | time=2015-04-17 09:00:00 | price=1203.68000 | sl=1184.22000 | tp=1210.52000 | lot=0.10
+2026-03-16 19:06:08 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-04-23 03:00:00 | price=1184.22000 | pnl=-195.30 | equity=9686.10
+2026-03-16 19:06:10 | INFO     | BacktestEngine            | OPEN SELL | time=2015-04-24 09:00:00 | price=1193.92000 | sl=1208.48000 | tp=1185.60000 | lot=0.10
+2026-03-16 19:06:10 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-04-24 15:00:00 | price=1185.60000 | pnl=82.50 | equity=9768.60
+2026-03-16 19:06:10 | INFO     | BacktestEngine            | OPEN SELL | time=2015-04-24 15:00:00 | price=1181.47000 | sl=1202.59000 | tp=1176.72000 | lot=0.10
+2026-03-16 19:06:10 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-04-24 16:00:00 | price=1176.72000 | pnl=46.80 | equity=9815.40
+2026-03-16 19:06:15 | INFO     | BacktestEngine            | OPEN BUY | time=2015-05-01 16:00:00 | price=1173.78000 | sl=1156.19000 | tp=1192.27000 | lot=0.10
+2026-03-16 19:06:16 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-05-04 16:00:00 | price=1192.27000 | pnl=184.20 | equity=9999.60
+2026-03-16 19:06:21 | INFO     | BacktestEngine            | OPEN SELL | time=2015-05-08 15:00:00 | price=1185.67000 | sl=1208.49000 | tp=1177.21000 | lot=0.10
+2026-03-16 19:06:24 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-05-13 15:00:00 | price=1208.49000 | pnl=-228.90 | equity=9770.70
+2026-03-16 19:06:25 | INFO     | BacktestEngine            | OPEN SELL | time=2015-05-14 10:00:00 | price=1213.97000 | sl=1232.07000 | tp=1204.16000 | lot=0.10
+2026-03-16 19:06:27 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-05-18 08:00:00 | price=1232.07000 | pnl=-181.70 | equity=9589.00
+2026-03-16 19:06:30 | INFO     | BacktestEngine            | OPEN BUY | time=2015-05-20 10:00:00 | price=1207.48000 | sl=1190.28000 | tp=1217.11000 | lot=0.10
+2026-03-16 19:06:35 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-05-26 14:00:00 | price=1190.28000 | pnl=-172.70 | equity=9416.30
+2026-03-16 19:06:35 | INFO     | BacktestEngine            | OPEN BUY | time=2015-05-26 14:00:00 | price=1186.68000 | sl=1181.07000 | tp=1204.05000 | lot=0.10
+2026-03-16 19:06:38 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-05-28 15:00:00 | price=1181.07000 | pnl=-56.80 | equity=9359.50
+2026-03-16 19:06:39 | INFO     | BacktestEngine            | OPEN SELL | time=2015-05-29 15:00:00 | price=1191.77000 | sl=1205.97000 | tp=1179.68000 | lot=0.10
+2026-03-16 19:06:44 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-06-03 18:00:00 | price=1179.68000 | pnl=120.20 | equity=9479.70
+2026-03-16 19:06:44 | INFO     | BacktestEngine            | OPEN SELL | time=2015-06-03 19:00:00 | price=1184.32000 | sl=1202.63000 | tp=1169.48000 | lot=0.10
+2026-03-16 19:06:46 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-06-05 14:00:00 | price=1169.48000 | pnl=147.70 | equity=9627.40
+2026-03-16 19:06:50 | INFO     | BacktestEngine            | OPEN BUY | time=2015-06-10 07:00:00 | price=1181.63000 | sl=1165.77000 | tp=1188.83000 | lot=0.10
+2026-03-16 19:06:50 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-06-10 12:00:00 | price=1188.83000 | pnl=71.30 | equity=9698.70
+2026-03-16 19:06:54 | INFO     | BacktestEngine            | OPEN SELL | time=2015-06-15 12:00:00 | price=1175.42000 | sl=1191.45000 | tp=1163.04000 | lot=0.10
+2026-03-16 19:06:58 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-06-18 09:00:00 | price=1191.45000 | pnl=-161.00 | equity=9537.70
+2026-03-16 19:07:09 | INFO     | BacktestEngine            | OPEN BUY | time=2015-06-29 15:00:00 | price=1176.03000 | sl=1162.60000 | tp=1194.97000 | lot=0.10
+2026-03-16 19:07:13 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-07-02 09:00:00 | price=1162.60000 | pnl=-135.00 | equity=9402.70
+2026-03-16 19:07:17 | INFO     | BacktestEngine            | OPEN BUY | time=2015-07-06 19:00:00 | price=1172.93000 | sl=1155.06000 | tp=1182.28000 | lot=0.10
+2026-03-16 19:07:18 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-07-07 15:00:00 | price=1155.06000 | pnl=-179.40 | equity=9223.30
+2026-03-16 19:07:24 | INFO     | BacktestEngine            | OPEN SELL | time=2015-07-10 19:00:00 | price=1159.22000 | sl=1177.28000 | tp=1148.73000 | lot=0.10
+2026-03-16 19:07:28 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-07-15 15:00:00 | price=1148.73000 | pnl=104.20 | equity=9327.50
+2026-03-16 19:07:30 | INFO     | BacktestEngine            | OPEN BUY | time=2015-07-16 11:00:00 | price=1145.38000 | sl=1132.37000 | tp=1152.64000 | lot=0.10
+2026-03-16 19:07:32 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-07-17 16:00:00 | price=1132.37000 | pnl=-130.80 | equity=9196.70
+2026-03-16 19:07:38 | INFO     | BacktestEngine            | OPEN SELL | time=2015-07-23 10:00:00 | price=1104.37000 | sl=1123.36000 | tp=1090.70000 | lot=0.10
+2026-03-16 19:07:39 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-07-23 20:00:00 | price=1090.70000 | pnl=136.00 | equity=9332.70
+2026-03-16 19:07:43 | INFO     | BacktestEngine            | OPEN BUY | time=2015-07-28 16:00:00 | price=1095.63000 | sl=1078.23000 | tp=1109.02000 | lot=0.10
+2026-03-16 19:08:01 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-08-11 09:00:00 | price=1109.02000 | pnl=133.20 | equity=9465.90
+2026-03-16 19:08:07 | INFO     | BacktestEngine            | OPEN SELL | time=2015-08-14 18:00:00 | price=1113.32000 | sl=1130.67000 | tp=1102.94000 | lot=0.10
+2026-03-16 19:08:13 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-08-19 19:00:00 | price=1130.67000 | pnl=-174.20 | equity=9291.70
+2026-03-16 19:08:18 | INFO     | BacktestEngine            | OPEN BUY | time=2015-08-24 16:00:00 | price=1158.68000 | sl=1135.65000 | tp=1186.74000 | lot=0.10
+2026-03-16 19:08:20 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-08-25 16:00:00 | price=1135.65000 | pnl=-231.00 | equity=9060.70
+2026-03-16 19:08:26 | INFO     | BacktestEngine            | OPEN BUY | time=2015-08-28 16:00:00 | price=1136.58000 | sl=1112.84000 | tp=1151.35000 | lot=0.10
+2026-03-16 19:08:42 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-09-09 15:00:00 | price=1112.84000 | pnl=-238.10 | equity=8822.60
+2026-03-16 19:08:48 | INFO     | BacktestEngine            | OPEN SELL | time=2015-09-14 14:00:00 | price=1104.82000 | sl=1120.23000 | tp=1096.62000 | lot=0.10
+2026-03-16 19:08:53 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-09-16 17:00:00 | price=1120.23000 | pnl=-154.80 | equity=8667.80
+2026-03-16 19:09:15 | INFO     | BacktestEngine            | OPEN BUY | time=2015-10-01 10:00:00 | price=1113.43000 | sl=1098.74000 | tp=1122.67000 | lot=0.10
+2026-03-16 19:09:17 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-10-02 14:00:00 | price=1122.67000 | pnl=91.70 | equity=8759.50
+2026-03-16 19:09:17 | INFO     | BacktestEngine            | OPEN BUY | time=2015-10-02 14:00:00 | price=1132.33000 | sl=1094.71000 | tp=1114.64000 | lot=0.10
+2026-03-16 19:09:18 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-10-02 15:00:00 | price=1114.64000 | pnl=-177.60 | equity=8581.90
+2026-03-16 19:09:24 | INFO     | BacktestEngine            | OPEN SELL | time=2015-10-07 10:00:00 | price=1148.37000 | sl=1163.88000 | tp=1139.56000 | lot=0.10
+2026-03-16 19:09:27 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-10-08 14:00:00 | price=1139.56000 | pnl=87.40 | equity=8669.30
+2026-03-16 19:09:28 | INFO     | BacktestEngine            | OPEN BUY | time=2015-10-09 07:00:00 | price=1148.33000 | sl=1129.65000 | tp=1158.06000 | lot=0.10
+2026-03-16 19:09:29 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-10-09 16:00:00 | price=1158.06000 | pnl=96.60 | equity=8765.90
+2026-03-16 19:09:43 | INFO     | BacktestEngine            | OPEN SELL | time=2015-10-19 17:00:00 | price=1171.17000 | sl=1190.34000 | tp=1158.08000 | lot=0.10
+2026-03-16 19:10:01 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-10-28 19:00:00 | price=1158.08000 | pnl=130.20 | equity=8896.10
+2026-03-16 19:11:25 | INFO     | BacktestEngine            | OPEN BUY | time=2015-12-11 16:00:00 | price=1074.78000 | sl=1050.38000 | tp=1090.71000 | lot=0.10
+2026-03-16 19:11:37 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-12-17 15:00:00 | price=1050.38000 | pnl=-244.70 | equity=8651.40
+2026-03-16 19:11:48 | INFO     | BacktestEngine            | OPEN SELL | time=2015-12-23 11:00:00 | price=1071.57000 | sl=1085.22000 | tp=1063.25000 | lot=0.10
+2026-03-16 19:22:07 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 19:22:08 | INFO     | __main__                  | Loaded 63954 bars from c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\XAUUSD_H1.csv | 2010-02-22 00:00 → 2026-03-16 04:00
+2026-03-16 19:22:10 | INFO     | BacktestEngine            | OPEN BUY | time=2015-03-10 07:00:00 | price=1160.93000 | sl=1145.72000 | tp=1173.37000 | lot=0.10
+2026-03-16 19:22:11 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-03-17 14:00:00 | price=1145.72000 | pnl=-152.80 | equity=9847.20
+2026-03-16 19:22:12 | INFO     | BacktestEngine            | OPEN SELL | time=2015-03-25 07:00:00 | price=1188.42000 | sl=1206.51000 | tp=1178.44000 | lot=0.10
+2026-03-16 19:22:12 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-03-26 08:00:00 | price=1206.51000 | pnl=-181.60 | equity=9665.60
+2026-03-16 19:22:13 | INFO     | BacktestEngine            | OPEN BUY | time=2015-04-01 15:00:00 | price=1197.58000 | sl=1175.26000 | tp=1205.45000 | lot=0.10
+2026-03-16 19:22:13 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-04-01 18:00:00 | price=1205.45000 | pnl=78.00 | equity=9743.60
+2026-03-16 19:22:15 | INFO     | BacktestEngine            | OPEN SELL | time=2015-04-15 11:00:00 | price=1192.22000 | sl=1207.10000 | tp=1179.50000 | lot=0.10
+2026-03-16 19:22:15 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-04-16 02:00:00 | price=1207.10000 | pnl=-149.50 | equity=9594.10
+2026-03-16 19:22:15 | INFO     | BacktestEngine            | OPEN BUY | time=2015-04-17 10:00:00 | price=1204.38000 | sl=1186.30000 | tp=1214.17000 | lot=0.10
+2026-03-16 19:22:16 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-04-22 16:00:00 | price=1186.30000 | pnl=-181.50 | equity=9412.60
+2026-03-16 19:22:16 | INFO     | BacktestEngine            | OPEN SELL | time=2015-04-22 16:00:00 | price=1187.07000 | sl=1214.05000 | tp=1186.18000 | lot=0.10
+2026-03-16 19:22:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-04-22 21:00:00 | price=1186.18000 | pnl=8.20 | equity=9420.80
+2026-03-16 19:22:16 | INFO     | BacktestEngine            | OPEN SELL | time=2015-04-24 09:00:00 | price=1193.92000 | sl=1208.41000 | tp=1185.65000 | lot=0.10
+2026-03-16 19:22:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-04-24 15:00:00 | price=1185.65000 | pnl=82.00 | equity=9502.80
+2026-03-16 19:22:16 | INFO     | BacktestEngine            | OPEN SELL | time=2015-04-24 15:00:00 | price=1181.47000 | sl=1202.59000 | tp=1176.72000 | lot=0.10
+2026-03-16 19:22:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-04-24 16:00:00 | price=1176.72000 | pnl=46.80 | equity=9549.60
+2026-03-16 19:22:16 | INFO     | BacktestEngine            | OPEN SELL | time=2015-04-24 16:00:00 | price=1177.97000 | sl=1199.78000 | tp=1170.24000 | lot=0.10
+2026-03-16 19:22:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-04-27 16:00:00 | price=1199.78000 | pnl=-218.80 | equity=9330.80
+2026-03-16 19:22:17 | INFO     | BacktestEngine            | OPEN BUY | time=2015-05-01 13:00:00 | price=1179.83000 | sl=1164.45000 | tp=1192.50000 | lot=0.10
+2026-03-16 19:22:17 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-05-04 16:00:00 | price=1192.50000 | pnl=126.00 | equity=9456.80
+2026-03-16 19:22:19 | INFO     | BacktestEngine            | OPEN SELL | time=2015-05-14 10:00:00 | price=1213.97000 | sl=1232.00000 | tp=1204.22000 | lot=0.10
+2026-03-16 19:22:19 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-05-18 08:00:00 | price=1232.00000 | pnl=-181.00 | equity=9275.80
+2026-03-16 19:22:20 | INFO     | BacktestEngine            | OPEN SELL | time=2015-05-21 15:00:00 | price=1204.27000 | sl=1219.48000 | tp=1192.10000 | lot=0.10
+2026-03-16 19:22:20 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-05-26 14:00:00 | price=1192.10000 | pnl=121.00 | equity=9396.80
+2026-03-16 19:22:21 | INFO     | BacktestEngine            | OPEN SELL | time=2015-05-29 15:00:00 | price=1191.77000 | sl=1206.00000 | tp=1179.66000 | lot=0.10
+2026-03-16 19:22:21 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-06-03 18:00:00 | price=1179.66000 | pnl=120.40 | equity=9517.20
+2026-03-16 19:22:21 | INFO     | BacktestEngine            | OPEN SELL | time=2015-06-03 19:00:00 | price=1184.32000 | sl=1202.53000 | tp=1169.57000 | lot=0.10
+2026-03-16 19:22:22 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-06-05 14:00:00 | price=1169.57000 | pnl=146.80 | equity=9664.00
+2026-03-16 19:22:22 | INFO     | BacktestEngine            | OPEN BUY | time=2015-06-10 07:00:00 | price=1181.63000 | sl=1166.02000 | tp=1188.64000 | lot=0.10
+2026-03-16 19:22:22 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-06-10 12:00:00 | price=1188.64000 | pnl=69.40 | equity=9733.40
+2026-03-16 19:22:23 | INFO     | BacktestEngine            | OPEN SELL | time=2015-06-15 12:00:00 | price=1175.42000 | sl=1191.38000 | tp=1163.09000 | lot=0.10
+2026-03-16 19:22:23 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-06-18 09:00:00 | price=1191.38000 | pnl=-160.30 | equity=9573.10
+2026-03-16 19:22:24 | INFO     | BacktestEngine            | OPEN BUY | time=2015-06-23 16:00:00 | price=1178.43000 | sl=1162.07000 | tp=1189.72000 | lot=0.10
+2026-03-16 19:22:25 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-07-02 13:00:00 | price=1162.07000 | pnl=-164.30 | equity=9408.80
+2026-03-16 19:22:25 | INFO     | BacktestEngine            | OPEN BUY | time=2015-07-06 19:00:00 | price=1172.93000 | sl=1155.09000 | tp=1182.26000 | lot=0.10
+2026-03-16 19:22:26 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-07-07 15:00:00 | price=1155.09000 | pnl=-179.10 | equity=9229.70
+2026-03-16 19:22:26 | INFO     | BacktestEngine            | OPEN BUY | time=2015-07-14 15:00:00 | price=1157.38000 | sl=1140.97000 | tp=1165.38000 | lot=0.10
+2026-03-16 19:22:27 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-07-17 14:00:00 | price=1140.97000 | pnl=-164.80 | equity=9064.90
+2026-03-16 19:22:27 | INFO     | BacktestEngine            | OPEN BUY | time=2015-07-20 18:00:00 | price=1108.23000 | sl=1077.17000 | tp=1131.82000 | lot=0.10
+2026-03-16 19:22:28 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-07-24 04:00:00 | price=1077.17000 | pnl=-311.30 | equity=8753.60
+2026-03-16 19:22:28 | INFO     | BacktestEngine            | OPEN SELL | time=2015-07-29 16:00:00 | price=1093.87000 | sl=1106.74000 | tp=1082.94000 | lot=0.10
+2026-03-16 19:22:29 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-07-30 08:00:00 | price=1082.94000 | pnl=108.60 | equity=8862.20
+2026-03-16 19:22:29 | INFO     | BacktestEngine            | OPEN BUY | time=2015-07-30 10:00:00 | price=1085.73000 | sl=1068.08000 | tp=1097.60000 | lot=0.10
+2026-03-16 19:22:29 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-07-31 15:00:00 | price=1097.60000 | pnl=118.00 | equity=8980.20
+2026-03-16 19:22:30 | INFO     | BacktestEngine            | OPEN BUY | time=2015-08-06 17:00:00 | price=1090.58000 | sl=1075.58000 | tp=1097.54000 | lot=0.10
+2026-03-16 19:22:30 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-08-07 16:00:00 | price=1097.54000 | pnl=68.90 | equity=9049.10
+2026-03-16 19:22:31 | INFO     | BacktestEngine            | OPEN BUY | time=2015-08-17 15:00:00 | price=1119.88000 | sl=1105.53000 | tp=1129.66000 | lot=0.10
+2026-03-16 19:22:31 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-08-19 18:00:00 | price=1129.66000 | pnl=97.10 | equity=9146.20
+2026-03-16 19:22:32 | INFO     | BacktestEngine            | OPEN BUY | time=2015-08-24 16:00:00 | price=1158.68000 | sl=1135.58000 | tp=1186.80000 | lot=0.10
+2026-03-16 19:22:32 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-08-25 16:00:00 | price=1135.58000 | pnl=-231.70 | equity=8914.50
+2026-03-16 19:22:32 | INFO     | BacktestEngine            | OPEN BUY | time=2015-08-28 16:00:00 | price=1136.58000 | sl=1112.99000 | tp=1151.23000 | lot=0.10
+2026-03-16 19:22:34 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-09-09 15:00:00 | price=1112.99000 | pnl=-236.60 | equity=8677.90
+2026-03-16 19:22:34 | INFO     | BacktestEngine            | OPEN SELL | time=2015-09-14 14:00:00 | price=1104.82000 | sl=1120.10000 | tp=1096.73000 | lot=0.10
+2026-03-16 19:22:35 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-09-16 16:00:00 | price=1120.10000 | pnl=-153.50 | equity=8524.40
+2026-03-16 19:22:37 | INFO     | BacktestEngine            | OPEN BUY | time=2015-09-30 20:00:00 | price=1116.18000 | sl=1096.43000 | tp=1129.01000 | lot=0.10
+2026-03-16 19:22:37 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-10-02 14:00:00 | price=1129.01000 | pnl=127.60 | equity=8652.00
+2026-03-16 19:22:37 | INFO     | BacktestEngine            | OPEN BUY | time=2015-10-02 14:00:00 | price=1132.33000 | sl=1094.77000 | tp=1114.59000 | lot=0.10
+2026-03-16 19:22:37 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-10-02 15:00:00 | price=1114.59000 | pnl=-178.10 | equity=8473.90
+2026-03-16 19:22:37 | INFO     | BacktestEngine            | OPEN SELL | time=2015-10-07 10:00:00 | price=1148.37000 | sl=1163.68000 | tp=1139.71000 | lot=0.10
+2026-03-16 19:22:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-10-08 14:00:00 | price=1139.71000 | pnl=85.90 | equity=8559.80
+2026-03-16 19:22:39 | INFO     | BacktestEngine            | OPEN SELL | time=2015-10-21 16:00:00 | price=1165.62000 | sl=1186.26000 | tp=1154.86000 | lot=0.10
+2026-03-16 19:22:40 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-10-28 19:00:00 | price=1154.86000 | pnl=106.90 | equity=8666.70
+2026-03-16 19:22:41 | INFO     | BacktestEngine            | OPEN SELL | time=2015-11-06 15:00:00 | price=1089.92000 | sl=1108.09000 | tp=1075.02000 | lot=0.10
+2026-03-16 19:22:42 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-11-12 15:00:00 | price=1075.02000 | pnl=148.30 | equity=8815.00
+2026-03-16 19:22:42 | INFO     | BacktestEngine            | OPEN SELL | time=2015-11-12 15:00:00 | price=1086.82000 | sl=1093.79000 | tp=1071.60000 | lot=0.10
+2026-03-16 19:22:42 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-11-16 06:00:00 | price=1093.79000 | pnl=-70.40 | equity=8744.60
+2026-03-16 19:22:46 | INFO     | BacktestEngine            | OPEN SELL | time=2015-12-14 10:00:00 | price=1067.72000 | sl=1086.27000 | tp=1054.50000 | lot=0.10
+2026-03-16 19:22:47 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-12-17 15:00:00 | price=1054.50000 | pnl=131.50 | equity=8876.10
+2026-03-16 19:22:47 | INFO     | BacktestEngine            | OPEN SELL | time=2015-12-23 11:00:00 | price=1071.57000 | sl=1085.10000 | tp=1063.35000 | lot=0.10
+2026-03-16 19:22:48 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-12-30 14:00:00 | price=1063.35000 | pnl=81.50 | equity=8957.60
+2026-03-16 19:22:49 | INFO     | BacktestEngine            | OPEN SELL | time=2016-01-11 15:00:00 | price=1101.17000 | sl=1121.67000 | tp=1087.10000 | lot=0.10
+2026-03-16 19:22:49 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-01-12 13:00:00 | price=1087.10000 | pnl=140.00 | equity=9097.60
+2026-03-16 19:22:50 | INFO     | BacktestEngine            | OPEN SELL | time=2016-01-14 14:00:00 | price=1083.82000 | sl=1104.60000 | tp=1073.13000 | lot=0.10
+2026-03-16 19:22:50 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-01-14 19:00:00 | price=1073.13000 | pnl=106.20 | equity=9203.80
+2026-03-16 19:22:50 | INFO     | BacktestEngine            | OPEN BUY | time=2016-01-15 15:00:00 | price=1093.33000 | sl=1072.31000 | tp=1108.08000 | lot=0.10
+2026-03-16 19:22:51 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-01-20 18:00:00 | price=1108.08000 | pnl=146.80 | equity=9350.60
+2026-03-16 19:22:52 | INFO     | BacktestEngine            | OPEN BUY | time=2016-01-28 13:00:00 | price=1119.88000 | sl=1105.29000 | tp=1131.74000 | lot=0.10
+2026-03-16 19:22:52 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-02-03 14:00:00 | price=1131.74000 | pnl=117.90 | equity=9468.50
+2026-03-16 19:22:52 | INFO     | BacktestEngine            | OPEN SELL | time=2016-02-03 15:00:00 | price=1132.07000 | sl=1143.33000 | tp=1115.58000 | lot=0.10
+2026-03-16 19:22:53 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-02-03 19:00:00 | price=1143.33000 | pnl=-113.30 | equity=9355.20
+2026-03-16 19:22:53 | INFO     | BacktestEngine            | OPEN SELL | time=2016-02-05 14:00:00 | price=1150.72000 | sl=1174.78000 | tp=1148.48000 | lot=0.10
+2026-03-16 19:22:53 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-02-05 15:00:00 | price=1148.48000 | pnl=21.70 | equity=9376.90
+2026-03-16 19:22:56 | INFO     | BacktestEngine            | OPEN SELL | time=2016-02-26 15:00:00 | price=1226.37000 | sl=1256.33000 | tp=1209.15000 | lot=0.10
+2026-03-16 19:22:56 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-03-03 16:00:00 | price=1256.33000 | pnl=-300.30 | equity=9076.60
+2026-03-16 19:22:57 | INFO     | BacktestEngine            | OPEN BUY | time=2016-03-08 07:00:00 | price=1269.78000 | sl=1243.17000 | tp=1288.10000 | lot=0.10
+2026-03-16 19:22:57 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-03-09 15:00:00 | price=1243.17000 | pnl=-266.80 | equity=8809.80
+2026-03-16 19:22:59 | INFO     | BacktestEngine            | OPEN BUY | time=2016-03-29 16:00:00 | price=1226.28000 | sl=1203.88000 | tp=1236.55000 | lot=0.10
+2026-03-16 19:22:59 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-03-29 18:00:00 | price=1236.55000 | pnl=102.00 | equity=8911.80
+2026-03-16 19:23:00 | INFO     | BacktestEngine            | OPEN SELL | time=2016-03-30 11:00:00 | price=1236.72000 | sl=1260.66000 | tp=1225.39000 | lot=0.10
+2026-03-16 19:23:00 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-03-30 17:00:00 | price=1225.39000 | pnl=112.60 | equity=9024.40
+2026-03-16 19:23:02 | INFO     | BacktestEngine            | OPEN SELL | time=2016-04-15 16:00:00 | price=1229.17000 | sl=1247.08000 | tp=1214.20000 | lot=0.10
+2026-03-16 19:23:02 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-04-19 14:00:00 | price=1247.08000 | pnl=-179.80 | equity=8844.60
+2026-03-16 19:23:03 | INFO     | BacktestEngine            | OPEN BUY | time=2016-04-26 16:00:00 | price=1241.73000 | sl=1220.52000 | tp=1255.01000 | lot=0.10
+2026-03-16 19:23:03 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-04-28 08:00:00 | price=1255.01000 | pnl=132.10 | equity=8976.70
+2026-03-16 19:23:04 | INFO     | BacktestEngine            | OPEN SELL | time=2016-05-03 17:00:00 | price=1285.22000 | sl=1311.55000 | tp=1265.50000 | lot=0.10
+2026-03-16 19:23:05 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-05-09 15:00:00 | price=1265.50000 | pnl=196.50 | equity=9173.20
+2026-03-16 19:23:05 | INFO     | BacktestEngine            | OPEN BUY | time=2016-05-13 08:00:00 | price=1274.88000 | sl=1253.09000 | tp=1289.35000 | lot=0.10
+2026-03-16 19:23:06 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-05-19 07:00:00 | price=1253.09000 | pnl=-218.60 | equity=8954.60
+2026-03-16 19:23:06 | INFO     | BacktestEngine            | OPEN SELL | time=2016-05-20 18:00:00 | price=1250.62000 | sl=1269.52000 | tp=1237.02000 | lot=0.10
+2026-03-16 19:23:07 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-05-24 15:00:00 | price=1237.02000 | pnl=135.30 | equity=9089.90
+2026-03-16 19:23:07 | INFO     | BacktestEngine            | OPEN BUY | time=2016-05-25 14:00:00 | price=1221.38000 | sl=1206.95000 | tp=1233.83000 | lot=0.10
+2026-03-16 19:23:07 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-05-26 03:00:00 | price=1233.83000 | pnl=123.80 | equity=9213.70
+2026-03-16 19:23:10 | INFO     | BacktestEngine            | OPEN SELL | time=2016-06-14 13:00:00 | price=1283.57000 | sl=1299.02000 | tp=1269.76000 | lot=0.10
+2026-03-16 19:23:10 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-06-16 03:00:00 | price=1299.02000 | pnl=-155.20 | equity=9058.50
+2026-03-16 19:23:12 | INFO     | BacktestEngine            | OPEN SELL | time=2016-11-16 15:00:00 | price=1227.97000 | sl=1247.42000 | tp=1212.40000 | lot=0.10
+2026-03-16 19:23:13 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-11-17 21:00:00 | price=1212.40000 | pnl=155.00 | equity=9213.50
+2026-03-16 19:23:13 | INFO     | BacktestEngine            | OPEN SELL | time=2016-11-22 17:00:00 | price=1208.02000 | sl=1230.30000 | tp=1199.91000 | lot=0.10
+2026-03-16 19:23:13 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-11-23 15:00:00 | price=1199.91000 | pnl=80.40 | equity=9293.90
+2026-03-16 19:23:14 | INFO     | BacktestEngine            | OPEN SELL | time=2016-11-29 11:00:00 | price=1186.37000 | sl=1208.56000 | tp=1176.44000 | lot=0.10
+2026-03-16 19:23:14 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-11-30 16:00:00 | price=1176.44000 | pnl=98.60 | equity=9392.50
+2026-03-16 19:23:15 | INFO     | BacktestEngine            | OPEN SELL | time=2016-12-05 11:00:00 | price=1165.72000 | sl=1188.54000 | tp=1147.37000 | lot=0.10
+2026-03-16 19:23:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-12-14 21:00:00 | price=1147.37000 | pnl=182.80 | equity=9575.30
+2026-03-16 19:23:17 | INFO     | BacktestEngine            | OPEN SELL | time=2016-12-20 09:00:00 | price=1135.02000 | sl=1149.47000 | tp=1124.27000 | lot=0.10
+2026-03-16 19:23:18 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-12-27 09:00:00 | price=1149.47000 | pnl=-145.20 | equity=9430.10
+2026-03-16 19:23:18 | INFO     | BacktestEngine            | OPEN SELL | time=2016-12-29 20:00:00 | price=1155.08000 | sl=1173.85000 | tp=1144.27000 | lot=0.10
+2026-03-16 19:23:19 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-01-05 05:00:00 | price=1173.85000 | pnl=-188.40 | equity=9241.70
+2026-03-16 19:23:19 | INFO     | BacktestEngine            | OPEN BUY | time=2017-01-09 11:00:00 | price=1176.33000 | sl=1160.77000 | tp=1187.98000 | lot=0.10
+2026-03-16 19:23:19 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-01-10 16:00:00 | price=1187.98000 | pnl=115.80 | equity=9357.50
+2026-03-16 19:23:20 | INFO     | BacktestEngine            | OPEN SELL | time=2017-01-17 09:00:00 | price=1211.12000 | sl=1226.39000 | tp=1201.51000 | lot=0.10
+2026-03-16 19:23:21 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-01-19 03:00:00 | price=1201.51000 | pnl=95.40 | equity=9452.90
+2026-03-16 19:23:21 | INFO     | BacktestEngine            | OPEN SELL | time=2017-01-24 18:00:00 | price=1211.87000 | sl=1230.00000 | tp=1203.93000 | lot=0.10
+2026-03-16 19:23:21 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-01-25 07:00:00 | price=1203.93000 | pnl=78.70 | equity=9531.60
+2026-03-16 19:23:23 | INFO     | BacktestEngine            | OPEN BUY | time=2017-02-03 16:00:00 | price=1216.33000 | sl=1197.91000 | tp=1227.83000 | lot=0.10
+2026-03-16 19:23:23 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-02-06 14:00:00 | price=1227.83000 | pnl=114.30 | equity=9645.90
+2026-03-16 19:23:23 | INFO     | BacktestEngine            | OPEN SELL | time=2017-02-08 11:00:00 | price=1235.07000 | sl=1253.48000 | tp=1226.55000 | lot=0.10
+2026-03-16 19:23:23 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-02-10 01:00:00 | price=1226.55000 | pnl=84.50 | equity=9730.40
+2026-03-16 19:23:24 | INFO     | BacktestEngine            | OPEN SELL | time=2017-02-13 16:00:00 | price=1221.92000 | sl=1241.86000 | tp=1215.41000 | lot=0.10
+2026-03-16 19:23:24 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-02-16 18:00:00 | price=1241.86000 | pnl=-200.10 | equity=9530.30
+2026-03-16 19:23:25 | INFO     | BacktestEngine            | OPEN SELL | time=2017-02-22 18:00:00 | price=1232.17000 | sl=1249.27000 | tp=1223.07000 | lot=0.10
+2026-03-16 19:23:25 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-02-23 17:00:00 | price=1249.27000 | pnl=-171.70 | equity=9358.60
+2026-03-16 19:23:26 | INFO     | BacktestEngine            | OPEN BUY | time=2017-02-28 17:00:00 | price=1257.38000 | sl=1240.35000 | tp=1264.80000 | lot=0.10
+2026-03-16 19:23:26 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-03-01 14:00:00 | price=1240.35000 | pnl=-171.00 | equity=9187.60
+2026-03-16 19:23:27 | INFO     | BacktestEngine            | OPEN BUY | time=2017-03-07 18:00:00 | price=1218.18000 | sl=1204.82000 | tp=1230.05000 | lot=0.10
+2026-03-16 19:23:27 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-03-09 06:00:00 | price=1204.82000 | pnl=-134.30 | equity=9053.30
+2026-03-16 19:23:28 | INFO     | BacktestEngine            | OPEN SELL | time=2017-03-14 15:00:00 | price=1203.87000 | sl=1216.69000 | tp=1196.22000 | lot=0.10
+2026-03-16 19:23:28 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-03-15 20:00:00 | price=1216.69000 | pnl=-128.90 | equity=8924.40
+2026-03-16 19:23:28 | INFO     | BacktestEngine            | OPEN BUY | time=2017-03-15 20:00:00 | price=1217.83000 | sl=1193.69000 | tp=1224.28000 | lot=0.10
+2026-03-16 19:23:28 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-03-16 03:00:00 | price=1224.28000 | pnl=63.80 | equity=8988.20
+2026-03-16 19:23:29 | INFO     | BacktestEngine            | OPEN SELL | time=2017-03-22 11:00:00 | price=1245.57000 | sl=1261.67000 | tp=1238.71000 | lot=0.10
+2026-03-16 19:23:31 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-04-07 04:00:00 | price=1261.67000 | pnl=-161.70 | equity=8826.50
+2026-03-16 19:23:33 | INFO     | BacktestEngine            | OPEN BUY | time=2017-04-27 17:00:00 | price=1261.98000 | sl=1250.28000 | tp=1274.13000 | lot=0.10
+2026-03-16 19:23:34 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-05-03 18:00:00 | price=1250.28000 | pnl=-117.70 | equity=8708.80
+2026-03-16 19:23:37 | INFO     | BacktestEngine            | OPEN SELL | time=2017-05-30 12:00:00 | price=1263.77000 | sl=1277.32000 | tp=1256.53000 | lot=0.10
+2026-03-16 19:23:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-06-02 19:00:00 | price=1277.32000 | pnl=-136.20 | equity=8572.60
+2026-03-16 19:23:39 | INFO     | BacktestEngine            | OPEN SELL | time=2017-06-14 20:00:00 | price=1275.32000 | sl=1293.03000 | tp=1265.92000 | lot=0.10
+2026-03-16 19:23:39 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-06-14 22:00:00 | price=1265.92000 | pnl=93.30 | equity=8665.90
+2026-03-16 19:23:40 | INFO     | BacktestEngine            | OPEN SELL | time=2017-06-21 17:00:00 | price=1242.82000 | sl=1255.03000 | tp=1236.38000 | lot=0.10
+2026-03-16 19:23:41 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-06-23 12:00:00 | price=1255.03000 | pnl=-122.80 | equity=8543.10
+2026-03-16 19:23:41 | INFO     | BacktestEngine            | OPEN SELL | time=2017-06-29 12:00:00 | price=1246.62000 | sl=1261.42000 | tp=1238.10000 | lot=0.10
+2026-03-16 19:23:42 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-07-03 05:00:00 | price=1238.10000 | pnl=84.50 | equity=8627.60
+2026-03-16 19:23:43 | INFO     | BacktestEngine            | OPEN SELL | time=2017-07-11 20:00:00 | price=1215.47000 | sl=1230.48000 | tp=1204.09000 | lot=0.10
+2026-03-16 19:23:43 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-07-14 16:00:00 | price=1230.48000 | pnl=-150.80 | equity=8476.80
+2026-03-16 19:23:46 | INFO     | BacktestEngine            | OPEN BUY | time=2017-07-28 17:00:00 | price=1265.88000 | sl=1247.60000 | tp=1273.22000 | lot=0.10
+2026-03-16 19:23:46 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-08-01 18:00:00 | price=1273.22000 | pnl=72.70 | equity=8549.50
+2026-03-16 19:23:47 | INFO     | BacktestEngine            | OPEN SELL | time=2017-08-04 17:00:00 | price=1256.62000 | sl=1276.37000 | tp=1253.15000 | lot=0.10
+2026-03-16 19:23:47 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-08-08 18:00:00 | price=1253.15000 | pnl=34.00 | equity=8583.50
+2026-03-16 19:23:49 | INFO     | BacktestEngine            | OPEN BUY | time=2017-08-21 18:00:00 | price=1291.68000 | sl=1275.03000 | tp=1302.03000 | lot=0.10
+2026-03-16 19:23:49 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-08-28 18:00:00 | price=1302.03000 | pnl=102.80 | equity=8686.30
+2026-03-16 19:23:52 | INFO     | BacktestEngine            | OPEN SELL | time=2017-09-14 17:00:00 | price=1324.92000 | sl=1344.68000 | tp=1311.54000 | lot=0.10
+2026-03-16 19:23:52 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-09-18 16:00:00 | price=1311.54000 | pnl=133.10 | equity=8819.40
+2026-03-16 19:23:53 | INFO     | BacktestEngine            | OPEN SELL | time=2017-09-25 17:00:00 | price=1293.42000 | sl=1307.84000 | tp=1283.77000 | lot=0.10
+2026-03-16 19:23:53 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-09-25 20:00:00 | price=1307.84000 | pnl=-144.90 | equity=8674.50
+2026-03-16 19:23:53 | INFO     | BacktestEngine            | OPEN BUY | time=2017-09-25 20:00:00 | price=1310.23000 | sl=1285.80000 | tp=1317.09000 | lot=0.10
+2026-03-16 19:23:53 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-09-27 12:00:00 | price=1285.80000 | pnl=-245.00 | equity=8429.50
+2026-03-16 19:23:54 | INFO     | BacktestEngine            | OPEN SELL | time=2017-09-29 12:00:00 | price=1287.02000 | sl=1303.33000 | tp=1278.74000 | lot=0.10
+2026-03-16 19:23:54 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-10-02 02:00:00 | price=1278.74000 | pnl=82.10 | equity=8511.60
+2026-03-16 19:23:55 | INFO     | BacktestEngine            | OPEN BUY | time=2017-10-05 13:00:00 | price=1277.93000 | sl=1264.97000 | tp=1286.06000 | lot=0.10
+2026-03-16 19:23:55 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-10-06 16:00:00 | price=1264.97000 | pnl=-130.30 | equity=8381.30
+2026-03-16 19:23:55 | INFO     | BacktestEngine            | OPEN BUY | time=2017-10-06 19:00:00 | price=1274.58000 | sl=1252.96000 | tp=1285.05000 | lot=0.10
+2026-03-16 19:23:55 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-10-09 09:00:00 | price=1285.05000 | pnl=104.00 | equity=8485.30
+2026-03-16 19:23:55 | INFO     | BacktestEngine            | OPEN SELL | time=2017-10-11 20:00:00 | price=1284.77000 | sl=1299.90000 | tp=1277.97000 | lot=0.10
+2026-03-16 19:23:56 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-10-13 15:00:00 | price=1299.90000 | pnl=-152.00 | equity=8333.30
+2026-03-16 19:23:56 | INFO     | BacktestEngine            | OPEN BUY | time=2017-10-13 16:00:00 | price=1301.73000 | sl=1283.97000 | tp=1310.45000 | lot=0.10
+2026-03-16 19:23:56 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-10-17 15:00:00 | price=1283.97000 | pnl=-178.30 | equity=8155.00
+2026-03-16 19:23:58 | INFO     | BacktestEngine            | OPEN SELL | time=2017-10-30 16:00:00 | price=1272.92000 | sl=1287.41000 | tp=1265.37000 | lot=0.10
+2026-03-16 19:23:59 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-11-09 13:00:00 | price=1287.41000 | pnl=-145.60 | equity=8009.40
+2026-03-16 19:23:59 | INFO     | BacktestEngine            | OPEN SELL | time=2017-11-10 19:00:00 | price=1275.77000 | sl=1292.00000 | tp=1265.66000 | lot=0.10
+2026-03-16 19:24:00 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-11-17 19:00:00 | price=1292.00000 | pnl=-163.00 | equity=7846.40
+2026-03-16 19:24:01 | INFO     | BacktestEngine            | OPEN SELL | time=2017-11-24 12:00:00 | price=1288.97000 | sl=1301.81000 | tp=1282.83000 | lot=0.10
+2026-03-16 19:24:02 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-11-29 18:00:00 | price=1282.83000 | pnl=60.70 | equity=7907.10
+2026-03-16 19:24:02 | INFO     | BacktestEngine            | OPEN BUY | time=2017-11-29 18:00:00 | price=1285.38000 | sl=1268.17000 | tp=1296.10000 | lot=0.10
+2026-03-16 19:24:03 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-12-05 16:00:00 | price=1268.17000 | pnl=-172.80 | equity=7734.30
+2026-03-16 19:24:04 | INFO     | BacktestEngine            | OPEN BUY | time=2017-12-13 16:00:00 | price=1243.68000 | sl=1231.20000 | tp=1252.32000 | lot=0.10
+2026-03-16 19:24:04 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-12-13 21:00:00 | price=1252.32000 | pnl=85.70 | equity=7820.00
+2026-03-16 19:24:04 | INFO     | BacktestEngine            | OPEN BUY | time=2017-12-18 10:00:00 | price=1257.18000 | sl=1244.99000 | tp=1263.88000 | lot=0.10
+2026-03-16 19:24:04 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-12-18 18:00:00 | price=1263.88000 | pnl=66.30 | equity=7886.30
+2026-03-16 19:24:05 | INFO     | BacktestEngine            | OPEN SELL | time=2017-12-21 15:00:00 | price=1265.32000 | sl=1275.05000 | tp=1258.88000 | lot=0.10
+2026-03-16 19:24:05 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-12-22 19:00:00 | price=1275.05000 | pnl=-98.00 | equity=7788.30
+2026-03-16 19:24:05 | INFO     | BacktestEngine            | OPEN SELL | time=2017-12-27 14:00:00 | price=1283.37000 | sl=1295.02000 | tp=1279.17000 | lot=0.10
+2026-03-16 19:24:06 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-12-28 20:00:00 | price=1295.02000 | pnl=-117.20 | equity=7671.10
+2026-03-16 19:24:06 | INFO     | BacktestEngine            | OPEN SELL | time=2018-01-08 10:00:00 | price=1316.07000 | sl=1331.01000 | tp=1306.72000 | lot=0.10
+2026-03-16 19:24:07 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-01-12 11:00:00 | price=1331.01000 | pnl=-150.10 | equity=7521.00
+2026-03-16 19:24:08 | INFO     | BacktestEngine            | OPEN SELL | time=2018-01-16 10:00:00 | price=1337.17000 | sl=1353.57000 | tp=1330.80000 | lot=0.10
+2026-03-16 19:24:08 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-01-17 18:00:00 | price=1330.80000 | pnl=63.00 | equity=7584.00
+2026-03-16 19:24:09 | INFO     | BacktestEngine            | OPEN SELL | time=2018-01-25 10:00:00 | price=1357.82000 | sl=1379.19000 | tp=1349.72000 | lot=0.10
+2026-03-16 19:24:09 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-01-25 21:00:00 | price=1349.72000 | pnl=80.30 | equity=7664.30
+2026-03-16 19:24:10 | INFO     | BacktestEngine            | OPEN SELL | time=2018-02-06 15:00:00 | price=1333.72000 | sl=1356.30000 | tp=1322.04000 | lot=0.10
+2026-03-16 19:24:10 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-02-06 22:00:00 | price=1322.04000 | pnl=116.10 | equity=7780.40
+2026-03-16 19:24:12 | INFO     | BacktestEngine            | OPEN SELL | time=2018-02-14 19:00:00 | price=1348.82000 | sl=1372.24000 | tp=1329.36000 | lot=0.10
+2026-03-16 19:24:12 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-02-20 19:00:00 | price=1329.36000 | pnl=193.90 | equity=7974.30
+2026-03-16 19:24:13 | INFO     | BacktestEngine            | OPEN BUY | time=2018-02-22 17:00:00 | price=1328.43000 | sl=1310.15000 | tp=1337.93000 | lot=0.10
+2026-03-16 19:24:13 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-02-26 04:00:00 | price=1337.93000 | pnl=94.30 | equity=8068.60
+2026-03-16 19:24:14 | INFO     | BacktestEngine            | OPEN SELL | time=2018-03-05 17:00:00 | price=1321.22000 | sl=1336.55000 | tp=1311.56000 | lot=0.10
+2026-03-16 19:24:14 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-03-06 18:00:00 | price=1336.55000 | pnl=-154.00 | equity=7914.60
+2026-03-16 19:24:15 | INFO     | BacktestEngine            | OPEN SELL | time=2018-03-15 11:00:00 | price=1323.02000 | sl=1336.18000 | tp=1315.64000 | lot=0.10
+2026-03-16 19:24:15 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-03-15 18:00:00 | price=1315.64000 | pnl=73.10 | equity=7987.70
+2026-03-16 19:24:16 | INFO     | BacktestEngine            | OPEN BUY | time=2018-03-16 18:00:00 | price=1314.38000 | sl=1297.30000 | tp=1322.56000 | lot=0.10
+2026-03-16 19:24:16 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-03-21 15:00:00 | price=1322.56000 | pnl=81.10 | equity=8068.80
+2026-03-16 19:24:18 | INFO     | BacktestEngine            | OPEN BUY | time=2018-04-04 11:00:00 | price=1342.13000 | sl=1323.86000 | tp=1349.01000 | lot=0.10
+2026-03-16 19:24:18 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-04-05 16:00:00 | price=1323.86000 | pnl=-183.40 | equity=7885.40
+2026-03-16 19:24:18 | INFO     | BacktestEngine            | OPEN SELL | time=2018-04-09 12:00:00 | price=1327.32000 | sl=1344.68000 | tp=1319.18000 | lot=0.10
+2026-03-16 19:24:19 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-04-11 09:00:00 | price=1344.68000 | pnl=-174.30 | equity=7711.10
+2026-03-16 19:24:19 | INFO     | BacktestEngine            | OPEN SELL | time=2018-04-17 11:00:00 | price=1342.07000 | sl=1360.00000 | tp=1332.04000 | lot=0.10
+2026-03-16 19:24:20 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-04-23 01:00:00 | price=1332.04000 | pnl=99.60 | equity=7810.70
+2026-03-16 19:24:21 | INFO     | BacktestEngine            | OPEN SELL | time=2018-04-26 15:00:00 | price=1324.42000 | sl=1337.37000 | tp=1314.41000 | lot=0.10
+2026-03-16 19:24:21 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-04-30 14:00:00 | price=1314.41000 | pnl=99.40 | equity=7910.10
+2026-03-16 19:24:22 | INFO     | BacktestEngine            | OPEN SELL | time=2018-05-02 17:00:00 | price=1305.67000 | sl=1320.68000 | tp=1295.27000 | lot=0.10
+2026-03-16 19:24:23 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-05-10 15:00:00 | price=1320.68000 | pnl=-150.80 | equity=7759.30
+2026-03-16 19:24:24 | INFO     | BacktestEngine            | OPEN SELL | time=2018-05-18 13:00:00 | price=1286.67000 | sl=1299.67000 | tp=1278.24000 | lot=0.10
+2026-03-16 19:24:24 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-05-24 15:00:00 | price=1299.67000 | pnl=-130.70 | equity=7628.60
+2026-03-16 19:24:25 | INFO     | BacktestEngine            | OPEN BUY | time=2018-05-29 12:00:00 | price=1303.03000 | sl=1288.47000 | tp=1313.33000 | lot=0.10
+2026-03-16 19:24:28 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-06-15 16:00:00 | price=1288.47000 | pnl=-146.30 | equity=7482.30
+2026-03-16 19:24:28 | INFO     | BacktestEngine            | OPEN BUY | time=2018-06-19 16:00:00 | price=1276.28000 | sl=1256.93000 | tp=1283.49000 | lot=0.10
+2026-03-16 19:24:29 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-06-26 12:00:00 | price=1256.93000 | pnl=-194.20 | equity=7288.10
+2026-03-16 19:24:30 | INFO     | BacktestEngine            | OPEN BUY | time=2018-07-03 09:00:00 | price=1242.13000 | sl=1225.11000 | tp=1248.10000 | lot=0.10
+2026-03-16 19:24:30 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-07-03 15:00:00 | price=1248.10000 | pnl=59.00 | equity=7347.10
+2026-03-16 19:24:30 | INFO     | BacktestEngine            | OPEN BUY | time=2018-07-06 17:00:00 | price=1255.48000 | sl=1241.37000 | tp=1264.08000 | lot=0.10
+2026-03-16 19:24:30 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-07-09 13:00:00 | price=1264.08000 | pnl=85.30 | equity=7432.40
+2026-03-16 19:24:31 | INFO     | BacktestEngine            | OPEN SELL | time=2018-07-13 09:00:00 | price=1244.32000 | sl=1257.38000 | tp=1239.08000 | lot=0.10
+2026-03-16 19:24:31 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-07-13 12:00:00 | price=1239.08000 | pnl=51.70 | equity=7484.10
+2026-03-16 19:24:31 | INFO     | BacktestEngine            | OPEN SELL | time=2018-07-16 17:00:00 | price=1239.42000 | sl=1254.39000 | tp=1233.29000 | lot=0.10
+2026-03-16 19:24:32 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-07-17 16:00:00 | price=1233.29000 | pnl=60.60 | equity=7544.70
+2026-03-16 19:24:32 | INFO     | BacktestEngine            | OPEN SELL | time=2018-07-17 16:00:00 | price=1231.22000 | sl=1251.59000 | tp=1231.66000 | lot=0.10
+2026-03-16 19:24:32 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-07-17 17:00:00 | price=1231.66000 | pnl=-5.10 | equity=7539.60
+2026-03-16 19:24:33 | INFO     | BacktestEngine            | OPEN SELL | time=2018-07-25 09:00:00 | price=1227.02000 | sl=1240.13000 | tp=1217.96000 | lot=0.10
+2026-03-16 19:24:33 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-07-27 13:00:00 | price=1217.96000 | pnl=89.90 | equity=7629.50
+2026-03-16 19:24:34 | INFO     | BacktestEngine            | OPEN SELL | time=2018-08-01 17:00:00 | price=1216.87000 | sl=1233.91000 | tp=1209.44000 | lot=0.10
+2026-03-16 19:24:34 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-08-02 21:00:00 | price=1209.44000 | pnl=73.60 | equity=7703.10
+2026-03-16 19:24:35 | INFO     | BacktestEngine            | OPEN SELL | time=2018-08-08 16:00:00 | price=1209.07000 | sl=1222.46000 | tp=1199.53000 | lot=0.10
+2026-03-16 19:24:35 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-08-13 14:00:00 | price=1199.53000 | pnl=94.70 | equity=7797.80
+2026-03-16 19:24:37 | INFO     | BacktestEngine            | OPEN SELL | time=2018-08-27 19:00:00 | price=1209.47000 | sl=1225.52000 | tp=1199.14000 | lot=0.10
+2026-03-16 19:24:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-08-30 16:00:00 | price=1199.14000 | pnl=102.60 | equity=7900.40
+2026-03-16 19:24:38 | INFO     | BacktestEngine            | OPEN SELL | time=2018-08-30 17:00:00 | price=1200.02000 | sl=1214.91000 | tp=1186.21000 | lot=0.10
+2026-03-16 19:24:41 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-09-27 16:00:00 | price=1186.21000 | pnl=137.40 | equity=8037.80
+2026-03-16 19:24:42 | INFO     | BacktestEngine            | OPEN SELL | time=2018-10-04 15:00:00 | price=1202.87000 | sl=1216.39000 | tp=1193.40000 | lot=0.10
+2026-03-16 19:24:43 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-10-08 11:00:00 | price=1193.40000 | pnl=94.00 | equity=8131.80
+2026-03-16 19:24:43 | INFO     | BacktestEngine            | OPEN BUY | time=2018-10-10 19:00:00 | price=1190.03000 | sl=1173.61000 | tp=1198.50000 | lot=0.10
+2026-03-16 19:24:43 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-10-11 12:00:00 | price=1198.50000 | pnl=84.00 | equity=8215.80
+2026-03-16 19:24:44 | INFO     | BacktestEngine            | OPEN BUY | time=2018-10-18 12:00:00 | price=1223.18000 | sl=1208.67000 | tp=1231.46000 | lot=0.10
+2026-03-16 19:24:45 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-10-23 10:00:00 | price=1231.46000 | pnl=82.10 | equity=8297.90
+2026-03-16 19:24:45 | INFO     | BacktestEngine            | OPEN SELL | time=2018-10-23 18:00:00 | price=1233.07000 | sl=1249.66000 | tp=1220.96000 | lot=0.10
+2026-03-16 19:24:47 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-10-30 12:00:00 | price=1220.96000 | pnl=120.40 | equity=8418.30
+2026-03-16 19:24:48 | INFO     | BacktestEngine            | OPEN BUY | time=2018-11-06 11:00:00 | price=1233.98000 | sl=1220.70000 | tp=1241.10000 | lot=0.10
+2026-03-16 19:24:48 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-11-08 15:00:00 | price=1220.70000 | pnl=-133.50 | equity=8284.80
+2026-03-16 19:24:48 | INFO     | BacktestEngine            | OPEN BUY | time=2018-11-12 11:00:00 | price=1206.98000 | sl=1190.54000 | tp=1216.80000 | lot=0.10
+2026-03-16 19:24:49 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-11-16 03:00:00 | price=1216.80000 | pnl=97.50 | equity=8382.30
+2026-03-16 19:24:50 | INFO     | BacktestEngine            | OPEN SELL | time=2018-11-23 09:00:00 | price=1223.62000 | sl=1236.16000 | tp=1220.51000 | lot=0.10
+2026-03-16 19:24:50 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-11-23 15:00:00 | price=1220.51000 | pnl=30.40 | equity=8412.70
+2026-03-16 19:24:51 | INFO     | BacktestEngine            | OPEN SELL | time=2018-11-27 18:00:00 | price=1211.97000 | sl=1230.08000 | tp=1205.30000 | lot=0.10
+2026-03-16 19:24:51 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-12-03 09:00:00 | price=1230.08000 | pnl=-181.80 | equity=8230.90
+2026-03-16 19:24:52 | INFO     | BacktestEngine            | OPEN BUY | time=2018-12-06 17:00:00 | price=1241.69000 | sl=1228.40000 | tp=1253.37000 | lot=0.10
+2026-03-16 19:24:54 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-12-19 16:00:00 | price=1253.37000 | pnl=116.10 | equity=8347.00
+2026-03-16 19:24:54 | INFO     | BacktestEngine            | OPEN SELL | time=2018-12-19 18:00:00 | price=1254.93000 | sl=1268.99000 | tp=1245.59000 | lot=0.10
+2026-03-16 19:24:54 | INFO     | BacktestEngine            | CLOSE SELL | exit=2018-12-19 21:00:00 | price=1245.59000 | pnl=92.70 | equity=8439.70
+2026-03-16 19:24:54 | INFO     | BacktestEngine            | OPEN BUY | time=2018-12-20 12:00:00 | price=1256.08000 | sl=1239.46000 | tp=1267.70000 | lot=0.10
+2026-03-16 19:24:54 | INFO     | BacktestEngine            | CLOSE BUY | exit=2018-12-24 18:00:00 | price=1267.70000 | pnl=115.50 | equity=8555.20
+2026-03-16 19:24:56 | INFO     | BacktestEngine            | OPEN SELL | time=2019-01-11 17:00:00 | price=1289.96000 | sl=1303.34000 | tp=1279.55000 | lot=0.10
+2026-03-16 19:24:57 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-01-21 10:00:00 | price=1279.55000 | pnl=103.40 | equity=8658.60
+2026-03-16 19:24:58 | INFO     | BacktestEngine            | OPEN SELL | time=2019-01-23 17:00:00 | price=1281.70000 | sl=1292.11000 | tp=1272.70000 | lot=0.10
+2026-03-16 19:24:58 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-01-25 16:00:00 | price=1292.11000 | pnl=-104.80 | equity=8553.80
+2026-03-16 19:24:59 | INFO     | BacktestEngine            | OPEN SELL | time=2019-01-30 09:00:00 | price=1314.42000 | sl=1327.19000 | tp=1307.35000 | lot=0.10
+2026-03-16 19:25:00 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-02-06 21:00:00 | price=1307.35000 | pnl=70.00 | equity=8623.80
+2026-03-16 19:25:00 | INFO     | BacktestEngine            | OPEN SELL | time=2019-02-08 14:00:00 | price=1313.12000 | sl=1324.12000 | tp=1305.61000 | lot=0.10
+2026-03-16 19:25:00 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-02-11 14:00:00 | price=1305.61000 | pnl=74.40 | equity=8698.20
+2026-03-16 19:25:00 | INFO     | BacktestEngine            | OPEN BUY | time=2019-02-12 09:00:00 | price=1311.94000 | sl=1298.88000 | tp=1318.36000 | lot=0.10
+2026-03-16 19:25:01 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-02-15 13:00:00 | price=1318.36000 | pnl=63.50 | equity=8761.70
+2026-03-16 19:25:02 | INFO     | BacktestEngine            | OPEN SELL | time=2019-02-25 19:00:00 | price=1325.96000 | sl=1343.10000 | tp=1317.77000 | lot=0.10
+2026-03-16 19:25:03 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-02-27 19:00:00 | price=1317.77000 | pnl=81.20 | equity=8842.90
+2026-03-16 19:25:03 | INFO     | BacktestEngine            | OPEN SELL | time=2019-03-07 08:00:00 | price=1284.27000 | sl=1296.65000 | tp=1277.38000 | lot=0.10
+2026-03-16 19:25:04 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-03-08 15:00:00 | price=1296.65000 | pnl=-124.50 | equity=8718.40
+2026-03-16 19:25:05 | INFO     | BacktestEngine            | OPEN BUY | time=2019-03-20 15:00:00 | price=1306.36000 | sl=1294.69000 | tp=1314.93000 | lot=0.10
+2026-03-16 19:25:05 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-03-20 20:00:00 | price=1314.93000 | pnl=85.00 | equity=8803.40
+2026-03-16 19:25:06 | INFO     | BacktestEngine            | OPEN SELL | time=2019-03-27 11:00:00 | price=1317.61000 | sl=1330.62000 | tp=1307.59000 | lot=0.10
+2026-03-16 19:25:06 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-03-28 03:00:00 | price=1307.59000 | pnl=99.50 | equity=8902.90
+2026-03-16 19:25:06 | INFO     | BacktestEngine            | OPEN BUY | time=2019-03-29 08:00:00 | price=1287.37000 | sl=1274.83000 | tp=1298.83000 | lot=0.10
+2026-03-16 19:25:07 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-03-29 15:00:00 | price=1298.83000 | pnl=113.90 | equity=9016.80
+2026-03-16 19:25:07 | INFO     | BacktestEngine            | OPEN SELL | time=2019-04-03 18:00:00 | price=1289.89000 | sl=1303.58000 | tp=1282.59000 | lot=0.10
+2026-03-16 19:25:07 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-04-04 16:00:00 | price=1282.59000 | pnl=72.30 | equity=9089.10
+2026-03-16 19:25:07 | INFO     | BacktestEngine            | OPEN BUY | time=2019-04-04 18:00:00 | price=1287.90000 | sl=1272.19000 | tp=1296.37000 | lot=0.10
+2026-03-16 19:25:08 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-04-08 05:00:00 | price=1296.37000 | pnl=84.00 | equity=9173.10
+2026-03-16 19:25:08 | INFO     | BacktestEngine            | OPEN BUY | time=2019-04-10 19:00:00 | price=1310.13000 | sl=1294.25000 | tp=1316.32000 | lot=0.10
+2026-03-16 19:25:08 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-04-11 18:00:00 | price=1294.25000 | pnl=-159.50 | equity=9013.60
+2026-03-16 19:25:09 | INFO     | BacktestEngine            | OPEN SELL | time=2019-04-22 17:00:00 | price=1274.96000 | sl=1287.56000 | tp=1267.87000 | lot=0.10
+2026-03-16 19:25:10 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-04-23 15:00:00 | price=1267.87000 | pnl=70.20 | equity=9083.80
+2026-03-16 19:25:10 | INFO     | BacktestEngine            | OPEN SELL | time=2019-04-29 11:00:00 | price=1282.10000 | sl=1293.10000 | tp=1274.84000 | lot=0.10
+2026-03-16 19:25:11 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-05-01 21:00:00 | price=1274.84000 | pnl=71.90 | equity=9155.70
+2026-03-16 19:25:12 | INFO     | BacktestEngine            | OPEN BUY | time=2019-05-09 18:00:00 | price=1285.37000 | sl=1269.86000 | tp=1294.02000 | lot=0.10
+2026-03-16 19:25:12 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-05-13 16:00:00 | price=1294.02000 | pnl=85.80 | equity=9241.50
+2026-03-16 19:25:12 | INFO     | BacktestEngine            | OPEN BUY | time=2019-05-13 16:00:00 | price=1297.87000 | sl=1277.06000 | tp=1299.87000 | lot=0.10
+2026-03-16 19:25:12 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-05-13 19:00:00 | price=1299.87000 | pnl=19.30 | equity=9260.80
+2026-03-16 19:25:14 | INFO     | BacktestEngine            | OPEN SELL | time=2019-05-28 16:00:00 | price=1278.24000 | sl=1290.94000 | tp=1272.61000 | lot=0.10
+2026-03-16 19:25:15 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-05-31 03:00:00 | price=1290.94000 | pnl=-127.70 | equity=9133.10
+2026-03-16 19:25:16 | INFO     | BacktestEngine            | OPEN BUY | time=2019-06-06 11:00:00 | price=1336.89000 | sl=1316.64000 | tp=1346.24000 | lot=0.10
+2026-03-16 19:25:16 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-06-07 17:00:00 | price=1346.24000 | pnl=92.80 | equity=9225.90
+2026-03-16 19:25:16 | INFO     | BacktestEngine            | OPEN SELL | time=2019-06-11 10:00:00 | price=1322.64000 | sl=1339.06000 | tp=1316.97000 | lot=0.10
+2026-03-16 19:25:17 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-06-13 18:00:00 | price=1339.06000 | pnl=-164.90 | equity=9061.00
+2026-03-16 19:25:20 | INFO     | BacktestEngine            | OPEN SELL | time=2019-07-10 17:00:00 | price=1407.81000 | sl=1430.20000 | tp=1390.88000 | lot=0.10
+2026-03-16 19:25:21 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-07-18 21:00:00 | price=1430.20000 | pnl=-224.60 | equity=8836.40
+2026-03-16 19:25:22 | INFO     | BacktestEngine            | OPEN BUY | time=2019-07-24 11:00:00 | price=1425.42000 | sl=1405.57000 | tp=1435.08000 | lot=0.10
+2026-03-16 19:25:23 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-08-01 09:00:00 | price=1405.57000 | pnl=-199.20 | equity=8637.20
+2026-03-16 19:25:24 | INFO     | BacktestEngine            | OPEN SELL | time=2019-08-09 16:00:00 | price=1497.32000 | sl=1525.09000 | tp=1482.21000 | lot=0.10
+2026-03-16 19:25:25 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-08-13 10:00:00 | price=1525.09000 | pnl=-278.40 | equity=8358.80
+2026-03-16 19:25:25 | INFO     | BacktestEngine            | OPEN SELL | time=2019-08-15 10:00:00 | price=1512.28000 | sl=1545.87000 | tp=1491.30000 | lot=0.10
+2026-03-16 19:25:26 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-08-26 01:00:00 | price=1545.87000 | pnl=-336.60 | equity=8022.20
+2026-03-16 19:25:27 | INFO     | BacktestEngine            | OPEN BUY | time=2019-08-27 18:00:00 | price=1542.53000 | sl=1515.87000 | tp=1552.95000 | lot=0.10
+2026-03-16 19:25:28 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-09-04 20:00:00 | price=1552.95000 | pnl=103.50 | equity=8125.70
+2026-03-16 19:25:29 | INFO     | BacktestEngine            | OPEN SELL | time=2019-09-11 17:00:00 | price=1494.20000 | sl=1513.43000 | tp=1477.50000 | lot=0.10
+2026-03-16 19:25:29 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-09-12 14:00:00 | price=1513.43000 | pnl=-193.00 | equity=7932.70
+2026-03-16 19:25:29 | INFO     | BacktestEngine            | OPEN BUY | time=2019-09-13 10:00:00 | price=1505.29000 | sl=1480.08000 | tp=1521.83000 | lot=0.10
+2026-03-16 19:25:30 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-09-23 16:00:00 | price=1521.83000 | pnl=164.70 | equity=8097.40
+2026-03-16 19:25:31 | INFO     | BacktestEngine            | OPEN SELL | time=2019-09-24 17:00:00 | price=1522.57000 | sl=1536.38000 | tp=1505.86000 | lot=0.10
+2026-03-16 19:25:31 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-09-25 19:00:00 | price=1505.86000 | pnl=166.40 | equity=8263.80
+2026-03-16 19:25:31 | INFO     | BacktestEngine            | OPEN SELL | time=2019-09-25 19:00:00 | price=1505.11000 | sl=1535.30000 | tp=1489.77000 | lot=0.10
+2026-03-16 19:25:31 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-09-27 16:00:00 | price=1489.77000 | pnl=152.70 | equity=8416.50
+2026-03-16 19:25:33 | INFO     | BacktestEngine            | OPEN SELL | time=2019-10-10 17:00:00 | price=1493.00000 | sl=1522.10000 | tp=1475.59000 | lot=0.10
+2026-03-16 19:25:33 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-10-11 17:00:00 | price=1475.59000 | pnl=173.40 | equity=8589.90
+2026-03-16 19:25:33 | INFO     | BacktestEngine            | OPEN SELL | time=2019-10-15 10:00:00 | price=1492.41000 | sl=1507.24000 | tp=1479.88000 | lot=0.10
+2026-03-16 19:25:33 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-10-15 17:00:00 | price=1479.88000 | pnl=124.60 | equity=8714.50
+2026-03-16 19:25:33 | INFO     | BacktestEngine            | OPEN SELL | time=2019-10-15 17:00:00 | price=1478.98000 | sl=1507.41000 | tp=1474.62000 | lot=0.10
+2026-03-16 19:25:35 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-10-25 14:00:00 | price=1507.41000 | pnl=-285.00 | equity=8429.50
+2026-03-16 19:25:35 | INFO     | BacktestEngine            | OPEN BUY | time=2019-10-28 17:00:00 | price=1490.52000 | sl=1472.12000 | tp=1506.42000 | lot=0.10
+2026-03-16 19:25:36 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-10-31 12:00:00 | price=1506.42000 | pnl=158.30 | equity=8587.80
+2026-03-16 19:25:37 | INFO     | BacktestEngine            | OPEN BUY | time=2019-11-08 16:00:00 | price=1465.94000 | sl=1437.80000 | tp=1474.00000 | lot=0.10
+2026-03-16 19:25:38 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-11-14 18:00:00 | price=1474.00000 | pnl=79.90 | equity=8667.70
+2026-03-16 19:25:39 | INFO     | BacktestEngine            | OPEN SELL | time=2019-11-27 16:00:00 | price=1454.20000 | sl=1469.30000 | tp=1445.79000 | lot=0.10
+2026-03-16 19:25:40 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-12-03 12:00:00 | price=1469.30000 | pnl=-151.70 | equity=8516.00
+2026-03-16 19:25:40 | INFO     | BacktestEngine            | OPEN SELL | time=2019-12-04 12:00:00 | price=1476.76000 | sl=1491.96000 | tp=1463.12000 | lot=0.10
+2026-03-16 19:25:41 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-12-06 16:00:00 | price=1463.12000 | pnl=135.70 | equity=8651.70
+2026-03-16 19:25:41 | INFO     | BacktestEngine            | OPEN SELL | time=2019-12-06 16:00:00 | price=1461.23000 | sl=1485.55000 | tp=1456.55000 | lot=0.10
+2026-03-16 19:25:42 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-12-12 16:00:00 | price=1485.55000 | pnl=-243.90 | equity=8407.80
+2026-03-16 19:25:42 | INFO     | BacktestEngine            | OPEN SELL | time=2019-12-12 17:00:00 | price=1466.38000 | sl=1490.06000 | tp=1454.93000 | lot=0.10
+2026-03-16 19:25:43 | INFO     | BacktestEngine            | CLOSE SELL | exit=2019-12-24 07:00:00 | price=1490.06000 | pnl=-237.50 | equity=8170.30
+2026-03-16 19:25:44 | INFO     | BacktestEngine            | OPEN BUY | time=2019-12-30 17:00:00 | price=1514.04000 | sl=1501.51000 | tp=1523.36000 | lot=0.10
+2026-03-16 19:25:44 | INFO     | BacktestEngine            | CLOSE BUY | exit=2019-12-31 06:00:00 | price=1523.36000 | pnl=92.50 | equity=8262.80
+2026-03-16 19:25:44 | INFO     | BacktestEngine            | OPEN SELL | time=2020-01-06 16:00:00 | price=1572.47000 | sl=1601.61000 | tp=1554.95000 | lot=0.10
+2026-03-16 19:25:45 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-01-08 02:00:00 | price=1601.61000 | pnl=-292.10 | equity=7970.70
+2026-03-16 19:25:46 | INFO     | BacktestEngine            | OPEN SELL | time=2020-01-16 18:00:00 | price=1550.52000 | sl=1568.65000 | tp=1538.56000 | lot=0.10
+2026-03-16 19:25:47 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-01-24 17:00:00 | price=1568.65000 | pnl=-182.00 | equity=7788.70
+2026-03-16 19:25:47 | INFO     | BacktestEngine            | OPEN BUY | time=2020-01-24 17:00:00 | price=1570.54000 | sl=1545.21000 | tp=1577.13000 | lot=0.10
+2026-03-16 19:25:47 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-01-27 01:00:00 | price=1577.13000 | pnl=65.20 | equity=7853.90
+2026-03-16 19:25:50 | INFO     | BacktestEngine            | OPEN BUY | time=2020-02-11 16:00:00 | price=1571.59000 | sl=1555.65000 | tp=1582.08000 | lot=0.10
+2026-03-16 19:25:50 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-02-14 16:00:00 | price=1582.08000 | pnl=104.20 | equity=7958.10
+2026-03-16 19:25:51 | INFO     | BacktestEngine            | OPEN SELL | time=2020-02-26 16:00:00 | price=1634.84000 | sl=1673.12000 | tp=1602.16000 | lot=0.10
+2026-03-16 19:25:52 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-02-28 17:00:00 | price=1602.16000 | pnl=326.10 | equity=8284.20
+2026-03-16 19:25:53 | INFO     | BacktestEngine            | OPEN SELL | time=2020-03-05 12:00:00 | price=1644.90000 | sl=1672.37000 | tp=1624.31000 | lot=0.10
+2026-03-16 19:25:53 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-03-05 22:00:00 | price=1672.37000 | pnl=-275.40 | equity=8008.80
+2026-03-16 19:25:53 | INFO     | BacktestEngine            | OPEN SELL | time=2020-03-06 13:00:00 | price=1685.71000 | sl=1718.08000 | tp=1656.22000 | lot=0.10
+2026-03-16 19:25:53 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-03-06 17:00:00 | price=1656.22000 | pnl=294.20 | equity=8303.00
+2026-03-16 19:25:53 | INFO     | BacktestEngine            | OPEN SELL | time=2020-03-11 18:00:00 | price=1644.69000 | sl=1690.47000 | tp=1619.96000 | lot=0.10
+2026-03-16 19:25:54 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-03-12 14:00:00 | price=1619.96000 | pnl=246.60 | equity=8549.60
+2026-03-16 19:25:55 | INFO     | BacktestEngine            | OPEN SELL | time=2020-03-20 09:00:00 | price=1509.95000 | sl=1560.45000 | tp=1454.06000 | lot=0.10
+2026-03-16 19:25:55 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-03-23 19:00:00 | price=1560.45000 | pnl=-505.70 | equity=8043.90
+2026-03-16 19:25:55 | INFO     | BacktestEngine            | OPEN SELL | time=2020-03-24 17:00:00 | price=1619.38000 | sl=1678.91000 | tp=1538.79000 | lot=0.10
+2026-03-16 19:25:57 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-04-09 16:00:00 | price=1678.91000 | pnl=-596.00 | equity=7447.90
+2026-03-16 19:25:58 | INFO     | BacktestEngine            | OPEN SELL | time=2020-04-13 13:00:00 | price=1687.81000 | sl=1727.06000 | tp=1660.87000 | lot=0.10
+2026-03-16 19:25:58 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-04-14 05:00:00 | price=1727.06000 | pnl=-393.20 | equity=7054.70
+2026-03-16 19:25:58 | INFO     | BacktestEngine            | OPEN SELL | time=2020-04-16 16:00:00 | price=1724.84000 | sl=1767.19000 | tp=1694.54000 | lot=0.10
+2026-03-16 19:25:58 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-04-17 08:00:00 | price=1694.54000 | pnl=302.30 | equity=7357.00
+2026-03-16 19:25:59 | INFO     | BacktestEngine            | OPEN SELL | time=2020-04-21 13:00:00 | price=1678.68000 | sl=1717.66000 | tp=1649.43000 | lot=0.10
+2026-03-16 19:25:59 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-04-22 20:00:00 | price=1717.66000 | pnl=-390.50 | equity=6966.50
+2026-03-16 19:26:00 | INFO     | BacktestEngine            | OPEN SELL | time=2020-04-29 12:00:00 | price=1706.20000 | sl=1733.60000 | tp=1683.68000 | lot=0.10
+2026-03-16 19:26:00 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-04-30 19:00:00 | price=1683.68000 | pnl=224.50 | equity=7191.00
+2026-03-16 19:26:01 | INFO     | BacktestEngine            | OPEN SELL | time=2020-05-05 11:00:00 | price=1699.35000 | sl=1728.74000 | tp=1676.75000 | lot=0.10
+2026-03-16 19:26:02 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-05-14 16:00:00 | price=1728.74000 | pnl=-294.60 | equity=6896.40
+2026-03-16 19:26:03 | INFO     | BacktestEngine            | OPEN BUY | time=2020-05-21 19:00:00 | price=1724.20000 | sl=1692.18000 | tp=1747.00000 | lot=0.10
+2026-03-16 19:26:05 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-06-03 17:00:00 | price=1692.18000 | pnl=-320.90 | equity=6575.50
+2026-03-16 19:26:06 | INFO     | BacktestEngine            | OPEN SELL | time=2020-06-16 17:00:00 | price=1729.13000 | sl=1755.36000 | tp=1701.75000 | lot=0.10
+2026-03-16 19:26:07 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-06-22 04:00:00 | price=1755.36000 | pnl=-263.00 | equity=6312.50
+2026-03-16 19:26:08 | INFO     | BacktestEngine            | OPEN SELL | time=2020-06-30 15:00:00 | price=1768.88000 | sl=1785.57000 | tp=1753.00000 | lot=0.10
+2026-03-16 19:26:08 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-06-30 18:00:00 | price=1785.57000 | pnl=-167.60 | equity=6144.90
+2026-03-16 19:26:10 | INFO     | BacktestEngine            | OPEN SELL | time=2020-07-10 19:00:00 | price=1794.20000 | sl=1823.26000 | tp=1780.59000 | lot=0.10
+2026-03-16 19:26:11 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-07-21 09:00:00 | price=1823.26000 | pnl=-291.30 | equity=5853.60
+2026-03-16 19:26:12 | INFO     | BacktestEngine            | OPEN SELL | time=2020-07-30 11:00:00 | price=1952.63000 | sl=2000.98000 | tp=1922.64000 | lot=0.10
+2026-03-16 19:26:13 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-08-04 20:00:00 | price=2000.98000 | pnl=-484.20 | equity=5369.40
+2026-03-16 19:26:13 | INFO     | BacktestEngine            | OPEN SELL | time=2020-08-05 18:00:00 | price=2043.16000 | sl=2092.90000 | tp=2005.65000 | lot=0.10
+2026-03-16 19:26:14 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-08-11 08:00:00 | price=2005.65000 | pnl=374.40 | equity=5743.80
+2026-03-16 19:26:14 | INFO     | BacktestEngine            | OPEN BUY | time=2020-08-12 10:00:00 | price=1936.71000 | sl=1818.77000 | tp=1986.70000 | lot=0.10
+2026-03-16 19:26:15 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-08-17 17:00:00 | price=1986.70000 | pnl=499.20 | equity=6243.00
+2026-03-16 19:26:15 | INFO     | BacktestEngine            | OPEN SELL | time=2020-08-18 07:00:00 | price=1990.78000 | sl=2029.49000 | tp=1962.87000 | lot=0.10
+2026-03-16 19:26:15 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-08-19 17:00:00 | price=1962.87000 | pnl=278.40 | equity=6521.40
+2026-03-16 19:26:15 | INFO     | BacktestEngine            | OPEN SELL | time=2020-08-21 11:00:00 | price=1934.23000 | sl=1991.17000 | tp=1903.90000 | lot=0.10
+2026-03-16 19:26:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-08-26 15:00:00 | price=1903.90000 | pnl=302.60 | equity=6824.00
+2026-03-16 19:26:17 | INFO     | BacktestEngine            | OPEN SELL | time=2020-09-04 16:00:00 | price=1926.06000 | sl=1967.92000 | tp=1897.63000 | lot=0.10
+2026-03-16 19:26:18 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-09-15 08:00:00 | price=1967.92000 | pnl=-419.30 | equity=6404.70
+2026-03-16 19:26:19 | INFO     | BacktestEngine            | OPEN BUY | time=2020-09-16 11:00:00 | price=1965.45000 | sl=1938.61000 | tp=1982.03000 | lot=0.10
+2026-03-16 19:26:19 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-09-17 06:00:00 | price=1938.61000 | pnl=-269.10 | equity=6135.60
+2026-03-16 19:26:20 | INFO     | BacktestEngine            | OPEN BUY | time=2020-09-23 20:00:00 | price=1862.56000 | sl=1820.30000 | tp=1900.12000 | lot=0.10
+2026-03-16 19:26:21 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-09-30 15:00:00 | price=1900.12000 | pnl=374.90 | equity=6510.50
+2026-03-16 19:26:21 | INFO     | BacktestEngine            | OPEN BUY | time=2020-09-30 16:00:00 | price=1885.68000 | sl=1862.60000 | tp=1918.31000 | lot=0.10
+2026-03-16 19:26:21 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-10-05 17:00:00 | price=1918.31000 | pnl=325.60 | equity=6836.10
+2026-03-16 19:26:22 | INFO     | BacktestEngine            | OPEN SELL | time=2020-10-13 16:00:00 | price=1895.63000 | sl=1938.91000 | tp=1888.85000 | lot=0.10
+2026-03-16 19:26:23 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-10-13 17:00:00 | price=1888.85000 | pnl=67.10 | equity=6903.20
+2026-03-16 19:26:23 | INFO     | BacktestEngine            | OPEN SELL | time=2020-10-13 17:00:00 | price=1892.18000 | sl=1929.28000 | tp=1872.12000 | lot=0.10
+2026-03-16 19:26:24 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-10-21 17:00:00 | price=1929.28000 | pnl=-371.70 | equity=6531.50
+2026-03-16 19:26:24 | INFO     | BacktestEngine            | OPEN SELL | time=2020-10-22 16:00:00 | price=1901.27000 | sl=1932.07000 | tp=1887.36000 | lot=0.10
+2026-03-16 19:26:25 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-10-28 14:00:00 | price=1887.36000 | pnl=138.40 | equity=6669.90
+2026-03-16 19:26:25 | INFO     | BacktestEngine            | OPEN BUY | time=2020-10-29 16:00:00 | price=1873.78000 | sl=1840.49000 | tp=1893.81000 | lot=0.10
+2026-03-16 19:26:25 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-11-02 18:00:00 | price=1893.81000 | pnl=199.60 | equity=6869.50
+2026-03-16 19:26:27 | INFO     | BacktestEngine            | OPEN BUY | time=2020-11-12 16:00:00 | price=1879.71000 | sl=1845.76000 | tp=1898.74000 | lot=0.10
+2026-03-16 19:26:27 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-11-16 04:00:00 | price=1898.74000 | pnl=189.60 | equity=7059.10
+2026-03-16 19:26:27 | INFO     | BacktestEngine            | OPEN SELL | time=2020-11-17 13:00:00 | price=1888.37000 | sl=1917.28000 | tp=1868.46000 | lot=0.10
+2026-03-16 19:26:28 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-11-18 14:00:00 | price=1868.46000 | pnl=198.40 | equity=7257.50
+2026-03-16 19:26:28 | INFO     | BacktestEngine            | OPEN SELL | time=2020-11-23 13:00:00 | price=1865.84000 | sl=1888.29000 | tp=1850.27000 | lot=0.10
+2026-03-16 19:26:28 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-11-23 16:00:00 | price=1850.27000 | pnl=155.00 | equity=7412.50
+2026-03-16 19:26:29 | INFO     | BacktestEngine            | OPEN SELL | time=2020-11-26 17:00:00 | price=1809.40000 | sl=1832.48000 | tp=1790.27000 | lot=0.10
+2026-03-16 19:26:29 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-11-27 15:00:00 | price=1790.27000 | pnl=190.60 | equity=7603.10
+2026-03-16 19:26:30 | INFO     | BacktestEngine            | OPEN SELL | time=2020-12-04 18:00:00 | price=1832.89000 | sl=1867.83000 | tp=1806.12000 | lot=0.10
+2026-03-16 19:26:30 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-12-07 18:00:00 | price=1867.83000 | pnl=-350.10 | equity=7253.00
+2026-03-16 19:26:34 | INFO     | BacktestEngine            | OPEN BUY | time=2021-01-06 11:00:00 | price=1957.91000 | sl=1919.53000 | tp=1976.33000 | lot=0.10
+2026-03-16 19:26:34 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-01-06 17:00:00 | price=1919.53000 | pnl=-384.50 | equity=6868.50
+2026-03-16 19:26:35 | INFO     | BacktestEngine            | OPEN BUY | time=2021-01-08 14:00:00 | price=1889.20000 | sl=1856.20000 | tp=1921.22000 | lot=0.10
+2026-03-16 19:26:35 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-01-08 17:00:00 | price=1856.20000 | pnl=-330.70 | equity=6537.80
+2026-03-16 19:26:35 | INFO     | BacktestEngine            | OPEN SELL | time=2021-01-12 16:00:00 | price=1840.84000 | sl=1882.59000 | tp=1816.60000 | lot=0.10
+2026-03-16 19:26:36 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-01-18 01:00:00 | price=1816.60000 | pnl=241.70 | equity=6779.50
+2026-03-16 19:26:36 | INFO     | BacktestEngine            | OPEN SELL | time=2021-01-21 16:00:00 | price=1863.88000 | sl=1892.20000 | tp=1838.91000 | lot=0.10
+2026-03-16 19:26:36 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-01-22 15:00:00 | price=1838.91000 | pnl=249.00 | equity=7028.50
+2026-03-16 19:26:37 | INFO     | BacktestEngine            | OPEN SELL | time=2021-01-26 10:00:00 | price=1854.25000 | sl=1876.40000 | tp=1833.35000 | lot=0.10
+2026-03-16 19:26:37 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-01-27 16:00:00 | price=1833.35000 | pnl=208.30 | equity=7236.80
+2026-03-16 19:26:37 | INFO     | BacktestEngine            | OPEN BUY | time=2021-01-29 09:00:00 | price=1845.70000 | sl=1819.39000 | tp=1871.68000 | lot=0.10
+2026-03-16 19:26:38 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-01-29 15:00:00 | price=1871.68000 | pnl=259.10 | equity=7495.90
+2026-03-16 19:26:39 | INFO     | BacktestEngine            | OPEN BUY | time=2021-02-11 11:00:00 | price=1842.83000 | sl=1815.82000 | tp=1860.40000 | lot=0.10
+2026-03-16 19:26:39 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-02-12 10:00:00 | price=1815.82000 | pnl=-270.80 | equity=7225.10
+2026-03-16 19:26:40 | INFO     | BacktestEngine            | OPEN SELL | time=2021-02-16 14:00:00 | price=1807.01000 | sl=1841.32000 | tp=1798.66000 | lot=0.10
+2026-03-16 19:26:40 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-02-16 15:00:00 | price=1798.66000 | pnl=82.80 | equity=7307.90
+2026-03-16 19:26:40 | INFO     | BacktestEngine            | OPEN SELL | time=2021-02-16 15:00:00 | price=1796.44000 | sl=1835.30000 | tp=1787.79000 | lot=0.10
+2026-03-16 19:26:40 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-02-17 01:00:00 | price=1787.79000 | pnl=85.80 | equity=7393.70
+2026-03-16 19:26:41 | INFO     | BacktestEngine            | OPEN BUY | time=2021-02-24 18:00:00 | price=1802.21000 | sl=1759.04000 | tp=1820.43000 | lot=0.10
+2026-03-16 19:26:41 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-02-26 07:00:00 | price=1759.04000 | pnl=-432.40 | equity=6961.30
+2026-03-16 19:26:42 | INFO     | BacktestEngine            | OPEN SELL | time=2021-03-03 11:00:00 | price=1727.80000 | sl=1758.65000 | tp=1705.13000 | lot=0.10
+2026-03-16 19:26:42 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-03-03 17:00:00 | price=1705.13000 | pnl=226.00 | equity=7187.30
+2026-03-16 19:26:42 | INFO     | BacktestEngine            | OPEN SELL | time=2021-03-04 20:00:00 | price=1690.81000 | sl=1743.44000 | tp=1668.55000 | lot=0.10
+2026-03-16 19:26:44 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-03-17 20:00:00 | price=1743.44000 | pnl=-527.00 | equity=6660.30
+2026-03-16 19:26:44 | INFO     | BacktestEngine            | OPEN SELL | time=2021-03-22 09:00:00 | price=1728.99000 | sl=1759.50000 | tp=1710.37000 | lot=0.10
+2026-03-16 19:26:45 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-03-29 16:00:00 | price=1710.37000 | pnl=185.50 | equity=6845.80
+2026-03-16 19:26:45 | INFO     | BacktestEngine            | OPEN BUY | time=2021-03-30 07:00:00 | price=1707.91000 | sl=1684.04000 | tp=1722.84000 | lot=0.10
+2026-03-16 19:26:45 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-03-30 15:00:00 | price=1684.04000 | pnl=-239.40 | equity=6606.40
+2026-03-16 19:26:46 | INFO     | BacktestEngine            | OPEN BUY | time=2021-04-07 17:00:00 | price=1741.43000 | sl=1716.29000 | tp=1755.77000 | lot=0.10
+2026-03-16 19:26:47 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-04-08 16:00:00 | price=1755.77000 | pnl=142.70 | equity=6749.10
+2026-03-16 19:26:49 | INFO     | BacktestEngine            | OPEN BUY | time=2021-04-21 15:00:00 | price=1786.53000 | sl=1758.35000 | tp=1799.59000 | lot=0.10
+2026-03-16 19:26:50 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-04-29 16:00:00 | price=1758.35000 | pnl=-282.50 | equity=6466.60
+2026-03-16 19:26:52 | INFO     | BacktestEngine            | OPEN BUY | time=2021-05-14 10:00:00 | price=1833.49000 | sl=1808.21000 | tp=1852.94000 | lot=0.10
+2026-03-16 19:26:52 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-05-17 06:00:00 | price=1852.94000 | pnl=193.80 | equity=6660.40
+2026-03-16 19:26:54 | INFO     | BacktestEngine            | OPEN BUY | time=2021-06-02 16:00:00 | price=1903.42000 | sl=1880.69000 | tp=1920.73000 | lot=0.10
+2026-03-16 19:26:54 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-06-03 16:00:00 | price=1880.69000 | pnl=-228.00 | equity=6432.40
+2026-03-16 19:26:56 | INFO     | BacktestEngine            | OPEN SELL | time=2021-06-16 14:00:00 | price=1854.62000 | sl=1875.99000 | tp=1841.20000 | lot=0.10
+2026-03-16 19:26:56 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-06-16 21:00:00 | price=1841.20000 | pnl=133.50 | equity=6565.90
+2026-03-16 19:26:57 | INFO     | BacktestEngine            | OPEN SELL | time=2021-06-23 16:00:00 | price=1794.12000 | sl=1806.59000 | tp=1765.93000 | lot=0.10
+2026-03-16 19:26:58 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-06-29 14:00:00 | price=1765.93000 | pnl=281.20 | equity=6847.10
+2026-03-16 19:26:59 | INFO     | BacktestEngine            | OPEN BUY | time=2021-07-08 11:00:00 | price=1813.64000 | sl=1781.45000 | tp=1825.07000 | lot=0.10
+2026-03-16 19:27:00 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-07-14 15:00:00 | price=1825.07000 | pnl=113.60 | equity=6960.70
+2026-03-16 19:27:01 | INFO     | BacktestEngine            | OPEN SELL | time=2021-07-20 19:00:00 | price=1811.65000 | sl=1836.98000 | tp=1786.52000 | lot=0.10
+2026-03-16 19:27:03 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-08-06 15:00:00 | price=1786.52000 | pnl=250.60 | equity=7211.30
+2026-03-16 19:27:05 | INFO     | BacktestEngine            | OPEN SELL | time=2021-08-20 12:00:00 | price=1781.42000 | sl=1804.84000 | tp=1767.70000 | lot=0.10
+2026-03-16 19:27:05 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-08-23 16:00:00 | price=1804.84000 | pnl=-234.90 | equity=6976.40
+2026-03-16 19:27:06 | INFO     | BacktestEngine            | OPEN SELL | time=2021-08-27 19:00:00 | price=1816.70000 | sl=1846.16000 | tp=1789.47000 | lot=0.10
+2026-03-16 19:27:08 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-09-08 16:00:00 | price=1789.47000 | pnl=271.60 | equity=7248.00
+2026-03-16 19:27:08 | INFO     | BacktestEngine            | OPEN BUY | time=2021-09-13 18:00:00 | price=1795.65000 | sl=1771.75000 | tp=1812.51000 | lot=0.10
+2026-03-16 19:27:09 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-09-16 14:00:00 | price=1771.75000 | pnl=-239.70 | equity=7008.30
+2026-03-16 19:27:10 | INFO     | BacktestEngine            | OPEN BUY | time=2021-09-23 14:00:00 | price=1773.23000 | sl=1748.72000 | tp=1792.22000 | lot=0.10
+2026-03-16 19:27:10 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-09-23 17:00:00 | price=1748.72000 | pnl=-245.80 | equity=6762.50
+2026-03-16 19:27:10 | INFO     | BacktestEngine            | OPEN SELL | time=2021-09-23 17:00:00 | price=1751.74000 | sl=1782.63000 | tp=1728.53000 | lot=0.10
+2026-03-16 19:27:10 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-09-28 15:00:00 | price=1728.53000 | pnl=231.40 | equity=6993.90
+2026-03-16 19:27:11 | INFO     | BacktestEngine            | OPEN SELL | time=2021-10-06 08:00:00 | price=1750.77000 | sl=1773.11000 | tp=1738.76000 | lot=0.10
+2026-03-16 19:27:12 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-10-08 15:00:00 | price=1773.11000 | pnl=-224.10 | equity=6769.80
+2026-03-16 19:27:12 | INFO     | BacktestEngine            | OPEN BUY | time=2021-10-08 15:00:00 | price=1776.16000 | sl=1741.51000 | tp=1774.69000 | lot=0.10
+2026-03-16 19:27:12 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-10-08 16:00:00 | price=1774.69000 | pnl=-15.40 | equity=6754.40
+2026-03-16 19:27:12 | INFO     | BacktestEngine            | OPEN BUY | time=2021-10-08 16:00:00 | price=1772.61000 | sl=1751.52000 | tp=1792.46000 | lot=0.10
+2026-03-16 19:27:12 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-10-11 01:00:00 | price=1751.52000 | pnl=-211.60 | equity=6542.80
+2026-03-16 19:27:12 | INFO     | BacktestEngine            | OPEN BUY | time=2021-10-12 09:00:00 | price=1761.47000 | sl=1741.53000 | tp=1774.84000 | lot=0.10
+2026-03-16 19:27:13 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-10-13 15:00:00 | price=1774.84000 | pnl=133.00 | equity=6675.80
+2026-03-16 19:27:13 | INFO     | BacktestEngine            | OPEN SELL | time=2021-10-14 15:00:00 | price=1798.68000 | sl=1819.05000 | tp=1779.54000 | lot=0.10
+2026-03-16 19:27:13 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-10-15 14:00:00 | price=1779.54000 | pnl=190.70 | equity=6866.50
+2026-03-16 19:27:14 | INFO     | BacktestEngine            | OPEN BUY | time=2021-10-25 12:00:00 | price=1799.54000 | sl=1774.70000 | tp=1822.80000 | lot=0.10
+2026-03-16 19:27:15 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-10-29 16:00:00 | price=1774.70000 | pnl=-249.10 | equity=6617.40
+2026-03-16 19:27:15 | INFO     | BacktestEngine            | OPEN SELL | time=2021-10-29 16:00:00 | price=1773.71000 | sl=1809.69000 | tp=1759.70000 | lot=0.10
+2026-03-16 19:27:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-11-03 16:00:00 | price=1759.70000 | pnl=139.40 | equity=6756.80
+2026-03-16 19:27:17 | INFO     | BacktestEngine            | OPEN SELL | time=2021-11-10 10:00:00 | price=1825.26000 | sl=1844.27000 | tp=1810.85000 | lot=0.10
+2026-03-16 19:27:17 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-11-10 15:00:00 | price=1844.27000 | pnl=-190.80 | equity=6566.00
+2026-03-16 19:27:18 | INFO     | BacktestEngine            | OPEN SELL | time=2021-11-16 17:00:00 | price=1860.86000 | sl=1887.02000 | tp=1840.20000 | lot=0.10
+2026-03-16 19:27:18 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-11-22 01:00:00 | price=1840.20000 | pnl=205.90 | equity=6771.90
+2026-03-16 19:27:20 | INFO     | BacktestEngine            | OPEN BUY | time=2021-12-07 08:00:00 | price=1783.37000 | sl=1760.38000 | tp=1794.32000 | lot=0.10
+2026-03-16 19:27:22 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-12-15 20:00:00 | price=1760.38000 | pnl=-230.60 | equity=6541.30
+2026-03-16 19:27:23 | INFO     | BacktestEngine            | OPEN BUY | time=2021-12-22 15:00:00 | price=1794.78000 | sl=1776.29000 | tp=1804.12000 | lot=0.10
+2026-03-16 19:27:23 | INFO     | BacktestEngine            | CLOSE BUY | exit=2021-12-22 22:00:00 | price=1804.12000 | pnl=92.70 | equity=6634.00
+2026-03-16 19:27:25 | INFO     | BacktestEngine            | OPEN SELL | time=2022-01-07 16:00:00 | price=1790.78000 | sl=1814.49000 | tp=1771.88000 | lot=0.10
+2026-03-16 19:27:25 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-01-11 18:00:00 | price=1814.49000 | pnl=-237.80 | equity=6396.20
+2026-03-16 19:27:26 | INFO     | BacktestEngine            | OPEN SELL | time=2022-01-14 19:00:00 | price=1815.73000 | sl=1841.41000 | tp=1803.48000 | lot=0.10
+2026-03-16 19:27:27 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-01-19 18:00:00 | price=1841.41000 | pnl=-257.50 | equity=6138.70
+2026-03-16 19:27:27 | INFO     | BacktestEngine            | OPEN BUY | time=2022-01-24 12:00:00 | price=1840.56000 | sl=1820.83000 | tp=1855.20000 | lot=0.10
+2026-03-16 19:27:28 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-01-26 21:00:00 | price=1820.83000 | pnl=-198.00 | equity=5940.70
+2026-03-16 19:27:33 | INFO     | BacktestEngine            | OPEN SELL | time=2022-03-03 14:00:00 | price=1930.41000 | sl=1968.23000 | tp=1906.99000 | lot=0.10
+2026-03-16 19:27:33 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-03-04 21:00:00 | price=1968.23000 | pnl=-378.90 | equity=5561.80
+2026-03-16 19:27:33 | INFO     | BacktestEngine            | OPEN BUY | time=2022-03-08 09:00:00 | price=2016.53000 | sl=1964.70000 | tp=2055.86000 | lot=0.10
+2026-03-16 19:27:33 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-03-08 17:00:00 | price=2055.86000 | pnl=392.60 | equity=5954.40
+2026-03-16 19:27:33 | INFO     | BacktestEngine            | OPEN SELL | time=2022-03-09 12:00:00 | price=2014.66000 | sl=2091.52000 | tp=1961.99000 | lot=0.10
+2026-03-16 19:27:34 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-03-11 14:00:00 | price=1961.99000 | pnl=526.00 | equity=6480.40
+2026-03-16 19:27:34 | INFO     | BacktestEngine            | OPEN SELL | time=2022-03-11 14:00:00 | price=1974.86000 | sl=2028.09000 | tp=1943.77000 | lot=0.10
+2026-03-16 19:27:34 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-03-15 03:00:00 | price=1943.77000 | pnl=310.20 | equity=6790.60
+2026-03-16 19:27:34 | INFO     | BacktestEngine            | OPEN BUY | time=2022-03-15 14:00:00 | price=1921.14000 | sl=1885.33000 | tp=1956.27000 | lot=0.10
+2026-03-16 19:27:35 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-03-24 13:00:00 | price=1956.27000 | pnl=350.60 | equity=7141.20
+2026-03-16 19:27:36 | INFO     | BacktestEngine            | OPEN SELL | time=2022-03-28 07:00:00 | price=1942.95000 | sl=1976.48000 | tp=1922.04000 | lot=0.10
+2026-03-16 19:27:36 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-03-28 22:00:00 | price=1922.04000 | pnl=208.40 | equity=7349.60
+2026-03-16 19:27:36 | INFO     | BacktestEngine            | OPEN BUY | time=2022-03-30 17:00:00 | price=1937.64000 | sl=1898.75000 | tp=1955.37000 | lot=0.10
+2026-03-16 19:27:38 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-04-11 11:00:00 | price=1955.37000 | pnl=176.60 | equity=7526.20
+2026-03-16 19:27:38 | INFO     | BacktestEngine            | OPEN SELL | time=2022-04-14 13:00:00 | price=1974.00000 | sl=1995.53000 | tp=1951.08000 | lot=0.10
+2026-03-16 19:27:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-04-18 15:00:00 | price=1995.53000 | pnl=-216.00 | equity=7310.20
+2026-03-16 19:27:39 | INFO     | BacktestEngine            | OPEN SELL | time=2022-04-22 12:00:00 | price=1943.47000 | sl=1971.99000 | tp=1924.07000 | lot=0.10
+2026-03-16 19:27:39 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-04-25 05:00:00 | price=1924.07000 | pnl=193.30 | equity=7503.50
+2026-03-16 19:27:41 | INFO     | BacktestEngine            | OPEN SELL | time=2022-05-04 17:00:00 | price=1866.53000 | sl=1891.12000 | tp=1842.75000 | lot=0.10
+2026-03-16 19:27:41 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-05-05 02:00:00 | price=1891.12000 | pnl=-246.60 | equity=7256.90
+2026-03-16 19:27:42 | INFO     | BacktestEngine            | OPEN SELL | time=2022-05-10 18:00:00 | price=1843.99000 | sl=1884.27000 | tp=1825.15000 | lot=0.10
+2026-03-16 19:27:42 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-05-12 19:00:00 | price=1825.15000 | pnl=187.70 | equity=7444.60
+2026-03-16 19:27:42 | INFO     | BacktestEngine            | OPEN BUY | time=2022-05-16 12:00:00 | price=1800.56000 | sl=1763.05000 | tp=1824.60000 | lot=0.10
+2026-03-16 19:27:42 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-05-16 22:00:00 | price=1824.60000 | pnl=239.70 | equity=7684.30
+2026-03-16 19:27:43 | INFO     | BacktestEngine            | OPEN SELL | time=2022-05-19 11:00:00 | price=1822.44000 | sl=1836.50000 | tp=1797.44000 | lot=0.10
+2026-03-16 19:27:43 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-05-19 15:00:00 | price=1836.50000 | pnl=-141.30 | equity=7543.00
+2026-03-16 19:27:44 | INFO     | BacktestEngine            | OPEN SELL | time=2022-05-25 10:00:00 | price=1858.31000 | sl=1880.68000 | tp=1842.42000 | lot=0.10
+2026-03-16 19:27:44 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-05-25 18:00:00 | price=1842.42000 | pnl=158.20 | equity=7701.20
+2026-03-16 19:27:44 | INFO     | BacktestEngine            | OPEN SELL | time=2022-05-31 13:00:00 | price=1848.93000 | sl=1872.15000 | tp=1835.69000 | lot=0.10
+2026-03-16 19:27:44 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-05-31 22:00:00 | price=1835.69000 | pnl=131.70 | equity=7832.90
+2026-03-16 19:27:45 | INFO     | BacktestEngine            | OPEN SELL | time=2022-06-03 07:00:00 | price=1867.74000 | sl=1890.18000 | tp=1855.17000 | lot=0.10
+2026-03-16 19:27:45 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-06-03 18:00:00 | price=1855.17000 | pnl=125.00 | equity=7957.90
+2026-03-16 19:27:45 | INFO     | BacktestEngine            | OPEN SELL | time=2022-06-08 16:00:00 | price=1852.38000 | sl=1875.38000 | tp=1836.50000 | lot=0.10
+2026-03-16 19:27:46 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-06-10 14:00:00 | price=1836.50000 | pnl=158.10 | equity=8116.00
+2026-03-16 19:27:47 | INFO     | BacktestEngine            | OPEN BUY | time=2022-06-21 18:00:00 | price=1835.41000 | sl=1813.98000 | tp=1857.11000 | lot=0.10
+2026-03-16 19:27:48 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-06-29 12:00:00 | price=1813.98000 | pnl=-215.00 | equity=7901.00
+2026-03-16 19:27:49 | INFO     | BacktestEngine            | OPEN SELL | time=2022-06-30 18:00:00 | price=1814.10000 | sl=1843.83000 | tp=1784.39000 | lot=0.10
+2026-03-16 19:27:49 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-07-05 17:00:00 | price=1784.39000 | pnl=296.40 | equity=8197.40
+2026-03-16 19:27:50 | INFO     | BacktestEngine            | OPEN SELL | time=2022-07-08 11:00:00 | price=1737.62000 | sl=1760.52000 | tp=1720.32000 | lot=0.10
+2026-03-16 19:27:50 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-07-13 15:00:00 | price=1720.32000 | pnl=172.30 | equity=8369.70
+2026-03-16 19:27:50 | INFO     | BacktestEngine            | OPEN BUY | time=2022-07-13 17:00:00 | price=1742.54000 | sl=1689.49000 | tp=1747.19000 | lot=0.10
+2026-03-16 19:27:51 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-07-21 09:00:00 | price=1689.49000 | pnl=-531.20 | equity=7838.50
+2026-03-16 19:27:52 | INFO     | BacktestEngine            | OPEN SELL | time=2022-07-27 17:00:00 | price=1716.70000 | sl=1737.82000 | tp=1699.24000 | lot=0.10
+2026-03-16 19:27:52 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-07-27 21:00:00 | price=1737.82000 | pnl=-211.90 | equity=7626.60
+2026-03-16 19:27:53 | INFO     | BacktestEngine            | OPEN SELL | time=2022-08-03 18:00:00 | price=1758.24000 | sl=1790.08000 | tp=1734.27000 | lot=0.10
+2026-03-16 19:27:53 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-08-04 18:00:00 | price=1790.08000 | pnl=-319.10 | equity=7307.50
+2026-03-16 19:27:54 | INFO     | BacktestEngine            | OPEN BUY | time=2022-08-11 15:00:00 | price=1796.31000 | sl=1772.31000 | tp=1808.63000 | lot=0.10
+2026-03-16 19:27:55 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-08-16 15:00:00 | price=1772.31000 | pnl=-240.70 | equity=7066.80
+2026-03-16 19:27:57 | INFO     | BacktestEngine            | OPEN BUY | time=2022-08-31 15:00:00 | price=1711.52000 | sl=1691.13000 | tp=1728.67000 | lot=0.10
+2026-03-16 19:27:57 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-09-01 17:00:00 | price=1691.13000 | pnl=-204.60 | equity=6862.20
+2026-03-16 19:27:58 | INFO     | BacktestEngine            | OPEN BUY | time=2022-09-12 11:00:00 | price=1725.71000 | sl=1699.82000 | tp=1740.45000 | lot=0.10
+2026-03-16 19:27:59 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-09-13 16:00:00 | price=1699.82000 | pnl=-259.60 | equity=6602.60
+2026-03-16 19:27:59 | INFO     | BacktestEngine            | OPEN SELL | time=2022-09-13 16:00:00 | price=1706.09000 | sl=1734.08000 | tp=1682.05000 | lot=0.10
+2026-03-16 19:27:59 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-09-15 15:00:00 | price=1682.05000 | pnl=239.70 | equity=6842.30
+2026-03-16 19:27:59 | INFO     | BacktestEngine            | OPEN BUY | time=2022-09-16 12:00:00 | price=1659.55000 | sl=1631.45000 | tp=1677.72000 | lot=0.10
+2026-03-16 19:27:59 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-09-16 17:00:00 | price=1677.72000 | pnl=181.00 | equity=7023.30
+2026-03-16 19:28:00 | INFO     | BacktestEngine            | OPEN BUY | time=2022-09-22 12:00:00 | price=1666.52000 | sl=1633.65000 | tp=1697.11000 | lot=0.10
+2026-03-16 19:28:00 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-09-26 03:00:00 | price=1633.65000 | pnl=-329.40 | equity=6693.90
+2026-03-16 19:28:01 | INFO     | BacktestEngine            | OPEN BUY | time=2022-10-03 09:00:00 | price=1663.58000 | sl=1641.81000 | tp=1683.45000 | lot=0.10
+2026-03-16 19:28:01 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-10-03 17:00:00 | price=1683.45000 | pnl=198.00 | equity=6891.90
+2026-03-16 19:28:02 | INFO     | BacktestEngine            | OPEN SELL | time=2022-10-04 14:00:00 | price=1705.31000 | sl=1735.18000 | tp=1685.21000 | lot=0.10
+2026-03-16 19:28:02 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-10-10 07:00:00 | price=1685.21000 | pnl=200.30 | equity=7092.20
+2026-03-16 19:28:03 | INFO     | BacktestEngine            | OPEN SELL | time=2022-10-13 16:00:00 | price=1648.04000 | sl=1688.62000 | tp=1629.89000 | lot=0.10
+2026-03-16 19:28:04 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-10-19 19:00:00 | price=1629.89000 | pnl=180.80 | equity=7273.00
+2026-03-16 19:28:04 | INFO     | BacktestEngine            | OPEN SELL | time=2022-10-21 17:00:00 | price=1638.82000 | sl=1675.33000 | tp=1619.16000 | lot=0.10
+2026-03-16 19:28:06 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-11-03 13:00:00 | price=1619.16000 | pnl=195.90 | equity=7468.90
+2026-03-16 19:28:06 | INFO     | BacktestEngine            | OPEN BUY | time=2022-11-08 12:00:00 | price=1670.44000 | sl=1648.69000 | tp=1686.21000 | lot=0.10
+2026-03-16 19:28:07 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-11-08 17:00:00 | price=1686.21000 | pnl=157.00 | equity=7625.90
+2026-03-16 19:28:07 | INFO     | BacktestEngine            | OPEN BUY | time=2022-11-10 16:00:00 | price=1743.95000 | sl=1700.66000 | tp=1755.62000 | lot=0.10
+2026-03-16 19:28:07 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-11-10 22:00:00 | price=1755.62000 | pnl=116.00 | equity=7741.90
+2026-03-16 19:28:07 | INFO     | BacktestEngine            | OPEN SELL | time=2022-11-11 09:00:00 | price=1760.49000 | sl=1789.62000 | tp=1735.01000 | lot=0.10
+2026-03-16 19:28:08 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-11-21 18:00:00 | price=1735.01000 | pnl=254.10 | equity=7996.00
+2026-03-16 19:28:09 | INFO     | BacktestEngine            | OPEN BUY | time=2022-11-23 17:00:00 | price=1743.38000 | sl=1710.76000 | tp=1764.44000 | lot=0.10
+2026-03-16 19:28:10 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-11-30 21:00:00 | price=1764.44000 | pnl=209.90 | equity=8205.90
+2026-03-16 19:28:11 | INFO     | BacktestEngine            | OPEN BUY | time=2022-12-07 16:00:00 | price=1783.10000 | sl=1754.69000 | tp=1793.60000 | lot=0.10
+2026-03-16 19:28:11 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-12-08 17:00:00 | price=1793.60000 | pnl=104.30 | equity=8310.20
+2026-03-16 19:28:11 | INFO     | BacktestEngine            | OPEN SELL | time=2022-12-12 17:00:00 | price=1784.33000 | sl=1811.92000 | tp=1771.45000 | lot=0.10
+2026-03-16 19:28:11 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-12-13 15:00:00 | price=1811.92000 | pnl=-276.60 | equity=8033.60
+2026-03-16 19:28:13 | INFO     | BacktestEngine            | OPEN SELL | time=2022-12-22 16:00:00 | price=1801.98000 | sl=1830.90000 | tp=1791.74000 | lot=0.10
+2026-03-16 19:28:13 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-12-22 20:00:00 | price=1791.74000 | pnl=101.70 | equity=8135.30
+2026-03-16 19:28:14 | INFO     | BacktestEngine            | OPEN BUY | time=2022-12-29 16:00:00 | price=1813.89000 | sl=1787.94000 | tp=1824.61000 | lot=0.10
+2026-03-16 19:28:14 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-12-30 16:00:00 | price=1824.61000 | pnl=106.50 | equity=8241.80
+2026-03-16 19:28:14 | INFO     | BacktestEngine            | OPEN BUY | time=2023-01-05 19:00:00 | price=1833.83000 | sl=1795.66000 | tp=1855.14000 | lot=0.10
+2026-03-16 19:28:14 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-01-06 17:00:00 | price=1855.14000 | pnl=212.40 | equity=8454.20
+2026-03-16 19:28:15 | INFO     | BacktestEngine            | OPEN SELL | time=2023-01-11 17:00:00 | price=1871.54000 | sl=1897.66000 | tp=1853.39000 | lot=0.10
+2026-03-16 19:28:15 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-01-12 15:00:00 | price=1897.66000 | pnl=-261.90 | equity=8192.30
+2026-03-16 19:28:15 | INFO     | BacktestEngine            | OPEN SELL | time=2023-01-12 17:00:00 | price=1888.35000 | sl=1919.15000 | tp=1855.59000 | lot=0.10
+2026-03-16 19:28:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-01-13 20:00:00 | price=1919.15000 | pnl=-308.70 | equity=7883.60
+2026-03-16 19:28:16 | INFO     | BacktestEngine            | OPEN SELL | time=2023-01-19 11:00:00 | price=1909.85000 | sl=1939.69000 | tp=1893.37000 | lot=0.10
+2026-03-16 19:28:17 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-01-24 09:00:00 | price=1939.69000 | pnl=-299.10 | equity=7584.50
+2026-03-16 19:28:17 | INFO     | BacktestEngine            | OPEN SELL | time=2023-01-24 17:00:00 | price=1934.44000 | sl=1949.14000 | tp=1901.45000 | lot=0.10
+2026-03-16 19:28:18 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-01-31 13:00:00 | price=1901.45000 | pnl=329.20 | equity=7913.70
+2026-03-16 19:28:19 | INFO     | BacktestEngine            | OPEN BUY | time=2023-02-07 20:00:00 | price=1869.17000 | sl=1846.91000 | tp=1903.94000 | lot=0.10
+2026-03-16 19:28:20 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-02-14 16:00:00 | price=1846.91000 | pnl=-223.30 | equity=7690.40
+2026-03-16 19:28:20 | INFO     | BacktestEngine            | OPEN BUY | time=2023-02-14 16:00:00 | price=1856.40000 | sl=1832.01000 | tp=1883.15000 | lot=0.10
+2026-03-16 19:28:20 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-02-15 10:00:00 | price=1832.01000 | pnl=-244.60 | equity=7445.80
+2026-03-16 19:28:20 | INFO     | BacktestEngine            | OPEN SELL | time=2023-02-16 16:00:00 | price=1828.29000 | sl=1860.09000 | tp=1809.74000 | lot=0.10
+2026-03-16 19:28:21 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-02-24 16:00:00 | price=1809.74000 | pnl=184.80 | equity=7630.60
+2026-03-16 19:28:22 | INFO     | BacktestEngine            | OPEN SELL | time=2023-03-01 16:00:00 | price=1841.74000 | sl=1862.54000 | tp=1819.35000 | lot=0.10
+2026-03-16 19:28:23 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-03-07 17:00:00 | price=1819.35000 | pnl=223.20 | equity=7853.80
+2026-03-16 19:28:23 | INFO     | BacktestEngine            | OPEN BUY | time=2023-03-08 10:00:00 | price=1813.20000 | sl=1794.39000 | tp=1826.42000 | lot=0.10
+2026-03-16 19:28:23 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-03-09 16:00:00 | price=1826.42000 | pnl=131.50 | equity=7985.30
+2026-03-16 19:28:23 | INFO     | BacktestEngine            | OPEN SELL | time=2023-03-13 16:00:00 | price=1910.11000 | sl=1945.87000 | tp=1859.57000 | lot=0.10
+2026-03-16 19:28:24 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-03-17 15:00:00 | price=1945.87000 | pnl=-358.30 | equity=7627.00
+2026-03-16 19:28:24 | INFO     | BacktestEngine            | OPEN SELL | time=2023-03-20 11:00:00 | price=1984.35000 | sl=2044.99000 | tp=1959.81000 | lot=0.10
+2026-03-16 19:28:25 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-03-21 15:00:00 | price=1959.81000 | pnl=244.70 | equity=7871.70
+2026-03-16 19:28:25 | INFO     | BacktestEngine            | OPEN SELL | time=2023-03-24 20:00:00 | price=1977.76000 | sl=2017.54000 | tp=1951.92000 | lot=0.10
+2026-03-16 19:28:25 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-03-27 13:00:00 | price=1951.92000 | pnl=257.70 | equity=8129.40
+2026-03-16 19:28:28 | INFO     | BacktestEngine            | OPEN BUY | time=2023-04-17 19:00:00 | price=1991.41000 | sl=1952.31000 | tp=2016.43000 | lot=0.10
+2026-03-16 19:28:30 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-05-02 19:00:00 | price=2016.43000 | pnl=249.50 | equity=8378.90
+2026-03-16 19:28:31 | INFO     | BacktestEngine            | OPEN SELL | time=2023-05-10 16:00:00 | price=2037.45000 | sl=2073.32000 | tp=2025.71000 | lot=0.10
+2026-03-16 19:28:31 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-05-10 18:00:00 | price=2025.71000 | pnl=116.70 | equity=8495.60
+2026-03-16 19:28:31 | INFO     | BacktestEngine            | OPEN SELL | time=2023-05-10 18:00:00 | price=2024.41000 | sl=2061.59000 | tp=2005.41000 | lot=0.10
+2026-03-16 19:28:32 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-05-12 09:00:00 | price=2005.41000 | pnl=189.30 | equity=8684.90
+2026-03-16 19:28:32 | INFO     | BacktestEngine            | OPEN BUY | time=2023-05-15 09:00:00 | price=2016.38000 | sl=1991.01000 | tp=2033.80000 | lot=0.10
+2026-03-16 19:28:32 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-05-16 19:00:00 | price=1991.01000 | pnl=-254.40 | equity=8430.50
+2026-03-16 19:28:33 | INFO     | BacktestEngine            | OPEN BUY | time=2023-05-25 17:00:00 | price=1945.11000 | sl=1913.23000 | tp=1969.61000 | lot=0.10
+2026-03-16 19:28:34 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-05-31 16:00:00 | price=1969.61000 | pnl=244.30 | equity=8674.80
+2026-03-16 19:28:34 | INFO     | BacktestEngine            | OPEN SELL | time=2023-06-01 11:00:00 | price=1955.37000 | sl=1979.09000 | tp=1939.22000 | lot=0.10
+2026-03-16 19:28:34 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-06-01 18:00:00 | price=1979.09000 | pnl=-237.90 | equity=8436.90
+2026-03-16 19:28:34 | INFO     | BacktestEngine            | OPEN SELL | time=2023-06-01 20:00:00 | price=1977.55000 | sl=2008.12000 | tp=1957.13000 | lot=0.10
+2026-03-16 19:28:35 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-06-02 19:00:00 | price=1957.13000 | pnl=203.50 | equity=8640.40
+2026-03-16 19:28:35 | INFO     | BacktestEngine            | OPEN BUY | time=2023-06-05 12:00:00 | price=1944.76000 | sl=1917.48000 | tp=1958.68000 | lot=0.10
+2026-03-16 19:28:35 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-06-05 17:00:00 | price=1958.68000 | pnl=138.50 | equity=8778.90
+2026-03-16 19:28:35 | INFO     | BacktestEngine            | OPEN SELL | time=2023-06-07 20:00:00 | price=1943.98000 | sl=1973.11000 | tp=1919.94000 | lot=0.10
+2026-03-16 19:28:37 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-06-21 16:00:00 | price=1919.94000 | pnl=239.70 | equity=9018.60
+2026-03-16 19:28:38 | INFO     | BacktestEngine            | OPEN SELL | time=2023-06-27 15:00:00 | price=1926.01000 | sl=1943.13000 | tp=1910.07000 | lot=0.10
+2026-03-16 19:28:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-06-28 09:00:00 | price=1910.07000 | pnl=158.70 | equity=9177.30
+2026-03-16 19:28:38 | INFO     | BacktestEngine            | OPEN SELL | time=2023-06-30 12:00:00 | price=1904.91000 | sl=1922.81000 | tp=1888.64000 | lot=0.10
+2026-03-16 19:28:39 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-07-03 16:00:00 | price=1922.81000 | pnl=-179.70 | equity=8997.60
+2026-03-16 19:28:39 | INFO     | BacktestEngine            | OPEN BUY | time=2023-07-03 16:00:00 | price=1929.40000 | sl=1899.47000 | tp=1936.85000 | lot=0.10
+2026-03-16 19:28:40 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-07-11 09:00:00 | price=1936.85000 | pnl=73.80 | equity=9071.40
+2026-03-16 19:28:40 | INFO     | BacktestEngine            | OPEN SELL | time=2023-07-14 10:00:00 | price=1956.62000 | sl=1976.47000 | tp=1943.58000 | lot=0.10
+2026-03-16 19:28:41 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-07-18 17:00:00 | price=1976.47000 | pnl=-199.20 | equity=8872.20
+2026-03-16 19:28:41 | INFO     | BacktestEngine            | OPEN SELL | time=2023-07-20 16:00:00 | price=1976.06000 | sl=1996.96000 | tp=1958.56000 | lot=0.10
+2026-03-16 19:28:41 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-07-21 16:00:00 | price=1958.56000 | pnl=174.30 | equity=9046.50
+2026-03-16 19:28:42 | INFO     | BacktestEngine            | OPEN SELL | time=2023-07-25 15:00:00 | price=1959.18000 | sl=1981.86000 | tp=1946.86000 | lot=0.10
+2026-03-16 19:28:42 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-07-27 05:00:00 | price=1981.86000 | pnl=-227.50 | equity=8819.00
+2026-03-16 19:28:43 | INFO     | BacktestEngine            | OPEN SELL | time=2023-07-31 18:00:00 | price=1970.50000 | sl=1993.70000 | tp=1949.29000 | lot=0.10
+2026-03-16 19:28:43 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-08-01 15:00:00 | price=1949.29000 | pnl=211.40 | equity=9030.40
+2026-03-16 19:28:43 | INFO     | BacktestEngine            | OPEN SELL | time=2023-08-02 18:00:00 | price=1935.35000 | sl=1961.76000 | tp=1918.29000 | lot=0.10
+2026-03-16 19:28:44 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-08-09 17:00:00 | price=1918.29000 | pnl=169.90 | equity=9200.30
+2026-03-16 19:28:45 | INFO     | BacktestEngine            | OPEN SELL | time=2023-08-14 16:00:00 | price=1904.02000 | sl=1929.45000 | tp=1898.09000 | lot=0.10
+2026-03-16 19:28:45 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-08-15 15:00:00 | price=1898.09000 | pnl=58.60 | equity=9258.90
+2026-03-16 19:28:46 | INFO     | BacktestEngine            | OPEN BUY | time=2023-08-18 14:00:00 | price=1894.12000 | sl=1877.34000 | tp=1904.78000 | lot=0.10
+2026-03-16 19:28:46 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-08-23 11:00:00 | price=1904.78000 | pnl=105.90 | equity=9364.80
+2026-03-16 19:28:47 | INFO     | BacktestEngine            | OPEN BUY | time=2023-08-25 16:00:00 | price=1915.57000 | sl=1901.07000 | tp=1927.21000 | lot=0.10
+2026-03-16 19:28:47 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-08-29 17:00:00 | price=1927.21000 | pnl=115.70 | equity=9480.50
+2026-03-16 19:28:50 | INFO     | BacktestEngine            | OPEN SELL | time=2023-09-20 11:00:00 | price=1928.91000 | sl=1942.18000 | tp=1920.92000 | lot=0.10
+2026-03-16 19:28:50 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-09-20 16:00:00 | price=1942.18000 | pnl=-133.40 | equity=9347.10
+2026-03-16 19:28:51 | INFO     | BacktestEngine            | OPEN BUY | time=2023-09-25 14:00:00 | price=1924.26000 | sl=1909.56000 | tp=1934.17000 | lot=0.10
+2026-03-16 19:28:51 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-09-26 15:00:00 | price=1909.56000 | pnl=-147.70 | equity=9199.40
+2026-03-16 19:28:51 | INFO     | BacktestEngine            | OPEN BUY | time=2023-09-28 09:00:00 | price=1875.10000 | sl=1859.04000 | tp=1888.48000 | lot=0.10
+2026-03-16 19:28:51 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-09-28 18:00:00 | price=1859.04000 | pnl=-161.30 | equity=9038.10
+2026-03-16 19:28:52 | INFO     | BacktestEngine            | OPEN SELL | time=2023-10-05 16:00:00 | price=1820.49000 | sl=1839.17000 | tp=1799.87000 | lot=0.10
+2026-03-16 19:28:52 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-10-09 01:00:00 | price=1839.17000 | pnl=-187.50 | equity=8850.60
+2026-03-16 19:28:53 | INFO     | BacktestEngine            | OPEN SELL | time=2023-10-11 15:00:00 | price=1872.72000 | sl=1890.42000 | tp=1858.52000 | lot=0.10
+2026-03-16 19:28:53 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-10-13 14:00:00 | price=1890.42000 | pnl=-177.70 | equity=8672.90
+2026-03-16 19:28:55 | INFO     | BacktestEngine            | OPEN BUY | time=2023-10-25 16:00:00 | price=1985.36000 | sl=1950.55000 | tp=1991.83000 | lot=0.10
+2026-03-16 19:28:55 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-10-26 11:00:00 | price=1991.83000 | pnl=64.00 | equity=8736.90
+2026-03-16 19:28:55 | INFO     | BacktestEngine            | OPEN SELL | time=2023-10-26 16:00:00 | price=1978.64000 | sl=2009.26000 | tp=1958.73000 | lot=0.10
+2026-03-16 19:28:55 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-10-27 22:00:00 | price=2009.26000 | pnl=-306.90 | equity=8430.00
+2026-03-16 19:28:56 | INFO     | BacktestEngine            | OPEN SELL | time=2023-10-31 17:00:00 | price=1993.98000 | sl=2025.04000 | tp=1981.46000 | lot=0.10
+2026-03-16 19:28:56 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-10-31 20:00:00 | price=1981.46000 | pnl=124.50 | equity=8554.50
+2026-03-16 19:28:56 | INFO     | BacktestEngine            | OPEN SELL | time=2023-10-31 20:00:00 | price=1984.30000 | sl=2013.53000 | tp=1963.59000 | lot=0.10
+2026-03-16 19:28:57 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-11-07 13:00:00 | price=1963.59000 | pnl=206.40 | equity=8760.90
+2026-03-16 19:28:58 | INFO     | BacktestEngine            | OPEN SELL | time=2023-11-17 14:00:00 | price=1988.50000 | sl=2009.59000 | tp=1975.37000 | lot=0.10
+2026-03-16 19:28:58 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-11-20 01:00:00 | price=1975.37000 | pnl=130.60 | equity=8891.50
+2026-03-16 19:29:00 | INFO     | BacktestEngine            | OPEN SELL | time=2023-12-01 11:00:00 | price=2046.16000 | sl=2067.63000 | tp=2030.60000 | lot=0.10
+2026-03-16 19:29:00 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-12-01 19:00:00 | price=2067.63000 | pnl=-215.40 | equity=8676.10
+2026-03-16 19:29:00 | INFO     | BacktestEngine            | OPEN BUY | time=2023-12-01 19:00:00 | price=2067.55000 | sl=2026.37000 | tp=2081.79000 | lot=0.10
+2026-03-16 19:29:00 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-12-04 01:00:00 | price=2081.79000 | pnl=141.70 | equity=8817.80
+2026-03-16 19:29:01 | INFO     | BacktestEngine            | OPEN SELL | time=2023-12-08 11:00:00 | price=2028.44000 | sl=2050.97000 | tp=2013.11000 | lot=0.10
+2026-03-16 19:29:01 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-12-08 16:00:00 | price=2013.11000 | pnl=152.60 | equity=8970.40
+2026-03-16 19:29:01 | INFO     | BacktestEngine            | OPEN SELL | time=2023-12-08 17:00:00 | price=2008.75000 | sl=2039.50000 | tp=1987.09000 | lot=0.10
+2026-03-16 19:29:01 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-12-11 16:00:00 | price=1987.09000 | pnl=215.90 | equity=9186.30
+2026-03-16 19:29:02 | INFO     | BacktestEngine            | OPEN SELL | time=2023-12-18 20:00:00 | price=2026.00000 | sl=2061.12000 | tp=2014.08000 | lot=0.10
+2026-03-16 19:29:03 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-12-22 13:00:00 | price=2061.12000 | pnl=-351.90 | equity=8834.40
+2026-03-16 19:29:04 | INFO     | BacktestEngine            | OPEN SELL | time=2024-01-02 18:00:00 | price=2065.56000 | sl=2090.61000 | tp=2036.80000 | lot=0.10
+2026-03-16 19:29:04 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-01-03 16:00:00 | price=2036.80000 | pnl=286.90 | equity=9121.30
+2026-03-16 19:29:04 | INFO     | BacktestEngine            | OPEN SELL | time=2024-01-04 17:00:00 | price=2044.60000 | sl=2065.61000 | tp=2020.81000 | lot=0.10
+2026-03-16 19:29:05 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-01-08 13:00:00 | price=2020.81000 | pnl=237.20 | equity=9358.50
+2026-03-16 19:29:05 | INFO     | BacktestEngine            | OPEN SELL | time=2024-01-10 08:00:00 | price=2024.08000 | sl=2049.19000 | tp=2011.10000 | lot=0.10
+2026-03-16 19:29:05 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-01-12 14:00:00 | price=2049.19000 | pnl=-251.80 | equity=9106.70
+2026-03-16 19:29:07 | INFO     | BacktestEngine            | OPEN BUY | time=2024-01-23 08:00:00 | price=2035.03000 | sl=2009.17000 | tp=2044.54000 | lot=0.10
+2026-03-16 19:29:08 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-01-30 16:00:00 | price=2044.54000 | pnl=94.40 | equity=9201.10
+2026-03-16 19:29:08 | INFO     | BacktestEngine            | OPEN BUY | time=2024-02-01 19:00:00 | price=2054.65000 | sl=2022.64000 | tp=2085.83000 | lot=0.10
+2026-03-16 19:29:08 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-02-05 10:00:00 | price=2022.64000 | pnl=-320.80 | equity=8880.30
+2026-03-16 19:29:09 | INFO     | BacktestEngine            | OPEN SELL | time=2024-02-07 17:00:00 | price=2038.08000 | sl=2064.42000 | tp=2027.92000 | lot=0.10
+2026-03-16 19:29:09 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-02-08 13:00:00 | price=2027.92000 | pnl=100.90 | equity=8981.20
+2026-03-16 19:29:09 | INFO     | BacktestEngine            | OPEN SELL | time=2024-02-08 14:00:00 | price=2024.71000 | sl=2051.28000 | tp=2014.29000 | lot=0.10
+2026-03-16 19:29:10 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-02-12 16:00:00 | price=2014.29000 | pnl=103.50 | equity=9084.70
+2026-03-16 19:29:10 | INFO     | BacktestEngine            | OPEN BUY | time=2024-02-13 09:00:00 | price=2025.43000 | sl=2006.71000 | tp=2034.26000 | lot=0.10
+2026-03-16 19:29:10 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-02-13 15:00:00 | price=2006.71000 | pnl=-187.90 | equity=8896.80
+2026-03-16 19:29:10 | INFO     | BacktestEngine            | OPEN BUY | time=2024-02-14 12:00:00 | price=1993.14000 | sl=1970.61000 | tp=2004.71000 | lot=0.10
+2026-03-16 19:29:10 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-02-15 16:00:00 | price=2004.71000 | pnl=115.00 | equity=9011.80
+2026-03-16 19:29:12 | INFO     | BacktestEngine            | OPEN BUY | time=2024-02-28 16:00:00 | price=2032.03000 | sl=2018.21000 | tp=2046.96000 | lot=0.10
+2026-03-16 19:29:12 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-02-29 15:00:00 | price=2046.96000 | pnl=148.60 | equity=9160.40
+2026-03-16 19:29:12 | INFO     | BacktestEngine            | OPEN SELL | time=2024-03-05 09:00:00 | price=2114.21000 | sl=2142.99000 | tp=2099.80000 | lot=0.10
+2026-03-16 19:29:13 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-03-06 16:00:00 | price=2142.99000 | pnl=-288.50 | equity=8871.90
+2026-03-16 19:29:14 | INFO     | BacktestEngine            | OPEN SELL | time=2024-03-19 09:00:00 | price=2155.60000 | sl=2176.51000 | tp=2143.92000 | lot=0.10
+2026-03-16 19:29:15 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-03-20 20:00:00 | price=2176.51000 | pnl=-209.80 | equity=8662.10
+2026-03-16 19:29:16 | INFO     | BacktestEngine            | OPEN SELL | time=2024-03-27 12:00:00 | price=2193.57000 | sl=2220.51000 | tp=2167.21000 | lot=0.10
+2026-03-16 19:29:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-03-28 18:00:00 | price=2220.51000 | pnl=-270.10 | equity=8392.00
+2026-03-16 19:29:17 | INFO     | BacktestEngine            | OPEN BUY | time=2024-04-05 18:00:00 | price=2326.43000 | sl=2264.72000 | tp=2356.74000 | lot=0.10
+2026-03-16 19:29:17 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-04-09 10:00:00 | price=2356.74000 | pnl=302.40 | equity=8694.40
+2026-03-16 19:29:18 | INFO     | BacktestEngine            | OPEN SELL | time=2024-04-11 12:00:00 | price=2330.60000 | sl=2371.09000 | tp=2296.52000 | lot=0.10
+2026-03-16 19:29:18 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-04-11 22:00:00 | price=2371.09000 | pnl=-405.60 | equity=8288.80
+2026-03-16 19:29:18 | INFO     | BacktestEngine            | OPEN SELL | time=2024-04-16 11:00:00 | price=2369.25000 | sl=2421.96000 | tp=2323.42000 | lot=0.10
+2026-03-16 19:29:19 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-04-23 04:00:00 | price=2323.42000 | pnl=457.60 | equity=8746.40
+2026-03-16 19:29:20 | INFO     | BacktestEngine            | OPEN SELL | time=2024-04-25 18:00:00 | price=2330.28000 | sl=2380.81000 | tp=2299.24000 | lot=0.10
+2026-03-16 19:29:20 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-04-30 17:00:00 | price=2299.24000 | pnl=309.70 | equity=9056.10
+2026-03-16 19:29:21 | INFO     | BacktestEngine            | OPEN BUY | time=2024-05-03 16:00:00 | price=2290.49000 | sl=2267.28000 | tp=2331.71000 | lot=0.10
+2026-03-16 19:29:21 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-05-06 16:00:00 | price=2331.71000 | pnl=411.50 | equity=9467.60
+2026-03-16 19:29:21 | INFO     | BacktestEngine            | OPEN SELL | time=2024-05-07 12:00:00 | price=2313.52000 | sl=2347.57000 | tp=2293.22000 | lot=0.10
+2026-03-16 19:29:21 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-05-10 01:00:00 | price=2347.57000 | pnl=-341.20 | equity=9126.40
+2026-03-16 19:29:22 | INFO     | BacktestEngine            | OPEN BUY | time=2024-05-17 10:00:00 | price=2384.08000 | sl=2358.68000 | tp=2404.82000 | lot=0.10
+2026-03-16 19:29:23 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-05-17 16:00:00 | price=2404.82000 | pnl=206.70 | equity=9333.10
+2026-03-16 19:29:23 | INFO     | BacktestEngine            | OPEN SELL | time=2024-05-17 19:00:00 | price=2407.61000 | sl=2446.80000 | tp=2379.44000 | lot=0.10
+2026-03-16 19:29:23 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-05-20 08:00:00 | price=2446.80000 | pnl=-392.60 | equity=8940.50
+2026-03-16 19:29:25 | INFO     | BacktestEngine            | OPEN BUY | time=2024-06-03 18:00:00 | price=2343.05000 | sl=2305.09000 | tp=2368.04000 | lot=0.10
+2026-03-16 19:29:25 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-06-06 04:00:00 | price=2368.04000 | pnl=249.20 | equity=9189.70
+2026-03-16 19:29:26 | INFO     | BacktestEngine            | OPEN SELL | time=2024-06-12 17:00:00 | price=2325.13000 | sl=2365.58000 | tp=2304.23000 | lot=0.10
+2026-03-16 19:29:26 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-06-13 14:00:00 | price=2304.23000 | pnl=208.30 | equity=9398.00
+2026-03-16 19:29:26 | INFO     | BacktestEngine            | OPEN SELL | time=2024-06-13 19:00:00 | price=2299.02000 | sl=2347.19000 | tp=2263.36000 | lot=0.10
+2026-03-16 19:29:27 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-06-20 16:00:00 | price=2347.19000 | pnl=-482.40 | equity=8915.60
+2026-03-16 19:29:27 | INFO     | BacktestEngine            | OPEN SELL | time=2024-06-20 19:00:00 | price=2356.15000 | sl=2391.32000 | tp=2326.60000 | lot=0.10
+2026-03-16 19:29:27 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-06-21 18:00:00 | price=2326.60000 | pnl=294.80 | equity=9210.40
+2026-03-16 19:29:28 | INFO     | BacktestEngine            | OPEN SELL | time=2024-06-25 17:00:00 | price=2326.97000 | sl=2355.72000 | tp=2304.49000 | lot=0.10
+2026-03-16 19:29:28 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-06-26 14:00:00 | price=2304.49000 | pnl=224.10 | equity=9434.50
+2026-03-16 19:29:29 | INFO     | BacktestEngine            | OPEN BUY | time=2024-07-01 14:00:00 | price=2338.41000 | sl=2305.48000 | tp=2351.44000 | lot=0.10
+2026-03-16 19:29:29 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-07-03 15:00:00 | price=2351.44000 | pnl=129.60 | equity=9564.10
+2026-03-16 19:29:30 | INFO     | BacktestEngine            | OPEN SELL | time=2024-07-15 10:00:00 | price=2407.71000 | sl=2430.49000 | tp=2384.38000 | lot=0.10
+2026-03-16 19:29:31 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-07-15 17:00:00 | price=2430.49000 | pnl=-228.50 | equity=9335.60
+2026-03-16 19:29:31 | INFO     | BacktestEngine            | OPEN SELL | time=2024-07-18 10:00:00 | price=2471.73000 | sl=2506.17000 | tp=2446.69000 | lot=0.10
+2026-03-16 19:29:31 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-07-18 22:00:00 | price=2446.69000 | pnl=249.70 | equity=9585.30
+2026-03-16 19:29:33 | INFO     | BacktestEngine            | OPEN BUY | time=2024-07-30 18:00:00 | price=2385.60000 | sl=2362.19000 | tp=2412.27000 | lot=0.10
+2026-03-16 19:29:33 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-07-30 23:00:00 | price=2412.27000 | pnl=266.00 | equity=9851.30
+2026-03-16 19:29:33 | INFO     | BacktestEngine            | OPEN SELL | time=2024-08-05 09:00:00 | price=2428.41000 | sl=2505.21000 | tp=2387.16000 | lot=0.10
+2026-03-16 19:29:33 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-08-05 14:00:00 | price=2387.16000 | pnl=411.80 | equity=10263.10
+2026-03-16 19:29:33 | INFO     | BacktestEngine            | OPEN BUY | time=2024-08-05 17:00:00 | price=2396.92000 | sl=2310.43000 | tp=2456.27000 | lot=0.10
+2026-03-16 19:29:34 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-08-12 16:00:00 | price=2456.27000 | pnl=592.80 | equity=10855.90
+2026-03-16 19:29:35 | INFO     | BacktestEngine            | OPEN BUY | time=2024-08-14 12:00:00 | price=2473.06000 | sl=2442.00000 | tp=2497.23000 | lot=0.10
+2026-03-16 19:29:35 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-08-14 19:00:00 | price=2442.00000 | pnl=-311.30 | equity=10544.60
+2026-03-16 19:29:35 | INFO     | BacktestEngine            | OPEN SELL | time=2024-08-15 16:00:00 | price=2444.28000 | sl=2478.05000 | tp=2414.52000 | lot=0.10
+2026-03-16 19:29:35 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-08-16 15:00:00 | price=2478.05000 | pnl=-338.40 | equity=10206.20
+2026-03-16 19:29:35 | INFO     | BacktestEngine            | OPEN SELL | time=2024-08-20 11:00:00 | price=2519.61000 | sl=2547.74000 | tp=2491.70000 | lot=0.10
+2026-03-16 19:29:36 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-08-22 16:00:00 | price=2491.70000 | pnl=278.40 | equity=10484.60
+2026-03-16 19:29:36 | INFO     | BacktestEngine            | OPEN BUY | time=2024-08-26 11:00:00 | price=2524.48000 | sl=2492.61000 | tp=2541.51000 | lot=0.10
+2026-03-16 19:29:37 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-09-02 05:00:00 | price=2492.61000 | pnl=-319.40 | equity=10165.20
+2026-03-16 19:29:37 | INFO     | BacktestEngine            | OPEN SELL | time=2024-09-03 15:00:00 | price=2493.05000 | sl=2521.28000 | tp=2467.51000 | lot=0.10
+2026-03-16 19:29:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-09-05 15:00:00 | price=2521.28000 | pnl=-283.00 | equity=9882.20
+2026-03-16 19:29:38 | INFO     | BacktestEngine            | OPEN SELL | time=2024-09-05 17:00:00 | price=2508.49000 | sl=2545.95000 | tp=2492.52000 | lot=0.10
+2026-03-16 19:29:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-09-06 19:00:00 | price=2492.52000 | pnl=159.00 | equity=10041.20
+2026-03-16 19:29:39 | INFO     | BacktestEngine            | OPEN BUY | time=2024-09-12 10:00:00 | price=2516.13000 | sl=2491.99000 | tp=2533.78000 | lot=0.10
+2026-03-16 19:29:39 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-09-12 15:00:00 | price=2533.78000 | pnl=175.80 | equity=10217.00
+2026-03-16 19:29:39 | INFO     | BacktestEngine            | OPEN SELL | time=2024-09-12 16:00:00 | price=2545.16000 | sl=2559.49000 | tp=2506.78000 | lot=0.10
+2026-03-16 19:29:39 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-09-12 23:00:00 | price=2559.49000 | pnl=-144.00 | equity=10073.00
+2026-03-16 19:29:39 | INFO     | BacktestEngine            | OPEN SELL | time=2024-09-16 10:00:00 | price=2581.85000 | sl=2612.04000 | tp=2566.94000 | lot=0.10
+2026-03-16 19:29:39 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-09-17 18:00:00 | price=2566.94000 | pnl=148.40 | equity=10221.40
+2026-03-16 19:29:40 | INFO     | BacktestEngine            | OPEN BUY | time=2024-09-18 15:00:00 | price=2576.44000 | sl=2548.28000 | tp=2597.66000 | lot=0.10
+2026-03-16 19:29:40 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-09-18 21:00:00 | price=2597.66000 | pnl=211.50 | equity=10432.90
+2026-03-16 19:29:40 | INFO     | BacktestEngine            | OPEN BUY | time=2024-09-19 09:00:00 | price=2576.06000 | sl=2529.92000 | tp=2607.36000 | lot=0.10
+2026-03-16 19:29:40 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-09-20 10:00:00 | price=2607.36000 | pnl=312.30 | equity=10745.20
+2026-03-16 19:29:40 | INFO     | BacktestEngine            | OPEN BUY | time=2024-09-24 18:00:00 | price=2643.37000 | sl=2607.52000 | tp=2669.42000 | lot=0.10
+2026-03-16 19:29:40 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-09-25 05:00:00 | price=2669.42000 | pnl=259.80 | equity=11005.00
+2026-03-16 19:29:41 | INFO     | BacktestEngine            | OPEN SELL | time=2024-09-27 11:00:00 | price=2662.36000 | sl=2699.85000 | tp=2639.53000 | lot=0.10
+2026-03-16 19:29:41 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-09-30 13:00:00 | price=2639.53000 | pnl=227.60 | equity=11232.60
+2026-03-16 19:29:42 | INFO     | BacktestEngine            | OPEN SELL | time=2024-10-04 16:00:00 | price=2651.68000 | sl=2676.31000 | tp=2611.88000 | lot=0.10
+2026-03-16 19:29:42 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-10-08 18:00:00 | price=2611.88000 | pnl=397.30 | equity=11629.90
+2026-03-16 19:29:43 | INFO     | BacktestEngine            | OPEN SELL | time=2024-10-10 16:00:00 | price=2626.48000 | sl=2661.33000 | tp=2599.23000 | lot=0.10
+2026-03-16 19:29:43 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-10-11 19:00:00 | price=2661.33000 | pnl=-349.20 | equity=11280.70
+2026-03-16 19:29:43 | INFO     | BacktestEngine            | OPEN SELL | time=2024-10-15 09:00:00 | price=2648.42000 | sl=2670.94000 | tp=2621.63000 | lot=0.10
+2026-03-16 19:29:43 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-10-16 09:00:00 | price=2670.94000 | pnl=-225.90 | equity=11054.80
+2026-03-16 19:29:45 | INFO     | BacktestEngine            | OPEN BUY | time=2024-10-28 17:00:00 | price=2740.91000 | sl=2708.49000 | tp=2769.73000 | lot=0.10
+2026-03-16 19:29:45 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-10-29 16:00:00 | price=2769.73000 | pnl=287.50 | equity=11342.30
+2026-03-16 19:29:46 | INFO     | BacktestEngine            | OPEN BUY | time=2024-11-05 11:00:00 | price=2740.14000 | sl=2709.14000 | tp=2766.24000 | lot=0.10
+2026-03-16 19:29:46 | INFO     | BacktestEngine            | CLOSE BUY | exit=2024-11-06 08:00:00 | price=2709.14000 | pnl=-310.70 | equity=11031.60
+2026-03-16 19:29:46 | INFO     | BacktestEngine            | OPEN SELL | time=2024-11-06 09:00:00 | price=2725.46000 | sl=2760.23000 | tp=2667.40000 | lot=0.10
+2026-03-16 19:29:46 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-11-06 15:00:00 | price=2667.40000 | pnl=579.90 | equity=11611.50
+2026-03-16 19:29:47 | INFO     | BacktestEngine            | OPEN SELL | time=2024-11-13 19:00:00 | price=2583.05000 | sl=2631.96000 | tp=2551.91000 | lot=0.10
+2026-03-16 19:29:47 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-11-14 08:00:00 | price=2551.91000 | pnl=310.70 | equity=11922.20
+2026-03-16 19:29:48 | INFO     | BacktestEngine            | OPEN SELL | time=2024-11-15 09:00:00 | price=2563.50000 | sl=2601.09000 | tp=2532.69000 | lot=0.10
+2026-03-16 19:29:48 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-11-18 15:00:00 | price=2601.09000 | pnl=-376.60 | equity=11545.60
+2026-03-16 19:29:50 | INFO     | BacktestEngine            | OPEN SELL | time=2024-12-04 15:00:00 | price=2648.23000 | sl=2669.78000 | tp=2613.88000 | lot=0.10
+2026-03-16 19:29:50 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-12-06 03:00:00 | price=2613.88000 | pnl=342.80 | equity=11888.40
+2026-03-16 19:29:51 | INFO     | BacktestEngine            | OPEN SELL | time=2024-12-06 17:00:00 | price=2637.33000 | sl=2679.02000 | tp=2603.70000 | lot=0.10
+2026-03-16 19:29:51 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-12-10 14:00:00 | price=2679.02000 | pnl=-417.60 | equity=11470.80
+2026-03-16 19:29:52 | INFO     | BacktestEngine            | OPEN SELL | time=2024-12-18 16:00:00 | price=2637.73000 | sl=2671.54000 | tp=2624.95000 | lot=0.10
+2026-03-16 19:29:52 | INFO     | BacktestEngine            | CLOSE SELL | exit=2024-12-18 21:00:00 | price=2624.95000 | pnl=127.10 | equity=11597.90
+2026-03-16 19:29:53 | INFO     | BacktestEngine            | OPEN SELL | time=2024-12-30 11:00:00 | price=2612.53000 | sl=2641.67000 | tp=2591.12000 | lot=0.10
+2026-03-16 19:29:54 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-01-02 12:00:00 | price=2641.67000 | pnl=-292.10 | equity=11305.80
+2026-03-16 19:29:55 | INFO     | BacktestEngine            | OPEN SELL | time=2025-01-13 13:00:00 | price=2675.69000 | sl=2713.56000 | tp=2655.11000 | lot=0.10
+2026-03-16 19:29:56 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-01-16 15:00:00 | price=2713.56000 | pnl=-379.40 | equity=10926.40
+2026-03-16 19:29:57 | INFO     | BacktestEngine            | OPEN SELL | time=2025-01-31 07:00:00 | price=2795.28000 | sl=2824.23000 | tp=2776.32000 | lot=0.10
+2026-03-16 19:29:58 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-02-03 04:00:00 | price=2776.32000 | pnl=188.90 | equity=11115.30
+2026-03-16 19:29:58 | INFO     | BacktestEngine            | OPEN SELL | time=2025-02-03 18:00:00 | price=2813.95000 | sl=2866.62000 | tp=2780.95000 | lot=0.10
+2026-03-16 19:29:58 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-02-05 10:00:00 | price=2866.62000 | pnl=-527.40 | equity=10587.90
+2026-03-16 19:29:59 | INFO     | BacktestEngine            | OPEN SELL | time=2025-02-07 20:00:00 | price=2860.95000 | sl=2909.22000 | tp=2823.66000 | lot=0.10
+2026-03-16 19:29:59 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-02-10 15:00:00 | price=2909.22000 | pnl=-483.40 | equity=10104.50
+2026-03-16 19:30:01 | INFO     | BacktestEngine            | OPEN SELL | time=2025-02-24 18:00:00 | price=2943.21000 | sl=2985.11000 | tp=2900.63000 | lot=0.10
+2026-03-16 19:30:01 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-02-25 17:00:00 | price=2900.63000 | pnl=425.10 | equity=10529.60
+2026-03-16 19:30:01 | INFO     | BacktestEngine            | OPEN BUY | time=2025-02-25 20:00:00 | price=2909.72000 | sl=2849.63000 | tp=2951.05000 | lot=0.10
+2026-03-16 19:30:01 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-02-28 15:00:00 | price=2849.63000 | pnl=-601.60 | equity=9928.00
+2026-03-16 19:30:02 | INFO     | BacktestEngine            | OPEN SELL | time=2025-03-04 13:00:00 | price=2919.81000 | sl=2961.88000 | tp=2879.96000 | lot=0.10
+2026-03-16 19:30:03 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-03-13 16:00:00 | price=2961.88000 | pnl=-421.40 | equity=9506.60
+2026-03-16 19:30:03 | INFO     | BacktestEngine            | OPEN SELL | time=2025-03-14 13:00:00 | price=2993.21000 | sl=3036.19000 | tp=2962.02000 | lot=0.10
+2026-03-16 19:30:04 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-03-18 15:00:00 | price=3036.19000 | pnl=-430.50 | equity=9076.10
+2026-03-16 19:30:04 | INFO     | BacktestEngine            | OPEN SELL | time=2025-03-19 09:00:00 | price=3035.59000 | sl=3076.16000 | tp=3017.91000 | lot=0.10
+2026-03-16 19:30:04 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-03-21 15:00:00 | price=3017.91000 | pnl=176.10 | equity=9252.20
+2026-03-16 19:30:05 | INFO     | BacktestEngine            | OPEN BUY | time=2025-03-26 10:00:00 | price=3024.20000 | sl=2997.49000 | tp=3053.88000 | lot=0.10
+2026-03-16 19:30:05 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-03-27 12:00:00 | price=3053.88000 | pnl=296.10 | equity=9548.30
+2026-03-16 19:30:05 | INFO     | BacktestEngine            | OPEN SELL | time=2025-04-01 08:00:00 | price=3131.70000 | sl=3190.24000 | tp=3111.22000 | lot=0.10
+2026-03-16 19:30:05 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-04-01 19:00:00 | price=3111.22000 | pnl=204.10 | equity=9752.40
+2026-03-16 19:30:05 | INFO     | BacktestEngine            | OPEN SELL | time=2025-04-01 19:00:00 | price=3106.36000 | sl=3167.18000 | tp=3073.66000 | lot=0.10
+2026-03-16 19:30:06 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-04-03 02:00:00 | price=3167.18000 | pnl=-608.90 | equity=9143.50
+2026-03-16 19:30:06 | INFO     | BacktestEngine            | OPEN BUY | time=2025-04-03 17:00:00 | price=3129.09000 | sl=2995.20000 | tp=3155.57000 | lot=0.10
+2026-03-16 19:30:06 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-04-07 02:00:00 | price=2995.20000 | pnl=-1339.60 | equity=7803.90
+2026-03-16 19:30:06 | INFO     | BacktestEngine            | OPEN SELL | time=2025-04-08 20:00:00 | price=2984.89000 | sl=3063.05000 | tp=2927.47000 | lot=0.10
+2026-03-16 19:30:07 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-04-09 14:00:00 | price=3063.05000 | pnl=-782.30 | equity=7021.60
+2026-03-16 19:30:08 | INFO     | BacktestEngine            | OPEN SELL | time=2025-04-21 08:00:00 | price=3385.15000 | sl=3456.52000 | tp=3315.45000 | lot=0.10
+2026-03-16 19:30:08 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-04-22 05:00:00 | price=3456.52000 | pnl=-714.40 | equity=6307.20
+2026-03-16 19:30:08 | INFO     | BacktestEngine            | OPEN SELL | time=2025-04-25 09:00:00 | price=3304.12000 | sl=3393.30000 | tp=3217.88000 | lot=0.10
+2026-03-16 19:30:09 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-05-01 12:00:00 | price=3217.88000 | pnl=861.70 | equity=7168.90
+2026-03-16 19:30:09 | INFO     | BacktestEngine            | OPEN BUY | time=2025-05-01 12:00:00 | price=3218.87000 | sl=3161.03000 | tp=3291.30000 | lot=0.10
+2026-03-16 19:30:10 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-05-05 12:00:00 | price=3291.30000 | pnl=723.60 | equity=7892.50
+2026-03-16 19:30:12 | INFO     | BacktestEngine            | OPEN SELL | time=2025-05-27 08:00:00 | price=3323.15000 | sl=3374.76000 | tp=3298.72000 | lot=0.10
+2026-03-16 19:30:12 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-05-27 10:00:00 | price=3298.72000 | pnl=243.60 | equity=8136.10
+2026-03-16 19:30:13 | INFO     | BacktestEngine            | OPEN SELL | time=2025-06-02 13:00:00 | price=3348.35000 | sl=3408.95000 | tp=3302.82000 | lot=0.10
+2026-03-16 19:30:14 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-06-09 03:00:00 | price=3302.82000 | pnl=454.60 | equity=8590.70
+2026-03-16 19:30:15 | INFO     | BacktestEngine            | OPEN SELL | time=2025-06-11 16:00:00 | price=3329.66000 | sl=3394.22000 | tp=3293.72000 | lot=0.10
+2026-03-16 19:30:15 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-06-12 16:00:00 | price=3394.22000 | pnl=-646.30 | equity=7944.40
+2026-03-16 19:30:16 | INFO     | BacktestEngine            | OPEN SELL | time=2025-06-23 09:00:00 | price=3357.30000 | sl=3411.02000 | tp=3316.37000 | lot=0.10
+2026-03-16 19:30:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-06-24 09:00:00 | price=3316.37000 | pnl=408.60 | equity=8353.00
+2026-03-16 19:30:17 | INFO     | BacktestEngine            | OPEN SELL | time=2025-07-03 16:00:00 | price=3331.73000 | sl=3380.99000 | tp=3282.20000 | lot=0.10
+2026-03-16 19:30:20 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-07-21 15:00:00 | price=3380.99000 | pnl=-493.30 | equity=7859.70
+2026-03-16 19:30:21 | INFO     | BacktestEngine            | OPEN BUY | time=2025-07-28 18:00:00 | price=3314.98000 | sl=3258.73000 | tp=3344.23000 | lot=0.10
+2026-03-16 19:30:22 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-08-01 15:00:00 | price=3344.23000 | pnl=291.80 | equity=8151.50
+2026-03-16 19:30:22 | INFO     | BacktestEngine            | OPEN SELL | time=2025-08-04 18:00:00 | price=3374.10000 | sl=3425.62000 | tp=3335.78000 | lot=0.10
+2026-03-16 19:30:23 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-08-12 17:00:00 | price=3335.78000 | pnl=382.50 | equity=8534.00
+2026-03-16 19:30:23 | INFO     | BacktestEngine            | OPEN SELL | time=2025-08-14 11:00:00 | price=3345.99000 | sl=3389.00000 | tp=3314.67000 | lot=0.10
+2026-03-16 19:30:24 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-08-20 02:00:00 | price=3314.67000 | pnl=312.50 | equity=8846.50
+2026-03-16 19:30:24 | INFO     | BacktestEngine            | OPEN BUY | time=2025-08-22 18:00:00 | price=3368.14000 | sl=3328.07000 | tp=3407.48000 | lot=0.10
+2026-03-16 19:30:25 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-08-28 14:00:00 | price=3407.48000 | pnl=392.70 | equity=9239.20
+2026-03-16 19:30:25 | INFO     | BacktestEngine            | OPEN BUY | time=2025-08-29 17:00:00 | price=3441.19000 | sl=3393.37000 | tp=3454.02000 | lot=0.10
+2026-03-16 19:30:25 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-09-01 04:00:00 | price=3454.02000 | pnl=127.60 | equity=9366.80
+2026-03-16 19:30:26 | INFO     | BacktestEngine            | OPEN SELL | time=2025-09-09 07:00:00 | price=3654.68000 | sl=3694.31000 | tp=3610.32000 | lot=0.10
+2026-03-16 19:30:27 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-09-16 11:00:00 | price=3694.31000 | pnl=-397.00 | equity=8969.80
+2026-03-16 19:30:28 | INFO     | BacktestEngine            | OPEN SELL | time=2025-09-22 16:00:00 | price=3722.08000 | sl=3771.97000 | tp=3684.36000 | lot=0.10
+2026-03-16 19:30:28 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-09-23 11:00:00 | price=3771.97000 | pnl=-499.60 | equity=8470.20
+2026-03-16 19:30:29 | INFO     | BacktestEngine            | OPEN SELL | time=2025-09-23 18:00:00 | price=3779.05000 | sl=3832.48000 | tp=3730.16000 | lot=0.10
+2026-03-16 19:30:29 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-09-24 21:00:00 | price=3730.16000 | pnl=488.20 | equity=8958.40
+2026-03-16 19:30:29 | INFO     | BacktestEngine            | OPEN SELL | time=2025-09-25 16:00:00 | price=3733.51000 | sl=3801.53000 | tp=3691.42000 | lot=0.10
+2026-03-16 19:30:29 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-09-29 07:00:00 | price=3801.53000 | pnl=-680.90 | equity=8277.50
+2026-03-16 19:30:29 | INFO     | BacktestEngine            | OPEN SELL | time=2025-09-30 10:00:00 | price=3843.53000 | sl=3915.72000 | tp=3811.10000 | lot=0.10
+2026-03-16 19:30:29 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-09-30 11:00:00 | price=3811.10000 | pnl=323.60 | equity=8601.10
+2026-03-16 19:30:30 | INFO     | BacktestEngine            | OPEN BUY | time=2025-10-02 12:00:00 | price=3879.35000 | sl=3815.10000 | tp=3918.91000 | lot=0.10
+2026-03-16 19:30:30 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-10-06 02:00:00 | price=3918.91000 | pnl=394.90 | equity=8996.00
+2026-03-16 19:30:31 | INFO     | BacktestEngine            | OPEN SELL | time=2025-10-14 09:00:00 | price=4112.00000 | sl=4222.61000 | tp=4042.53000 | lot=0.10
+2026-03-16 19:30:32 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-10-16 03:00:00 | price=4222.61000 | pnl=-1106.80 | equity=7889.20
+2026-03-16 19:30:33 | INFO     | BacktestEngine            | OPEN SELL | time=2025-10-30 17:00:00 | price=4001.48000 | sl=4131.09000 | tp=3891.50000 | lot=0.10
+2026-03-16 19:30:35 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-11-11 02:00:00 | price=4131.09000 | pnl=-1296.80 | equity=6592.40
+2026-03-16 19:30:35 | INFO     | BacktestEngine            | OPEN BUY | time=2025-11-12 17:00:00 | price=4181.51000 | sl=4069.85000 | tp=4186.96000 | lot=0.10
+2026-03-16 19:30:35 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-11-12 18:00:00 | price=4186.96000 | pnl=53.80 | equity=6646.20
+2026-03-16 19:30:35 | INFO     | BacktestEngine            | OPEN SELL | time=2025-11-12 18:00:00 | price=4196.16000 | sl=4261.99000 | tp=4119.71000 | lot=0.10
+2026-03-16 19:30:36 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-11-14 14:00:00 | price=4119.71000 | pnl=763.80 | equity=7410.00
+2026-03-16 19:30:37 | INFO     | BacktestEngine            | OPEN BUY | time=2025-11-21 16:00:00 | price=4071.93000 | sl=3970.09000 | tp=4163.99000 | lot=0.10
+2026-03-16 19:30:37 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-11-26 04:00:00 | price=4163.99000 | pnl=919.90 | equity=8329.90
+2026-03-16 19:30:37 | INFO     | BacktestEngine            | OPEN SELL | time=2025-11-27 07:00:00 | price=4146.70000 | sl=4213.13000 | tp=4103.88000 | lot=0.10
+2026-03-16 19:30:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-11-28 19:00:00 | price=4213.13000 | pnl=-665.00 | equity=7664.90
+2026-03-16 19:30:38 | INFO     | BacktestEngine            | OPEN SELL | time=2025-12-04 12:00:00 | price=4196.99000 | sl=4271.87000 | tp=4145.18000 | lot=0.10
+2026-03-16 19:30:39 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-12-11 18:00:00 | price=4271.87000 | pnl=-749.50 | equity=6915.40
+2026-03-16 19:30:41 | INFO     | BacktestEngine            | OPEN BUY | time=2025-12-19 19:00:00 | price=4353.62000 | sl=4286.28000 | tp=4397.55000 | lot=0.10
+2026-03-16 19:30:41 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-12-22 06:00:00 | price=4397.55000 | pnl=438.60 | equity=7354.00
+2026-03-16 19:30:41 | INFO     | BacktestEngine            | OPEN SELL | time=2025-12-24 17:00:00 | price=4458.21000 | sl=4550.93000 | tp=4398.74000 | lot=0.10
+2026-03-16 19:30:42 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-12-29 16:00:00 | price=4398.74000 | pnl=594.00 | equity=7948.00
+2026-03-16 19:30:44 | INFO     | BacktestEngine            | OPEN SELL | time=2026-01-20 13:00:00 | price=4732.83000 | sl=4798.78000 | tp=4671.69000 | lot=0.10
+2026-03-16 19:30:44 | INFO     | BacktestEngine            | CLOSE SELL | exit=2026-01-21 03:00:00 | price=4798.78000 | pnl=-660.20 | equity=7287.80
+2026-03-16 19:30:47 | INFO     | BacktestEngine            | OPEN BUY | time=2026-02-11 13:00:00 | price=5111.99000 | sl=4968.75000 | tp=5189.70000 | lot=0.10
+2026-03-16 19:30:48 | INFO     | BacktestEngine            | CLOSE BUY | exit=2026-02-12 18:00:00 | price=4968.75000 | pnl=-1433.10 | equity=5854.70
+2026-03-16 19:30:48 | INFO     | BacktestEngine            | OPEN SELL | time=2026-02-12 19:00:00 | price=4940.64000 | sl=5142.55000 | tp=4807.10000 | lot=0.10
+2026-03-16 19:30:49 | INFO     | BacktestEngine            | CLOSE SELL | exit=2026-02-23 01:00:00 | price=5142.55000 | pnl=-2019.80 | equity=3834.90
+2026-03-16 19:30:50 | INFO     | BacktestEngine            | OPEN SELL | time=2026-02-26 13:00:00 | price=5164.35000 | sl=5276.03000 | tp=5090.52000 | lot=0.10
+2026-03-16 19:30:50 | INFO     | BacktestEngine            | CLOSE SELL | exit=2026-02-27 23:00:00 | price=5276.03000 | pnl=-1117.50 | equity=2717.40
+2026-03-16 19:30:50 | INFO     | BacktestEngine            | OPEN BUY | time=2026-03-03 15:00:00 | price=5156.73000 | sl=4968.18000 | tp=5426.34000 | lot=0.10
+2026-03-16 19:30:52 | INFO     | BacktestEngine            | CLOSE BUY | exit=2026-03-16 01:00:00 | price=4968.18000 | pnl=-1886.20 | equity=831.20
+2026-03-16 19:38:56 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 19:38:56 | INFO     | __main__                  | Loaded 63954 bars from c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\XAUUSD_H1.csv | 2010-02-22 00:00 → 2026-03-16 04:00
+2026-03-16 19:38:58 | INFO     | BacktestEngine            | OPEN BUY | time=2015-03-10 07:00:00 | price=1160.93000 | sl=1145.72000 | tp=1173.37000 | lot=0.10
+2026-03-16 19:39:23 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 19:39:23 | INFO     | __main__                  | Loaded 63954 bars from c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\XAUUSD_H1.csv | 2010-02-22 00:00 → 2026-03-16 04:00
+2026-03-16 19:39:25 | INFO     | BacktestEngine            | OPEN BUY | time=2015-03-10 07:00:00 | price=1160.93000 | sl=1145.72000 | tp=1173.37000 | lot=0.10
+2026-03-16 19:39:27 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-03-17 14:00:00 | price=1145.72000 | pnl=-152.80 | equity=9847.20
+2026-03-16 19:39:28 | INFO     | BacktestEngine            | OPEN SELL | time=2015-03-25 07:00:00 | price=1188.42000 | sl=1206.51000 | tp=1178.44000 | lot=0.10
+2026-03-16 19:39:28 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-03-26 08:00:00 | price=1206.51000 | pnl=-181.60 | equity=9665.60
+2026-03-16 19:39:29 | INFO     | BacktestEngine            | OPEN BUY | time=2015-04-01 15:00:00 | price=1197.58000 | sl=1175.26000 | tp=1205.45000 | lot=0.10
+2026-03-16 19:39:29 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-04-01 18:00:00 | price=1205.45000 | pnl=78.00 | equity=9743.60
+2026-03-16 20:02:43 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 20:02:43 | ERROR    | __main__                  | CSV file not found: c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\EURUSD_H1.csv
+2026-03-16 20:03:22 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 20:03:22 | INFO     | __main__                  | Loaded 1673 bars from c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\EURUSD_H1.csv | 2025-12-05 02:00 → 2026-03-16 19:00
+2026-03-16 20:03:23 | INFO     | BacktestEngine            | OPEN SELL | time=2025-12-18 12:00:00 | price=0.94247 | sl=4.93000 | tp=1.17000 | lot=0.10
+2026-03-16 20:03:25 | INFO     | BacktestEngine            | CLOSE SELL | exit=2026-01-05 01:00:00 | price=1.17000 | pnl=-2.98 | equity=9997.02
+2026-03-16 20:03:28 | INFO     | BacktestEngine            | OPEN BUY | time=2026-01-23 19:00:00 | price=1.40942 | sl=-2.58000 | tp=1.18000 | lot=0.10
+2026-03-16 20:03:28 | INFO     | BacktestEngine            | CLOSE BUY | exit=2026-01-23 21:00:00 | price=1.18000 | pnl=-2.99 | equity=9994.03
+2026-03-16 20:03:29 | INFO     | BacktestEngine            | OPEN SELL | time=2026-01-29 12:00:00 | price=0.96421 | sl=4.96000 | tp=1.19000 | lot=0.10
+2026-03-16 20:03:29 | INFO     | BacktestEngine            | CLOSE SELL | exit=2026-01-30 04:00:00 | price=1.19000 | pnl=-2.96 | equity=9991.07
+2026-03-16 20:03:30 | INFO     | BacktestEngine            | OPEN SELL | time=2026-02-04 18:00:00 | price=0.95024 | sl=4.94000 | tp=1.17000 | lot=0.10
+2026-03-16 20:03:35 | INFO     | BacktestEngine            | CLOSE SELL | exit=2026-03-02 10:00:00 | price=1.17000 | pnl=-2.90 | equity=9988.18
+2026-03-16 20:03:35 | INFO     | BacktestEngine            | OPEN SELL | time=2026-03-05 08:00:00 | price=0.93067 | sl=4.92000 | tp=1.15000 | lot=0.10
+2026-03-16 20:03:37 | INFO     | BacktestEngine            | CLOSE SELL | exit=2026-03-13 06:00:00 | price=1.15000 | pnl=-2.89 | equity=9985.28
+2026-03-16 20:12:51 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 20:12:51 | INFO     | __main__                  | Loaded 63356 bars from c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\EURUSD_H1.csv | 2015-01-02 09:00 → 2026-03-16 20:00
+2026-03-16 20:12:54 | INFO     | BacktestEngine            | OPEN BUY | time=2015-01-21 16:00:00 | price=1.39392 | sl=-2.60000 | tp=1.17000 | lot=0.10
+2026-03-16 20:13:28 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-08-24 16:00:00 | price=1.17000 | pnl=-2.94 | equity=9997.06
+2026-03-16 20:13:28 | INFO     | BacktestEngine            | OPEN SELL | time=2015-08-26 14:00:00 | price=0.91084 | sl=4.91000 | tp=1.13000 | lot=0.10
+2026-03-16 20:13:28 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-08-26 23:00:00 | price=1.13000 | pnl=-2.89 | equity=9994.17
+2026-03-16 20:13:29 | INFO     | BacktestEngine            | OPEN BUY | time=2015-08-28 20:00:00 | price=1.35048 | sl=-2.65000 | tp=1.13000 | lot=0.10
+2026-03-16 20:13:29 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-09-01 10:00:00 | price=1.13000 | pnl=-2.90 | equity=9991.26
+2026-03-16 20:13:30 | INFO     | BacktestEngine            | OPEN BUY | time=2015-09-08 18:00:00 | price=1.34802 | sl=-2.64000 | tp=1.13000 | lot=0.10
+2026-03-16 20:13:31 | INFO     | BacktestEngine            | CLOSE BUY | exit=2015-09-11 02:00:00 | price=1.13000 | pnl=-2.88 | equity=9988.38
+2026-03-16 20:13:32 | INFO     | BacktestEngine            | OPEN SELL | time=2015-09-16 11:00:00 | price=0.89528 | sl=4.88000 | tp=1.12000 | lot=0.10
+2026-03-16 20:13:33 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-09-21 17:00:00 | price=1.12000 | pnl=-2.95 | equity=9985.44
+2026-03-16 20:13:34 | INFO     | BacktestEngine            | OPEN SELL | time=2015-09-28 16:00:00 | price=0.88665 | sl=4.88000 | tp=1.11000 | lot=0.10
+2026-03-16 20:13:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2015-10-22 23:00:00 | price=1.11000 | pnl=-2.93 | equity=9982.50
+2026-03-16 20:13:39 | INFO     | BacktestEngine            | OPEN BUY | time=2015-10-28 10:00:00 | price=1.33442 | sl=-2.65000 | tp=1.11000 | lot=0.10
+2026-03-16 20:13:53 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-02-03 20:00:00 | price=1.11000 | pnl=-2.94 | equity=9979.56
+2026-03-16 20:13:54 | INFO     | BacktestEngine            | OPEN BUY | time=2016-02-08 19:00:00 | price=1.34645 | sl=-2.65000 | tp=1.13000 | lot=0.10
+2026-03-16 20:13:54 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-02-09 17:00:00 | price=1.13000 | pnl=-2.86 | equity=9976.69
+2026-03-16 20:13:54 | INFO     | BacktestEngine            | OPEN SELL | time=2016-02-09 17:00:00 | price=0.90092 | sl=4.89000 | tp=1.12000 | lot=0.10
+2026-03-16 20:13:54 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-02-10 17:00:00 | price=1.12000 | pnl=-2.89 | equity=9973.80
+2026-03-16 20:13:56 | INFO     | BacktestEngine            | OPEN SELL | time=2016-02-18 10:00:00 | price=0.88336 | sl=4.87000 | tp=1.11000 | lot=0.10
+2026-03-16 20:13:56 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-02-18 13:00:00 | price=1.11000 | pnl=-2.97 | equity=9970.84
+2026-03-16 20:13:57 | INFO     | BacktestEngine            | OPEN SELL | time=2016-02-22 10:00:00 | price=0.87885 | sl=4.87000 | tp=1.10000 | lot=0.10
+2026-03-16 20:13:57 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-02-23 11:00:00 | price=1.10000 | pnl=-2.91 | equity=9967.93
+2026-03-16 20:13:59 | INFO     | BacktestEngine            | OPEN SELL | time=2016-03-04 18:00:00 | price=0.87095 | sl=4.86000 | tp=1.09000 | lot=0.10
+2026-03-16 20:14:00 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-03-10 14:00:00 | price=1.09000 | pnl=-2.89 | equity=9965.04
+2026-03-16 20:14:00 | INFO     | BacktestEngine            | OPEN SELL | time=2016-03-14 11:00:00 | price=0.88246 | sl=4.87000 | tp=1.10000 | lot=0.10
+2026-03-16 20:14:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-06-24 05:00:00 | price=1.10000 | pnl=-2.88 | equity=9962.16
+2026-03-16 20:14:17 | INFO     | BacktestEngine            | OPEN BUY | time=2016-06-29 11:00:00 | price=1.33642 | sl=-2.66000 | tp=1.12000 | lot=0.10
+2026-03-16 20:14:22 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-08-02 11:00:00 | price=1.12000 | pnl=-2.86 | equity=9959.30
+2026-03-16 20:14:23 | INFO     | BacktestEngine            | OPEN BUY | time=2016-08-05 19:00:00 | price=1.33791 | sl=-2.65000 | tp=1.11000 | lot=0.10
+2026-03-16 20:14:23 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-08-05 21:00:00 | price=1.11000 | pnl=-2.98 | equity=9956.32
+2026-03-16 20:14:24 | INFO     | BacktestEngine            | OPEN BUY | time=2016-08-09 18:00:00 | price=1.34099 | sl=-2.65000 | tp=1.11000 | lot=0.10
+2026-03-16 20:14:24 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-08-09 19:00:00 | price=1.11000 | pnl=-3.01 | equity=9953.31
+2026-03-16 20:14:24 | INFO     | BacktestEngine            | OPEN BUY | time=2016-08-09 19:00:00 | price=1.34091 | sl=-2.64000 | tp=1.12000 | lot=0.10
+2026-03-16 20:14:25 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-08-12 16:00:00 | price=1.12000 | pnl=-2.91 | equity=9950.40
+2026-03-16 20:14:25 | INFO     | BacktestEngine            | OPEN BUY | time=2016-08-12 17:00:00 | price=1.34951 | sl=-2.64000 | tp=1.13000 | lot=0.10
+2026-03-16 20:14:25 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-08-16 16:00:00 | price=1.13000 | pnl=-2.90 | equity=9947.50
+2026-03-16 20:14:27 | INFO     | BacktestEngine            | OPEN SELL | time=2016-09-01 12:00:00 | price=0.88496 | sl=4.87000 | tp=1.11000 | lot=0.10
+2026-03-16 20:14:33 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-10-11 14:00:00 | price=1.11000 | pnl=-2.95 | equity=9944.55
+2026-03-16 20:14:33 | INFO     | BacktestEngine            | OPEN BUY | time=2016-10-12 11:00:00 | price=1.33564 | sl=-2.65000 | tp=1.11000 | lot=0.10
+2026-03-16 20:14:37 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-11-02 14:00:00 | price=1.11000 | pnl=-2.96 | equity=9941.60
+2026-03-16 20:14:38 | INFO     | BacktestEngine            | OPEN SELL | time=2016-11-04 15:00:00 | price=0.87986 | sl=4.87000 | tp=1.10000 | lot=0.10
+2026-03-16 20:14:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-11-09 15:00:00 | price=1.10000 | pnl=-2.90 | equity=9938.69
+2026-03-16 20:14:39 | INFO     | BacktestEngine            | OPEN SELL | time=2016-11-16 10:00:00 | price=0.84153 | sl=4.83000 | tp=1.06000 | lot=0.10
+2026-03-16 20:14:40 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-11-18 03:00:00 | price=1.06000 | pnl=-2.88 | equity=9935.81
+2026-03-16 20:14:40 | INFO     | BacktestEngine            | OPEN BUY | time=2016-11-22 12:00:00 | price=1.29309 | sl=-2.69000 | tp=1.07000 | lot=0.10
+2026-03-16 20:14:42 | INFO     | BacktestEngine            | CLOSE BUY | exit=2016-12-05 13:00:00 | price=1.07000 | pnl=-2.93 | equity=9932.88
+2026-03-16 20:14:43 | INFO     | BacktestEngine            | OPEN SELL | time=2016-12-09 14:00:00 | price=0.82518 | sl=4.82000 | tp=1.05000 | lot=0.10
+2026-03-16 20:14:44 | INFO     | BacktestEngine            | CLOSE SELL | exit=2016-12-14 22:00:00 | price=1.05000 | pnl=-2.95 | equity=9929.93
+2026-03-16 20:14:46 | INFO     | BacktestEngine            | OPEN SELL | time=2017-01-03 10:00:00 | price=0.81339 | sl=4.80000 | tp=1.04000 | lot=0.10
+2026-03-16 20:14:46 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-01-03 11:00:00 | price=1.04000 | pnl=-2.97 | equity=9926.96
+2026-03-16 20:14:47 | INFO     | BacktestEngine            | OPEN BUY | time=2017-01-09 18:00:00 | price=1.28737 | sl=-2.70000 | tp=1.06000 | lot=0.10
+2026-03-16 20:14:47 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-01-10 04:00:00 | price=1.06000 | pnl=-2.97 | equity=9923.99
+2026-03-16 20:14:49 | INFO     | BacktestEngine            | OPEN SELL | time=2017-01-19 16:00:00 | price=0.82942 | sl=4.82000 | tp=1.05000 | lot=0.10
+2026-03-16 20:14:54 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-02-22 10:00:00 | price=1.05000 | pnl=-2.91 | equity=9921.09
+2026-03-16 20:14:54 | INFO     | BacktestEngine            | OPEN BUY | time=2017-02-22 12:00:00 | price=1.28055 | sl=-2.71000 | tp=1.06000 | lot=0.10
+2026-03-16 20:14:54 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-02-24 10:00:00 | price=1.06000 | pnl=-2.91 | equity=9918.18
+2026-03-16 20:14:54 | INFO     | BacktestEngine            | OPEN BUY | time=2017-02-27 10:00:00 | price=1.28810 | sl=-2.70000 | tp=1.06000 | lot=0.10
+2026-03-16 20:14:54 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-02-27 15:00:00 | price=1.06000 | pnl=-2.98 | equity=9915.20
+2026-03-16 20:14:55 | INFO     | BacktestEngine            | OPEN BUY | time=2017-02-28 18:00:00 | price=1.29191 | sl=-2.70000 | tp=1.07000 | lot=0.10
+2026-03-16 20:14:56 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-03-13 05:00:00 | price=1.07000 | pnl=-2.92 | equity=9912.28
+2026-03-16 20:14:58 | INFO     | BacktestEngine            | OPEN BUY | time=2017-03-22 16:00:00 | price=1.31175 | sl=-2.68000 | tp=1.09000 | lot=0.10
+2026-03-16 20:14:59 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-03-27 16:00:00 | price=1.09000 | pnl=-2.92 | equity=9909.36
+2026-03-16 20:15:00 | INFO     | BacktestEngine            | OPEN SELL | time=2017-04-05 15:00:00 | price=0.83668 | sl=4.82000 | tp=1.06000 | lot=0.10
+2026-03-16 20:15:00 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-04-07 19:00:00 | price=1.06000 | pnl=-2.93 | equity=9906.43
+2026-03-16 20:15:01 | INFO     | BacktestEngine            | OPEN BUY | time=2017-04-10 18:00:00 | price=1.29054 | sl=-2.70000 | tp=1.06000 | lot=0.10
+2026-03-16 20:15:01 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-04-10 19:00:00 | price=1.06000 | pnl=-3.01 | equity=9903.42
+2026-03-16 20:15:01 | INFO     | BacktestEngine            | OPEN BUY | time=2017-04-11 12:00:00 | price=1.29058 | sl=-2.69000 | tp=1.06000 | lot=0.10
+2026-03-16 20:15:01 | INFO     | BacktestEngine            | CLOSE BUY | exit=2017-04-11 13:00:00 | price=1.06000 | pnl=-3.01 | equity=9900.42
+2026-03-16 20:15:02 | INFO     | BacktestEngine            | OPEN SELL | time=2017-04-19 13:00:00 | price=0.84215 | sl=4.83000 | tp=1.07000 | lot=0.10
+2026-03-16 20:15:02 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-04-19 19:00:00 | price=1.07000 | pnl=-2.98 | equity=9897.44
+2026-03-16 20:15:02 | INFO     | BacktestEngine            | OPEN SELL | time=2017-04-21 12:00:00 | price=0.84185 | sl=4.83000 | tp=1.07000 | lot=0.10
+2026-03-16 20:15:02 | INFO     | BacktestEngine            | CLOSE SELL | exit=2017-04-21 13:00:00 | price=1.07000 | pnl=-2.98 | equity=9894.46
+2026-03-16 20:15:03 | INFO     | BacktestEngine            | OPEN SELL | time=2017-04-27 16:00:00 | price=0.85953 | sl=4.85000 | tp=1.08000 | lot=0.10
+2026-03-16 20:18:51 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-02-18 15:00:00 | price=1.08000 | pnl=-2.90 | equity=9891.55
+2026-03-16 20:18:52 | INFO     | BacktestEngine            | OPEN BUY | time=2020-02-21 11:00:00 | price=1.31077 | sl=-2.67000 | tp=1.08000 | lot=0.10
+2026-03-16 20:18:52 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-02-21 12:00:00 | price=1.08000 | pnl=-3.01 | equity=9888.55
+2026-03-16 20:18:52 | INFO     | BacktestEngine            | OPEN BUY | time=2020-02-21 12:00:00 | price=1.30977 | sl=-2.67000 | tp=1.08000 | lot=0.10
+2026-03-16 20:18:52 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-02-21 13:00:00 | price=1.08000 | pnl=-3.00 | equity=9885.55
+2026-03-16 20:18:52 | INFO     | BacktestEngine            | OPEN SELL | time=2020-02-21 17:00:00 | price=0.85508 | sl=4.84000 | tp=1.08000 | lot=0.10
+2026-03-16 20:18:59 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-03-19 12:00:00 | price=1.08000 | pnl=-2.95 | equity=9882.60
+2026-03-16 20:18:59 | INFO     | BacktestEngine            | OPEN BUY | time=2020-03-19 15:00:00 | price=1.31026 | sl=-2.70000 | tp=1.10000 | lot=0.10
+2026-03-16 20:19:01 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-03-26 18:00:00 | price=1.10000 | pnl=-2.80 | equity=9879.80
+2026-03-16 20:19:01 | INFO     | BacktestEngine            | OPEN SELL | time=2020-03-26 20:00:00 | price=0.87418 | sl=4.87000 | tp=1.09000 | lot=0.10
+2026-03-16 20:19:03 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-04-02 15:00:00 | price=1.09000 | pnl=-2.86 | equity=9876.94
+2026-03-16 20:19:03 | INFO     | BacktestEngine            | OPEN BUY | time=2020-04-03 17:00:00 | price=1.30965 | sl=-2.68000 | tp=1.09000 | lot=0.10
+2026-03-16 20:19:04 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-04-07 15:00:00 | price=1.09000 | pnl=-2.90 | equity=9874.04
+2026-03-16 20:19:04 | INFO     | BacktestEngine            | OPEN BUY | time=2020-04-09 13:00:00 | price=1.31590 | sl=-2.67000 | tp=1.09000 | lot=0.10
+2026-03-16 20:19:04 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-04-09 15:00:00 | price=1.09000 | pnl=-2.96 | equity=9871.08
+2026-03-16 20:19:04 | INFO     | BacktestEngine            | OPEN SELL | time=2020-04-09 16:00:00 | price=0.86308 | sl=4.85000 | tp=1.08000 | lot=0.10
+2026-03-16 20:19:08 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-04-23 10:00:00 | price=1.08000 | pnl=-2.87 | equity=9868.21
+2026-03-16 20:19:09 | INFO     | BacktestEngine            | OPEN BUY | time=2020-04-28 12:00:00 | price=1.31757 | sl=-2.67000 | tp=1.09000 | lot=0.10
+2026-03-16 20:19:10 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-04-30 17:00:00 | price=1.09000 | pnl=-2.98 | equity=9865.24
+2026-03-16 20:19:12 | INFO     | BacktestEngine            | OPEN SELL | time=2020-05-08 18:00:00 | price=0.85522 | sl=4.85000 | tp=1.08000 | lot=0.10
+2026-03-16 20:19:13 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-05-11 23:00:00 | price=1.08000 | pnl=-2.95 | equity=9862.29
+2026-03-16 20:19:13 | INFO     | BacktestEngine            | OPEN BUY | time=2020-05-12 14:00:00 | price=1.31474 | sl=-2.67000 | tp=1.09000 | lot=0.10
+2026-03-16 20:19:15 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-05-18 18:00:00 | price=1.09000 | pnl=-2.95 | equity=9859.34
+2026-03-16 20:19:15 | INFO     | BacktestEngine            | OPEN SELL | time=2020-05-19 11:00:00 | price=0.86520 | sl=4.85000 | tp=1.09000 | lot=0.10
+2026-03-16 20:19:16 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-05-22 11:00:00 | price=1.09000 | pnl=-2.95 | equity=9856.39
+2026-03-16 20:19:18 | INFO     | BacktestEngine            | OPEN BUY | time=2020-06-02 09:00:00 | price=1.34192 | sl=-2.64000 | tp=1.12000 | lot=0.10
+2026-03-16 20:19:19 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-06-03 03:00:00 | price=1.12000 | pnl=-2.92 | equity=9853.47
+2026-03-16 20:19:19 | INFO     | BacktestEngine            | OPEN SELL | time=2020-06-04 19:00:00 | price=0.90297 | sl=4.90000 | tp=1.12000 | lot=0.10
+2026-03-16 20:19:25 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-06-18 19:00:00 | price=1.12000 | pnl=-2.87 | equity=9850.60
+2026-03-16 20:19:26 | INFO     | BacktestEngine            | OPEN SELL | time=2020-06-23 19:00:00 | price=0.90094 | sl=4.89000 | tp=1.13000 | lot=0.10
+2026-03-16 20:19:27 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-06-24 10:00:00 | price=1.13000 | pnl=-2.99 | equity=9847.61
+2026-03-16 20:19:27 | INFO     | BacktestEngine            | OPEN BUY | time=2020-06-25 16:00:00 | price=1.35162 | sl=-2.64000 | tp=1.13000 | lot=0.10
+2026-03-16 20:19:29 | INFO     | BacktestEngine            | CLOSE BUY | exit=2020-07-02 11:00:00 | price=1.13000 | pnl=-2.92 | equity=9844.70
+2026-03-16 20:19:31 | INFO     | BacktestEngine            | OPEN SELL | time=2020-07-08 17:00:00 | price=0.90287 | sl=4.89000 | tp=1.13000 | lot=0.10
+2026-03-16 20:19:31 | INFO     | BacktestEngine            | CLOSE SELL | exit=2020-07-09 17:00:00 | price=1.13000 | pnl=-2.97 | equity=9841.73
+2026-03-16 20:19:32 | INFO     | BacktestEngine            | OPEN SELL | time=2020-07-14 11:00:00 | price=0.90516 | sl=4.89000 | tp=1.13000 | lot=0.10
+2026-03-16 20:21:25 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-11-17 05:00:00 | price=1.13000 | pnl=-2.95 | equity=9838.78
+2026-03-16 20:21:27 | INFO     | BacktestEngine            | OPEN SELL | time=2021-11-24 12:00:00 | price=0.89077 | sl=4.88000 | tp=1.12000 | lot=0.10
+2026-03-16 20:21:27 | INFO     | BacktestEngine            | CLOSE SELL | exit=2021-11-24 15:00:00 | price=1.12000 | pnl=-2.99 | equity=9835.79
+2026-03-16 20:21:29 | INFO     | BacktestEngine            | OPEN BUY | time=2021-12-01 17:00:00 | price=1.36334 | sl=-2.63000 | tp=1.14000 | lot=0.10
+2026-03-16 20:21:38 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-01-12 15:00:00 | price=1.14000 | pnl=-2.93 | equity=9832.85
+2026-03-16 20:21:38 | INFO     | BacktestEngine            | OPEN SELL | time=2022-01-13 13:00:00 | price=0.91640 | sl=4.90000 | tp=1.14000 | lot=0.10
+2026-03-16 20:21:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-01-14 19:00:00 | price=1.14000 | pnl=-2.94 | equity=9829.92
+2026-03-16 20:21:41 | INFO     | BacktestEngine            | OPEN SELL | time=2022-01-26 11:00:00 | price=0.89852 | sl=4.88000 | tp=1.13000 | lot=0.10
+2026-03-16 20:21:41 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-01-26 12:00:00 | price=1.13000 | pnl=-3.01 | equity=9826.90
+2026-03-16 20:21:41 | INFO     | BacktestEngine            | OPEN BUY | time=2022-01-28 13:00:00 | price=1.34312 | sl=-2.64000 | tp=1.12000 | lot=0.10
+2026-03-16 20:21:41 | INFO     | BacktestEngine            | CLOSE BUY | exit=2022-01-31 17:00:00 | price=1.12000 | pnl=-2.93 | equity=9823.97
+2026-03-16 20:21:42 | INFO     | BacktestEngine            | OPEN SELL | time=2022-02-01 11:00:00 | price=0.89606 | sl=4.88000 | tp=1.12000 | lot=0.10
+2026-03-16 20:21:47 | INFO     | BacktestEngine            | CLOSE SELL | exit=2022-02-24 12:00:00 | price=1.12000 | pnl=-2.94 | equity=9821.03
+2026-03-16 20:21:48 | INFO     | BacktestEngine            | OPEN BUY | time=2022-03-01 10:00:00 | price=1.35261 | sl=-2.64000 | tp=1.13000 | lot=0.10
+2026-03-16 20:24:29 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-04-11 03:00:00 | price=1.13000 | pnl=-2.93 | equity=9818.10
+2026-03-16 20:24:32 | INFO     | BacktestEngine            | OPEN SELL | time=2025-04-25 17:00:00 | price=0.90685 | sl=4.90000 | tp=1.13000 | lot=0.10
+2026-03-16 20:24:33 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-05-01 06:00:00 | price=1.13000 | pnl=-2.93 | equity=9815.17
+2026-03-16 20:24:36 | INFO     | BacktestEngine            | OPEN SELL | time=2025-05-06 11:00:00 | price=0.90272 | sl=4.89000 | tp=1.13000 | lot=0.10
+2026-03-16 20:24:36 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-05-07 23:00:00 | price=1.13000 | pnl=-2.97 | equity=9812.20
+2026-03-16 20:24:36 | INFO     | BacktestEngine            | OPEN SELL | time=2025-05-08 10:00:00 | price=0.89972 | sl=4.89000 | tp=1.12000 | lot=0.10
+2026-03-16 20:24:37 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-05-09 05:00:00 | price=1.12000 | pnl=-2.90 | equity=9809.30
+2026-03-16 20:24:38 | INFO     | BacktestEngine            | OPEN SELL | time=2025-05-14 14:00:00 | price=0.89173 | sl=4.88000 | tp=1.12000 | lot=0.10
+2026-03-16 20:24:38 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-05-14 18:00:00 | price=1.12000 | pnl=-2.98 | equity=9806.32
+2026-03-16 20:24:39 | INFO     | BacktestEngine            | OPEN SELL | time=2025-05-16 09:00:00 | price=0.89122 | sl=4.88000 | tp=1.12000 | lot=0.10
+2026-03-16 20:24:39 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-05-16 11:00:00 | price=1.12000 | pnl=-2.99 | equity=9803.33
+2026-03-16 20:24:39 | INFO     | BacktestEngine            | OPEN SELL | time=2025-05-16 19:00:00 | price=0.88449 | sl=4.87000 | tp=1.11000 | lot=0.10
+2026-03-16 20:25:50 | INFO     | BacktestEngine            | CLOSE SELL | exit=2026-03-16 20:00:00 | price=1.15185 | pnl=-3.37 | equity=9799.95
+2026-03-16 20:57:50 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 20:57:50 | INFO     | __main__                  | Loaded 63356 bars from c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\EURUSD_H1.csv | 2015-01-02 09:00 → 2026-03-16 20:00
+2026-03-16 20:57:53 | INFO     | BacktestEngine            | OPEN BUY | time=2015-01-21 16:00:00 | price=1.39392 | sl=-2.60000 | tp=1.17000 | lot=0.10
+2026-03-16 21:00:41 | INFO     | __main__                  | === BACKTEST MODE ===
+2026-03-16 21:00:41 | INFO     | __main__                  | Loaded 13666 bars from c:\Users\ldani\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Expert Advisors MT5\King of Modules\Data\EURUSD_H1_2023-2026.csv | 2023-01-02 00:00 → 2026-03-16 20:00
+2026-03-16 21:00:42 | INFO     | BacktestEngine            | OPEN SELL | time=2023-01-12 17:00:00 | price=0.85067 | sl=4.84000 | tp=1.07000 | lot=0.10
+2026-03-16 21:00:46 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-02-07 10:00:00 | price=1.07000 | pnl=-2.89 | equity=9997.11
+2026-03-16 21:00:47 | INFO     | BacktestEngine            | OPEN SELL | time=2023-02-09 12:00:00 | price=0.84774 | sl=4.83000 | tp=1.07000 | lot=0.10
+2026-03-16 21:00:47 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-02-10 12:00:00 | price=1.07000 | pnl=-2.92 | equity=9994.18
+2026-03-16 21:00:47 | INFO     | BacktestEngine            | OPEN SELL | time=2023-02-10 13:00:00 | price=0.83985 | sl=4.83000 | tp=1.06000 | lot=0.10
+2026-03-16 21:00:48 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-02-22 21:00:00 | price=1.06000 | pnl=-2.90 | equity=9991.28
+2026-03-16 21:00:49 | INFO     | BacktestEngine            | OPEN BUY | time=2023-03-01 09:00:00 | price=1.29415 | sl=-2.70000 | tp=1.07000 | lot=0.10
+2026-03-16 21:00:51 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-03-10 17:00:00 | price=1.07000 | pnl=-2.94 | equity=9988.34
+2026-03-16 21:00:52 | INFO     | BacktestEngine            | OPEN SELL | time=2023-03-21 11:00:00 | price=0.84462 | sl=4.83000 | tp=1.07000 | lot=0.10
+2026-03-16 21:01:02 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-05-30 08:00:00 | price=1.07000 | pnl=-2.95 | equity=9985.39
+2026-03-16 21:01:02 | INFO     | BacktestEngine            | OPEN SELL | time=2023-05-30 09:00:00 | price=0.83943 | sl=4.82000 | tp=1.06000 | lot=0.10
+2026-03-16 21:01:19 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-09-25 16:00:00 | price=1.06000 | pnl=-2.91 | equity=9982.48
+2026-03-16 21:01:20 | INFO     | BacktestEngine            | OPEN SELL | time=2023-10-02 13:00:00 | price=0.82395 | sl=4.81000 | tp=1.05000 | lot=0.10
+2026-03-16 21:01:20 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-10-02 17:00:00 | price=1.05000 | pnl=-2.96 | equity=9979.52
+2026-03-16 21:01:21 | INFO     | BacktestEngine            | OPEN SELL | time=2023-10-09 10:00:00 | price=0.82228 | sl=4.81000 | tp=1.05000 | lot=0.10
+2026-03-16 21:01:22 | INFO     | BacktestEngine            | CLOSE SELL | exit=2023-10-13 17:00:00 | price=1.05000 | pnl=-2.98 | equity=9976.54
+2026-03-16 21:01:23 | INFO     | BacktestEngine            | OPEN BUY | time=2023-10-19 15:00:00 | price=1.28764 | sl=-2.70000 | tp=1.06000 | lot=0.10
+2026-03-16 21:01:23 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-10-19 19:00:00 | price=1.06000 | pnl=-2.98 | equity=9973.57
+2026-03-16 21:01:24 | INFO     | BacktestEngine            | OPEN BUY | time=2023-10-23 12:00:00 | price=1.28930 | sl=-2.70000 | tp=1.06000 | lot=0.10
+2026-03-16 21:01:24 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-10-23 13:00:00 | price=1.06000 | pnl=-2.99 | equity=9970.57
+2026-03-16 21:01:24 | INFO     | BacktestEngine            | OPEN BUY | time=2023-10-23 13:00:00 | price=1.29044 | sl=-2.70000 | tp=1.06000 | lot=0.10
+2026-03-16 21:01:24 | INFO     | BacktestEngine            | CLOSE BUY | exit=2023-10-23 14:00:00 | price=1.06000 | pnl=-3.00 | equity=9967.57
+2026-03-16 21:01:24 | INFO     | BacktestEngine            | OPEN SELL | time=2023-10-27 15:00:00 | price=0.82559 | sl=4.81000 | tp=1.05000 | lot=0.10
+2026-03-16 21:01:34 | INFO     | BacktestEngine            | CLOSE SELL | exit=2025-01-02 00:00:00 | price=1.05000 | pnl=-2.94 | equity=9964.63
+2026-03-16 21:01:35 | INFO     | BacktestEngine            | OPEN BUY | time=2025-01-08 16:00:00 | price=1.25914 | sl=-2.73000 | tp=1.04000 | lot=0.10
+2026-03-16 21:01:36 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-01-20 15:00:00 | price=1.04000 | pnl=-2.89 | equity=9961.73
+2026-03-16 21:01:37 | INFO     | BacktestEngine            | OPEN BUY | time=2025-01-21 18:00:00 | price=1.27224 | sl=-2.72000 | tp=1.05000 | lot=0.10
+2026-03-16 21:01:37 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-01-24 11:00:00 | price=1.05000 | pnl=-2.92 | equity=9958.81
+2026-03-16 21:01:37 | INFO     | BacktestEngine            | OPEN BUY | time=2025-01-27 11:00:00 | price=1.27887 | sl=-2.71000 | tp=1.05000 | lot=0.10
+2026-03-16 21:01:37 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-01-27 12:00:00 | price=1.05000 | pnl=-2.99 | equity=9955.82
+2026-03-16 21:01:37 | INFO     | BacktestEngine            | OPEN BUY | time=2025-01-27 12:00:00 | price=1.28054 | sl=-2.71000 | tp=1.06000 | lot=0.10
+2026-03-16 21:01:43 | INFO     | BacktestEngine            | CLOSE BUY | exit=2025-03-04 21:00:00 | price=1.06000 | pnl=-2.91 | equity=9952.92
+2026-03-16 21:01:43 | INFO     | BacktestEngine            | OPEN SELL | time=2025-03-06 09:00:00 | price=0.84991 | sl=4.84000 | tp=1.07000 | lot=0.10
+2026-03-16 21:02:46 | INFO     | BacktestEngine            | CLOSE SELL | exit=2026-03-16 20:00:00 | price=1.15185 | pnl=-3.72 | equity=9949.20

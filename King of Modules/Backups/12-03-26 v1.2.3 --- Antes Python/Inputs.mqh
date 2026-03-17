@@ -3,16 +3,10 @@
 
 //================ Trading =================
 input group "=== Trade Settings ==="
+input double InpLotSize               = 0.1;                  // Lot Size
 input int    InpLongMagicNumber       = 123456;               // Long Swings Magic Number
 input int    InpShortMagicNumber      = 987654;               // Short Swings Magic Number
-input double InpLotSize               = 0.1;                  // Lot Size
 
-
-//================ Equity Step Lot Scaling =================
-input group "=== Equity Step Lot Scaling ==="
-input bool   InpUseStepLotScaling = false;                    // Use Step Lot Scaling
-input double InpStepCapital       = 100.0;                    // Step Capital
-input double InpStepLot           = 0.01;                     // Step Lot
 
 //================ Entries =================
 input group "=== Entries ==="
@@ -22,7 +16,7 @@ enum ENUM_SWING_MODE
    LONG = 1,
    SHORT  = 2
 };
-input int             InpMaxSimultaneousTrades = 4;           // Maximum simultaneous trades allowed
+input int             InpMaxSimultaneousTrades = 2;           // Maximum simultaneous trades allowed
 input ENUM_SWING_MODE UseMRStrategy            = LONG;        // Use Mean Reversion Strategy
 input ENUM_SWING_MODE UseTBStrategy            = SHORT;       // Use Trendline Breakout Strategy
 input ENUM_SWING_MODE UseTPStrategy            = LONG;        // Use Tend Pullback Strategy
@@ -40,30 +34,27 @@ enum ENUM_STOP_MODE
 input group "=== Stop Loss & Trailing ==="
 input ENUM_STOP_MODE InpLongStopMode          = STOP_FIXED;   // Long Swing Stop Mode
 input ENUM_STOP_MODE InpShortStopMode         = STOP_FIXED;   // Short Swing Stop Mode
-input int            InpTechnicalStopLookback = 9;            // Technical Stop Lookback (Bars to look back for swing high/low)
-input double         InpStopMultiplier        = 5.0;          // Stop Multiplier
-input int            InpStopExtraPoints       = 375;          // Extra Points
+input int            InpTechnicalStopLookback = 5;            // Technical Stop Lookback (Bars to look back for swing high/low)
+input double         InpStopMultiplier        = 2.0;          // Stop Multiplier
+input int            InpStopExtraPoints       = 5;            // Extra Points
 
 
 //================ Takes =================
 enum ENUM_TAKE_MODE
 {
-    TAKE_FIXED  = 0,
-    TAKE_POINTS = 1,
-    TAKE_KAMA   = 2
+    TAKE_FIXED = 0,
+    TAKE_KAMA  = 1
 };
 input group "=== Takes ==="
-input bool           InpUseTakeProfit   = true;               // Use Take Profit
-input double         InpTPMultiplier    = 4.0;                // TP Multiplier
-input int            InpTakeExtraPoints = 50;                 // Extra Points
-input int            InpTakePoints      = 300;                // Take Based by Points
-input ENUM_TAKE_MODE InpLongTakeMode    = TAKE_KAMA;          // Long Take Mode
-input ENUM_TAKE_MODE InpShortTakeMode   = TAKE_KAMA;          // Short Take Mode
+input bool           InpUseTakeProfit   = false;              // Use Take Profit
+input double         InpTPMultiplier    = 2.0;                // TP Multiplier
+input int            InpTakeExtraPoints = 5;                  // Extra Points
+input ENUM_TAKE_MODE InpTakeMode        = TAKE_FIXED;         // Take Mode
 
 
 //================ Time Filter =================
 input group "=== Time Filter ==="
-input bool InpUseTimeFilter = true;                           // Use Time Filter
+input bool InpUseTimeFilter = false;                          // Use Time Filter
 input int  InpStartHour     = 8;                              // Start Hour
 input int  InpEndHour       = 20;                             // End Hour
 
@@ -71,8 +62,8 @@ input int  InpEndHour       = 20;                             // End Hour
 //================ RSI =================
 input group "=== RSI Settings ==="
 input int    InpRSIPeriod         = 14;                       // RSI Period
-input double InpRSIOversold       = 28.0;                     // RSI Oversold
-input double InpRSIOverbought     = 72.0;                     // RSI Overbought
+input double InpRSIOversold       = 30.0;                     // RSI Oversold
+input double InpRSIOverbought     = 70.0;                     // RSI Overbought
 input double InpRSIResetThreshold = 20.0;                     // RSI Reset Threshold
 
 
@@ -85,13 +76,13 @@ input int InpKAMASlowPeriod = 30;                             // KAMA Slow Perio
 
 //================ Keltner =================
 input group "=== Keltner Channel Settings ==="
-input int    InpKeltnerEMAPeriod  = 14;                       // Keltner EMA Period
-input double InpKeltnerATRFactor  = 2.5;                      // Keltner ATR Factor
+input int    InpKeltnerEMAPeriod  = 20;                       // Keltner EMA Period
+input double InpKeltnerATRFactor  = 2.0;                      // Keltner ATR Factor
 
 
 //================ ATR =================
 input group "=== ATR Settings ==="
-input int    InpATRPeriod            = 14;                    // ATR Period
+input int    InpATRPeriod                = 14;                // ATR Period
 input bool   InpUseATRMRTrendFilter  = true;                  // Use ATR Mean Reversion Strong Trend Filter
 input double InpATRMRTrendMultiplier = 1.01;                  // ATR Mean Reversion Strong Trend Multiplier
 input bool   InpUseATRKTTrendFilter  = true;                  // Use ATR Kama Trend Strong Trend Filter
@@ -103,21 +94,28 @@ input double InpATRRETrendMultiplier = 1.01;                  // ATR RSI Exhaust
 input group "=== ADX Settings ==="
 input int    InpADXPeriod                = 14;                // ADX Period
 input bool   InpUseADXFilter             = true;              // Use ADX Filter
-input double InpADXComparision           = 24;                // ADX Comparision
+input double InpADXComparision           = 22;                // ADX Comparision
 
 
 //================ Distance Filter =================
 input group "=== Mean Distance Filter ==="
-input bool   InpUseMeanDistanceFilter = true;                 // Use Mean Distance Filter
-input double InpMeanDistanceATRMult   = 0.4;                  // Mean Distance Multiplier
+input bool   InpUseMeanDistanceFilter = false;
+input double InpMeanDistanceATRMult   = 1.2;
 
 
 //================ KAMA Trend Filter =================
 input group "=== KAMA Strong Trend Filter ==="
-input bool   InpUseKAMAStrongTrendFilter = true;              // Use KAMA Strong Trend Filter
-input int    InpKAMASlopeLookback        = 8;                 // KAMA Slope Lookback
-input double InpKAMASlopeATRMultiplier   = 1.3;               // KAMA Slope ATR Multiplier
+input bool   InpUseKAMAStrongTrendFilter = false;             // Use KAMA Strong Trend Filter
+input int    InpKAMASlopeLookback        = 5;                 // KAMA Slope Lookback
+input double InpKAMASlopeATRMultiplier   = 1.5;               // KAMA Slope ATR Multiplier
 
+
+//================ Equity Step Lot Scaling =================
+input group "=== Equity Step Lot Scaling ==="
+input bool   InpUseStepLotScaling = false;                    // Use Step Lot Scaling
+input double InpInitialLot        = 0.10;                     // Initial Lot
+input double InpStepCapital       = 100.0;                    // Step Capital
+input double InpStepLot           = 0.01;                     // Step Lot
 
 enum ENUM_SIGNAL
 {
@@ -125,9 +123,5 @@ enum ENUM_SIGNAL
    SIGNAL_BUY  =  1,
    SIGNAL_SELL = -1
 };
-
-//--- Lot scaling globals
-double g_initialBalance    = 0.0;
-double g_currentScaledLot  = 0.0;
 
 #endif

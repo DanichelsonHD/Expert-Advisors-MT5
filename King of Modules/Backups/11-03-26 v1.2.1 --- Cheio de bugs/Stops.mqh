@@ -9,7 +9,7 @@ CPositionInfo stop_pos;
 
 
 //------------------------------------------------
-// CALCULATE STOP LOSS
+// CALCULATE STOP LOSS (ATR-based, legacy)
 //------------------------------------------------
 
 double CalculateStopLoss(ENUM_ORDER_TYPE type)
@@ -22,7 +22,7 @@ double CalculateStopLoss(ENUM_ORDER_TYPE type)
    double point  = SymbolInfoDouble(_Symbol,SYMBOL_POINT);
    int digits    = (int)SymbolInfoInteger(_Symbol,SYMBOL_DIGITS);
 
-   double extraDist = InpStopExtraPoints * point;
+   double extraDist = InpExtraPoints * point;
    double stopDist  = atr * InpStopMultiplier + extraDist;
 
    double price;
@@ -45,17 +45,17 @@ double CalculateStopLoss(ENUM_ORDER_TYPE type)
 
 //------------------------------------------------
 // TECHNICAL STOP (Highest High & Lowest Low)
+// Generic version — uses legacy InpTechnicalStopLookback
 //------------------------------------------------
 
 double CalculateTechnicalStop(ENUM_ORDER_TYPE type)
 {
    double point  = SymbolInfoDouble(_Symbol, SYMBOL_POINT);
    int    digits = (int)SymbolInfoInteger(_Symbol, SYMBOL_DIGITS);
-   double buffer = InpStopExtraPoints * point;
+   double buffer = InpExtraPoints * point;
 
    if(type == ORDER_TYPE_BUY)
    {
-      // Stop abaixo do lowest low dos últimos N candles
       double lowest = iLow(_Symbol, _Period, 1);
 
       for(int i = 1; i <= InpTechnicalStopLookback; i++)
@@ -79,7 +79,6 @@ double CalculateTechnicalStop(ENUM_ORDER_TYPE type)
    }
    else
    {
-      // Stop acima do highest high dos últimos N candles
       double highest = iHigh(_Symbol, _Period, 1);
 
       for(int i = 1; i <= InpTechnicalStopLookback; i++)
@@ -105,6 +104,64 @@ double CalculateTechnicalStop(ENUM_ORDER_TYPE type)
 
 
 //------------------------------------------------
+// SWING TECHNICAL STOP
+// Uses lookback and buffer specific to swing type.
+// BUY  -> LowestLow(lookback)  - bufferPoints * _Point
+// SELL -> HighestHigh(lookback) + bufferPoints * _Point
+//------------------------------------------------
+
+double CalculateSwingTechnicalStop(ENUM_ORDER_TYPE type, int lookback, int bufferPoints)
+{
+   double point  = SymbolInfoDouble(_Symbol, SYMBOL_POINT);
+   int    digits = (int)SymbolInfoInteger(_Symbol, SYMBOL_DIGITS);
+   double buffer = bufferPoints * point;
+
+   int    stopLevel  = (int)SymbolInfoInteger(_Symbol, SYMBOL_TRADE_STOPS_LEVEL);
+   int    freezeLevel= (int)SymbolInfoInteger(_Symbol, SYMBOL_TRADE_FREEZE_LEVEL);
+   double minDist    = MathMax(stopLevel, freezeLevel) * point + point;
+
+   if(type == ORDER_TYPE_BUY)
+   {
+      double lowest = iLow(_Symbol, _Period, 1);
+
+      for(int i = 1; i <= lookback; i++)
+      {
+         double low = iLow(_Symbol, _Period, i);
+         if(low < lowest)
+            lowest = low;
+      }
+
+      double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
+      double sl  = NormalizeDouble(lowest - buffer, digits);
+
+      if(ask - sl < minDist)
+         sl = NormalizeDouble(ask - minDist, digits);
+
+      return sl;
+   }
+   else
+   {
+      double highest = iHigh(_Symbol, _Period, 1);
+
+      for(int i = 1; i <= lookback; i++)
+      {
+         double high = iHigh(_Symbol, _Period, i);
+         if(high > highest)
+            highest = high;
+      }
+
+      double bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
+      double sl  = NormalizeDouble(highest + buffer, digits);
+
+      if(sl - bid < minDist)
+         sl = NormalizeDouble(bid + minDist, digits);
+
+      return sl;
+   }
+}
+
+
+//------------------------------------------------
 // ATR STOP CALCULATION (com broker safety)
 //------------------------------------------------
 
@@ -115,7 +172,7 @@ double CalculateATRStop(ENUM_ORDER_TYPE orderType, double atr)
    int    stopLevel  = (int)SymbolInfoInteger(_Symbol, SYMBOL_TRADE_STOPS_LEVEL);
    int    freezeLevel= (int)SymbolInfoInteger(_Symbol, SYMBOL_TRADE_FREEZE_LEVEL);
 
-   double stopDist = atr * InpStopMultiplier + (InpStopExtraPoints * point);
+   double stopDist = atr * InpStopMultiplier + (InpExtraPoints * point);
    double minDist  = MathMax(stopLevel, freezeLevel) * point + point;
 
    if(stopDist < minDist)
@@ -140,16 +197,31 @@ double CalculateATRStop(ENUM_ORDER_TYPE orderType, double atr)
 
 
 //------------------------------------------------
-// GET STOP BASED ON MODE
+// GET STOP BASED ON MODE AND SWING TYPE
+// magic parameter drives short vs long swing stop.
+// STOP_FIXED     -> ATR-based (swing-agnostic)
+// STOP_TECHNICAL -> swing-specific lookback + buffer
 //------------------------------------------------
 
-double GetStopLoss(ENUM_ORDER_TYPE orderType, double atr)
+double GetStopLoss(ENUM_ORDER_TYPE orderType, double atr, long magic)
 {
-   if(InpLongStopMode == STOP_FIXED)
+   if(InpStopMode == STOP_FIXED)
       return CalculateATRStop(orderType, atr);
 
-   if(InpLongStopMode == STOP_TECHNICAL)
+   if(InpStopMode == STOP_TECHNICAL)
+   {
+      if(IsShortSwingMagic(magic))
+         return CalculateSwingTechnicalStop(orderType,
+                                            InpShortSwingLookback,
+                                            InpShortSwingBufferPoints);
+
+      else
+         return CalculateSwingTechnicalStop(orderType,
+                                            InpLongSwingLookback,
+                                            InpLongSwingBufferPoints);
+
       return CalculateTechnicalStop(orderType);
+   }
 
    return 0;
 }
@@ -164,7 +236,7 @@ void ManageTrailingStop(double atr)
    if(!g_position.Select(_Symbol))
       return;
 
-   if(g_position.Magic() != (ulong)InpLongMagicNumber)
+   if(g_position.Magic() != (ulong)InpMagicNumber)
       return;
 
    double point      = SymbolInfoDouble(_Symbol, SYMBOL_POINT);
@@ -172,7 +244,7 @@ void ManageTrailingStop(double atr)
    int    stopLevel  = (int)SymbolInfoInteger(_Symbol, SYMBOL_TRADE_STOPS_LEVEL);
    int    freezeLevel= (int)SymbolInfoInteger(_Symbol, SYMBOL_TRADE_FREEZE_LEVEL);
 
-   double trailDist = atr * InpStopMultiplier + (InpStopExtraPoints * point);
+   double trailDist = atr * InpStopMultiplier + (InpExtraPoints * point);
    double minDist   = MathMax(stopLevel, freezeLevel) * point + point;
 
    if(trailDist < minDist)
