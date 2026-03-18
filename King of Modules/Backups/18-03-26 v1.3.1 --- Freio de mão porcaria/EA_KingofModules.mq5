@@ -16,9 +16,6 @@
 #include "Takes.mqh"
 #include "Stops.mqh"
 
-//--- Global trade objects (shared across all modules)
-CTrade        g_trade;
-CPositionInfo g_position;
 
 //+------------------------------------------------------------------+
 //| Syncs CPositionInfo and validates EA magic.                      |
@@ -44,6 +41,10 @@ int OnInit()
    // Initialize globals of lot scaling
    g_initialBalance   = AccountInfoDouble(ACCOUNT_BALANCE);
    g_currentScaledLot = InpLotSize;
+
+   // Initialize drawdown globals
+   g_dailyStartBalance = g_initialBalance;
+   g_lastDay           = TimeCurrent();
 
    // Configure g_trade (magic, slippage, filling)
    g_trade.SetExpertMagicNumber(InpLongMagicNumber);
