@@ -41,20 +41,31 @@ void IndicatorsRelease() {}
 // ============================================================
 int GetRSI(var* prev, var* current)
 {
+    var* priceSeries;
     var* s;
-    s        = series(RSI(series(price()), InpRSIPeriod));
+
+    priceSeries = series(price());
+    s           = series(RSI(priceSeries, InpRSIPeriod));
+
     *current = s[1];
     *prev    = s[2];
     return 1;
 }
 
 
+// ============================================================
+//  GetKeltner
+// ============================================================
 int GetKeltner(var* upper, var* lower)
 {
-    var ema;
-    var atr;
-    ema    = EMA(series(price()), InpKeltnerEMAPeriod);
-    atr    = ATR(InpATRPeriod);
+    var* priceSeries;
+    var  ema;
+    var  atr;
+
+    priceSeries = series(price());
+    ema         = EMA(priceSeries, InpKeltnerEMAPeriod);
+    atr         = ATR(InpATRPeriod);
+
     *upper = ema + InpKeltnerATRFactor * atr;
     *lower = ema - InpKeltnerATRFactor * atr;
     return 1;
@@ -67,34 +78,34 @@ int GetKeltner(var* upper, var* lower)
 // ============================================================
 var ComputeKAMA_Raw()
 {
+    var* priceSeries;
     var  fast_sc;
     var  slow_sc;
-    var* cls;
     var  sig;
     var  noise;
     var  er;
     var  sc;
     int  i;
 
-    fast_sc = 2.0 / (InpKAMAFastPeriod + 1.0);
-    slow_sc = 2.0 / (InpKAMASlowPeriod + 1.0);
-    cls     = series(price());
+    fast_sc     = 2.0 / (InpKAMAFastPeriod + 1.0);
+    slow_sc     = 2.0 / (InpKAMASlowPeriod + 1.0);
+    priceSeries = series(price());
 
     if(s_kamaWarmup < InpKAMAPeriod)
     {
         s_kamaWarmup++;
-        s_kama = cls[0];
+        s_kama = priceSeries[0];
     }
     else
     {
-        sig   = fabs(cls[0] - cls[InpKAMAPeriod]);
+        sig   = fabs(priceSeries[0] - priceSeries[InpKAMAPeriod]);
         noise = 0;
         for(i = 0; i < InpKAMAPeriod; i++)
-            noise += fabs(cls[i] - cls[i + 1]);
+            noise += fabs(priceSeries[i] - priceSeries[i + 1]);
 
         if(noise > 0) er = sig / noise; else er = 0;
         sc     = pow(er * (fast_sc - slow_sc) + slow_sc, 2.0);
-        s_kama = s_kama + sc * (cls[0] - s_kama);
+        s_kama = s_kama + sc * (priceSeries[0] - s_kama);
     }
 
     return s_kama;
@@ -179,8 +190,7 @@ var* kamaValSeries()
 
 // ============================================================
 //  kamaColorSeries
-//  series() called unconditionally — no conditional branching
-//  around the series() call itself.
+//  series() called unconditionally.
 //  2 = rising/bullish  (original valc=2)
 //  1 = falling/bearish (original valc=1)
 //  flat = hold s_kamaColor (original valc[i-1])
