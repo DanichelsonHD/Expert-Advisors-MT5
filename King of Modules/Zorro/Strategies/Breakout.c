@@ -5,11 +5,6 @@
 
 int SignalBreakout()
 {
-    // #3: one execution per bar
-    static int lastBar;
-    if(Bar == lastBar) return SIGNAL_NONE;
-    lastBar = Bar;
-
     return SIGNAL_NONE;
 }
 

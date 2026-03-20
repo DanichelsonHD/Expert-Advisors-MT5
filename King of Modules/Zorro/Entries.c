@@ -20,9 +20,11 @@ var GetTakeProfit(int signal, var atr);
 
 int CountOpenPositions()
 {
-    int count;
-    count = 0;
-    for(open_trades) count++;
+    int count = 0;
+
+    for(open_trades)
+        count++;
+
     return count;
 }
 
@@ -42,7 +44,6 @@ var CalculateLotSize()
     if(lot > MAX_LOT) lot = MAX_LOT;
     return roundto(lot, InpStepLot);
 }
-
 
 int ExecuteEntry(int signal, var atr)
 {
@@ -71,9 +72,14 @@ int ExecuteEntry(int signal, var atr)
     else
         enterShort();
 
+    if(true)
+    {
+        Lots = 0.1;
+        enterLong();
+    }
+
     return 1;
 }
-
 
 void EntriesEngine(var atrVal)
 {
@@ -121,6 +127,7 @@ void EntriesEngine(var atrVal)
 
     // ── RSI Exhaustion ──────────────────────────────────────
     // NOT wired in original MQL5 EntriesEngine().
+    // Disabled to preserve original behavior.
     // To activate: uncomment and set UseREStrategy accordingly.
     //
     // if(UseREStrategy != SWING_OFF)

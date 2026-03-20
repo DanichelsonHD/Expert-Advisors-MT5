@@ -3,13 +3,24 @@
 
 #include "Inputs.c"
 
-// ── KAMA persistent state ─────────────────────────────────────
+// ── KAMA state (no inline init – Lite-C restriction) ──────────
 var s_kama;
 var s_kamaFiltered;
 var s_kamaColor;
 int s_kamaWarmup;
 
+int s_kamaRawLastBar;
+int s_kamaFilteredLastBar;
+int s_kamaColorLastBar;
 
+var s_kamaRawCache;
+var s_kamaFilteredCache;
+var s_kamaColorCache;
+
+
+// ============================================================
+//  IndicatorsInit
+// ============================================================
 int IndicatorsInit()
 {
     int lookback;
@@ -24,10 +35,16 @@ int IndicatorsInit()
 
     if(lookback > LookBack) LookBack = lookback;
 
-    s_kama         = 0;
-    s_kamaFiltered = 0;
-    s_kamaColor    = 0;
-    s_kamaWarmup   = 0;
+    s_kama               = 0;
+    s_kamaFiltered       = 0;
+    s_kamaColor          = 0;
+    s_kamaWarmup         = 0;
+    s_kamaRawLastBar     = -1;
+    s_kamaFilteredLastBar = -1;
+    s_kamaColorLastBar   = -1;
+    s_kamaRawCache       = 0;
+    s_kamaFilteredCache  = 0;
+    s_kamaColorCache     = 0;
     return 1;
 }
 
@@ -36,19 +53,15 @@ void IndicatorsRelease() {}
 
 // ============================================================
 //  GetRSI
-//  s[1] = last closed bar (MQL5 CopyBuffer shift=1)
-//  s[2] = bar before that
 // ============================================================
 int GetRSI(var* prev, var* current)
 {
-    var* priceSeries;
+    var* preS;
     var* s;
-
-    priceSeries = series(price());
-    s           = series(RSI(priceSeries, InpRSIPeriod));
-
-    *current = s[1];
-    *prev    = s[2];
+    preS     = series(price());
+    s        = series(RSI(preS, InpRSIPeriod));
+    *current = s[0];
+    *prev    = s[1];
     return 1;
 }
 
@@ -58,14 +71,10 @@ int GetRSI(var* prev, var* current)
 // ============================================================
 int GetKeltner(var* upper, var* lower)
 {
-    var* priceSeries;
-    var  ema;
-    var  atr;
-
-    priceSeries = series(price());
-    ema         = EMA(priceSeries, InpKeltnerEMAPeriod);
-    atr         = ATR(InpATRPeriod);
-
+    var ema;
+    var atr;
+    ema    = EMA(series(price()), InpKeltnerEMAPeriod);
+    atr    = ATR(InpATRPeriod);
     *upper = ema + InpKeltnerATRFactor * atr;
     *lower = ema - InpKeltnerATRFactor * atr;
     return 1;
@@ -74,40 +83,44 @@ int GetKeltner(var* upper, var* lower)
 
 // ============================================================
 //  ComputeKAMA_Raw
-//  MUST always execute fully — no early returns.
 // ============================================================
 var ComputeKAMA_Raw()
 {
-    var* priceSeries;
-    var  fast_sc;
-    var  slow_sc;
-    var  sig;
-    var  noise;
-    var  er;
-    var  sc;
-    int  i;
+    var fast_sc;
+    var slow_sc;
+    var* cls;
+    var signal;
+    var noise;
+    var er;
+    var sc;
+    int i;
 
-    fast_sc     = 2.0 / (InpKAMAFastPeriod + 1.0);
-    slow_sc     = 2.0 / (InpKAMASlowPeriod + 1.0);
-    priceSeries = series(price());
+    if(Bar == s_kamaRawLastBar)
+        return s_kamaRawCache;
+
+    fast_sc = 2.0 / (InpKAMAFastPeriod + 1.0);
+    slow_sc = 2.0 / (InpKAMASlowPeriod + 1.0);
+    cls     = series(price());
 
     if(s_kamaWarmup < InpKAMAPeriod)
     {
         s_kamaWarmup++;
-        s_kama = priceSeries[0];
+        s_kama = cls[0];
     }
     else
     {
-        sig   = fabs(priceSeries[0] - priceSeries[InpKAMAPeriod]);
-        noise = 0;
+        signal = fabs(cls[0] - cls[InpKAMAPeriod]);
+        noise  = 0;
         for(i = 0; i < InpKAMAPeriod; i++)
-            noise += fabs(priceSeries[i] - priceSeries[i + 1]);
+            noise += fabs(cls[i] - cls[i + 1]);
 
-        if(noise > 0) er = sig / noise; else er = 0;
+        if(noise > 0) er = signal / noise; else er = 0;
         sc     = pow(er * (fast_sc - slow_sc) + slow_sc, 2.0);
-        s_kama = s_kama + sc * (priceSeries[0] - s_kama);
+        s_kama = s_kama + sc * (cls[0] - s_kama);
     }
 
+    s_kamaRawLastBar = Bar;
+    s_kamaRawCache   = s_kama;
     return s_kama;
 }
 
@@ -119,7 +132,6 @@ var* kamaRawSeries()
 
 // ============================================================
 //  ComputeKAMA_Filtered
-//  MUST always execute fully — no early returns.
 // ============================================================
 var ComputeKAMA_Filtered()
 {
@@ -137,13 +149,18 @@ var ComputeKAMA_Filtered()
     var  filteredNow;
     int  k;
 
+    if(Bar == s_kamaFilteredLastBar)
+        return s_kamaFilteredCache;
+
     rs      = kamaRawSeries();
     rawNow  = rs[0];
     rawPrev = rs[1];
 
     if(s_kamaWarmup <= InpKAMAPeriod)
     {
-        s_kamaFiltered = rawNow;
+        s_kamaFiltered        = rawNow;
+        s_kamaFilteredLastBar = Bar;
+        s_kamaFilteredCache   = rawNow;
         return rawNow;
     }
 
@@ -178,7 +195,9 @@ var ComputeKAMA_Filtered()
             filteredNow = s_kamaFiltered;
     }
 
-    s_kamaFiltered = filteredNow;
+    s_kamaFiltered        = filteredNow;
+    s_kamaFilteredLastBar = Bar;
+    s_kamaFilteredCache   = filteredNow;
     return filteredNow;
 }
 
@@ -190,28 +209,31 @@ var* kamaValSeries()
 
 // ============================================================
 //  kamaColorSeries
-//  series() called unconditionally.
-//  2 = rising/bullish  (original valc=2)
-//  1 = falling/bearish (original valc=1)
-//  flat = hold s_kamaColor (original valc[i-1])
 // ============================================================
 var* kamaColorSeries()
 {
     var* ks;
     var  colorNow;
 
+    if(Bar == s_kamaColorLastBar)
+        return series(s_kamaColorCache);
+
     ks = kamaValSeries();
 
-    if     (ks[0] > ks[1]) colorNow = 2;
+    if     (ks[0] > ks[1]) colorNow = 0;
     else if(ks[0] < ks[1]) colorNow = 1;
     else                   colorNow = s_kamaColor;
 
-    s_kamaColor = colorNow;
-
+    s_kamaColor        = colorNow;
+    s_kamaColorLastBar = Bar;
+    s_kamaColorCache   = colorNow;
     return series(colorNow);
 }
 
 
+// ============================================================
+//  GetKAMAColor
+// ============================================================
 int GetKAMAColor(int* prev, int* current)
 {
     var* cs;
@@ -222,6 +244,9 @@ int GetKAMAColor(int* prev, int* current)
 }
 
 
+// ============================================================
+//  GetKAMASlope
+// ============================================================
 var GetKAMASlope()
 {
     var* ks;
@@ -232,7 +257,6 @@ var GetKAMASlope()
 
 // ============================================================
 //  GetATR
-//  s[1] = last closed bar ATR (MQL5 CopyBuffer shift=1)
 // ============================================================
 int GetATR(var* current, var* avg)
 {
@@ -241,10 +265,10 @@ int GetATR(var* current, var* avg)
     int  i;
 
     s        = series(ATR(InpATRPeriod));
-    *current = s[1];
+    *current = s[0];
 
     sum = 0;
-    for(i = 1; i <= InpATRPeriod; i++) sum += s[i];
+    for(i = 0; i < InpATRPeriod; i++) sum += s[i];
     *avg = sum / InpATRPeriod;
     return 1;
 }

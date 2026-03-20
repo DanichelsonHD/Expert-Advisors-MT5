@@ -8,29 +8,33 @@
 
 // ============================================================
 //  GetKamaFlip
-//  #7: bullish transition = 1→2, bearish transition = 2→1
+//  Scans the last KAMA_FLIP_LOOKBACK bar-pairs for a regime flip.
+//  bullishFlip → any bar in the window transitioned bearish→bullish
+//  bearishFlip → any bar in the window transitioned bullish→bearish
+//
+//  kamaColorSeries() index:
+//    [1] = most recent closed bar (bar 1)
+//    [2] = bar 2, etc.
+//  Pairs examined: ([1],[2]), ([2],[3]), ([3],[4])
+//    i.e. current=cs[i], previous=cs[i+1] for i=1..KAMA_FLIP_LOOKBACK
 // ============================================================
 int GetKamaFlip(int* bullishFlip, int* bearishFlip)
 {
-    var* cs;
-    int  i;
-    int  current;
-    int  previous;
-
-    cs = kamaColorSeries();
+    var* cs = kamaColorSeries();
 
     *bullishFlip = 0;
     *bearishFlip = 0;
 
+    int i;
     for(i = 1; i <= KAMA_FLIP_LOOKBACK; i++)
     {
-        current  = (int)cs[i];
-        previous = (int)cs[i + 1];
+        int current  = (int)cs[i];
+        int previous = (int)cs[i + 1];
 
-        // #7: bearish→bullish: 1→2
-        if(previous == 1 && current == 2) *bullishFlip = 1;
-        // #7: bullish→bearish: 2→1
-        if(previous == 2 && current == 1) *bearishFlip = 1;
+        // bearish→bullish: 1→0
+        if(previous == 1 && current == 0) *bullishFlip = 1;
+        // bullish→bearish: 0→1
+        if(previous == 0 && current == 1) *bearishFlip = 1;
     }
 
     return 1;
@@ -39,29 +43,33 @@ int GetKamaFlip(int* bullishFlip, int* bearishFlip)
 
 // ============================================================
 //  PassATRExpansionFilter
-//  #5/#6: use s[1] (closed bar), s[2] (prev closed bar)
+//  Allows entry only when:
+//    (a) ATR(14) is rising vs. previous bar  AND
+//    (b) ATR(14) > ATR(50) * InpATRKTTrendMultiplier
+//  (expanding volatility / trending regime).
 // ============================================================
 int PassATRExpansionFilter()
 {
-    var* atrFastSeries;
-    var  atrFastNow;
-    var  atrFastPrev;
-    var* atrSlowSeries;
-    var  atrSlow;
-
     if(!InpUseATRKTTrendFilter)
         return 1;
 
-    // #6: pointer stored once
-    atrFastSeries = series(ATR(InpATRPeriod));
-    atrFastNow    = atrFastSeries[1];   // #5: closed bar
-    atrFastPrev   = atrFastSeries[2];   // #5: prev closed bar
+    var* atrFastSeries;
+    var  atrFastNow;   
+    var  atrFastPrev;
 
+    atrFastSeries = series(ATR(InpATRPeriod));
+    atrFastNow    = atrFastSeries[0];
+    atrFastPrev   = atrFastSeries[1];
+
+    // ATR must be rising
     if(atrFastNow <= atrFastPrev)
         return 0;
 
-    atrSlowSeries = series(ATR(50));
-    atrSlow       = atrSlowSeries[1];   // #5: closed bar
+    var atrSlow;
+    var* atrSeries;
+    
+    atrSeries = series(ATR(50));
+    atrSlow = atrSeries[0];
 
     return (atrFastNow > atrSlow * InpATRKTTrendMultiplier);
 }
@@ -69,21 +77,18 @@ int PassATRExpansionFilter()
 
 // ============================================================
 //  PassADXTrendFilter
-//  #5/#6: use s[1] (closed bar), s[2] (prev closed bar)
+//  Allows entry only when:
+//    (a) ADX is rising vs. previous bar  AND
+//    (b) ADX < InpADXComparision (not yet in overextended trend)
 // ============================================================
 int PassADXTrendFilter()
 {
-    var* adxSeries;
-    var  adxNow;
-    var  adxPrev;
-
     if(!InpUseADXFilter)
         return 1;
 
-    // #6: pointer stored once
-    adxSeries = series(ADX(InpADXPeriod));
-    adxNow    = adxSeries[1];   // #5: closed bar
-    adxPrev   = adxSeries[2];   // #5: prev closed bar
+    var* adxSeries = series(ADX(InpADXPeriod));
+    var  adxNow    = adxSeries[0];
+    var  adxPrev   = adxSeries[1];
 
     if(adxNow <= adxPrev)
         return 0;
@@ -92,19 +97,14 @@ int PassADXTrendFilter()
 }
 
 
+// ============================================================
+//  SignalKamaTrend  (public)
+//  Fires SIGNAL_BUY on bullish KAMA flip, SIGNAL_SELL on bearish,
+//  subject to ATR expansion and ADX trend strength filters.
+// ============================================================
 int SignalKamaTrend()
 {
-    int bullishFlip;
-    int bearishFlip;
-
-    // #3: one execution per bar
-    static int lastBar;
-    if(Bar == lastBar) return SIGNAL_NONE;
-    lastBar = Bar;
-
-    bullishFlip = 0;
-    bearishFlip = 0;
-
+    int bullishFlip = 0, bearishFlip = 0;
     if(!GetKamaFlip(&bullishFlip, &bearishFlip))
         return SIGNAL_NONE;
 

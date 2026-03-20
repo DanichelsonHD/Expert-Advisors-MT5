@@ -6,20 +6,19 @@
 
 // ============================================================
 //  PassREATRCompressionFilter
-//  #5/#6: use s[1] (closed bar)
+//  Returns 1 when ATR(14)*multiplier < ATR(50) (compressed regime).
+//  ATR(50) series is at a dedicated call-site here.
 // ============================================================
 int PassREATRCompressionFilter()
 {
     var* atrSeries;
-    var  atrFast;
-    var  atrSlow;
+    var atrFast;
+    var atrSlow;
 
-    // #6: pointer stored once per series call
     atrSeries = series(ATR(InpATRPeriod));
-    atrFast   = atrSeries[1];   // #5: closed bar
-
+    atrFast = atrSeries[0];
     atrSeries = series(ATR(50));
-    atrSlow   = atrSeries[1];   // #5: closed bar
+    atrSlow = atrSeries[0];
 
     return (atrFast * InpATRRETrendMultiplier < atrSlow);
 }
@@ -27,61 +26,60 @@ int PassREATRCompressionFilter()
 
 // ============================================================
 //  DetectRSIExhaustion
-//  #7: kamaColor == 1 → bearish (SELL)
-//      kamaColor == 2 → bullish (BUY)
+//  Pure momentum-continuation logic:
+//    SELL: extreme RSI/price on the low side + KAMA still falling
+//    BUY:  extreme RSI/price on the high side + KAMA still rising
+//
+//  OR logic between RSI and Keltner conditions is preserved
+//  faithfully from the original.
 // ============================================================
-int DetectRSIExhaustion(var curRSI, var upperK, var lowerK,
-                        int kamaColor, var close1)
+int DetectRSIExhaustion(var curRSI,
+                                        var upperK, var lowerK,
+                                        int kamaColor, var close1)
 {
+    // SELL: oversold OR below lower band, KAMA bearish (falling)
     if((curRSI < InpRSIOversold || close1 < lowerK) && kamaColor == 1)
         return SIGNAL_SELL;
 
-    if((curRSI > InpRSIOverbought || close1 > upperK) && kamaColor == 2)   // #7
+    // BUY:  overbought OR above upper band, KAMA bullish (rising)
+    if((curRSI > InpRSIOverbought || close1 > upperK) && kamaColor == 0)
         return SIGNAL_BUY;
 
     return SIGNAL_NONE;
 }
 
 
+// ============================================================
+//  SignalRSIExhaustion  (public)
+// ============================================================
 int SignalRSIExhaustion()
 {
-    var  curRSI;
-    var  prevRSI;
-    var  upperK;
-    var  lowerK;
-    int  kamaColorPrev;
-    int  kamaColorCur;
-    var* closeSeries;
-    var  close1;
-
-    // #3: one execution per bar
-    static int lastBar;
-    if(Bar == lastBar) return SIGNAL_NONE;
-    lastBar = Bar;
-
-    curRSI  = 0;
-    prevRSI = 0;
+    // ── Gather indicators ────────────────────────────────────
+    var curRSI = 0, prevRSI = 0;
     if(!GetRSI(&prevRSI, &curRSI))
         return SIGNAL_NONE;
 
-    upperK = 0;
-    lowerK = 0;
+    var upperK = 0, lowerK = 0;
     if(!GetKeltner(&upperK, &lowerK))
         return SIGNAL_NONE;
 
-    kamaColorPrev = 0;
-    kamaColorCur  = 0;
+    int kamaColorPrev = 0, kamaColorCur = 0;
     if(!GetKAMAColor(&kamaColorPrev, &kamaColorCur))
         return SIGNAL_NONE;
 
-    // #6: pointer stored, #5: closed bar
-    closeSeries = series(price());
-    close1      = closeSeries[1];
+    var* closeSeries;
+    var close1;
 
+    closeSeries = series(price());
+    close1 = closeSeries[1];   // bar[-1] close
+
+    // ── Filter ───────────────────────────────────────────────
     if(!PassREATRCompressionFilter())
         return SIGNAL_NONE;
 
-    return DetectRSIExhaustion(curRSI, upperK, lowerK, kamaColorCur, close1);
+    // ── Signal ───────────────────────────────────────────────
+    return DetectRSIExhaustion(curRSI, upperK, lowerK,
+                                kamaColorCur, close1);
 }
 
 #endif // RSI_EXHAUSTION_C

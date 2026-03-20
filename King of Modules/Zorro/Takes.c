@@ -3,16 +3,14 @@
 
 #include "Indicators.c"
 
-// #7: encoding matches original MQL5 KAMA with filter:
-//     1 = bearish (falling), 2 = bullish (rising)
 #define KAMA_REGIME_NONE    0
 #define KAMA_REGIME_BEARISH 1
 #define KAMA_REGIME_BULLISH 2
 
 int ResolveKAMARegime(int colorCode)
 {
-    if(colorCode == 2) return KAMA_REGIME_BULLISH;   // #7
-    if(colorCode == 1) return KAMA_REGIME_BEARISH;   // #7
+    if(colorCode == 0) return KAMA_REGIME_BULLISH;
+    if(colorCode == 1) return KAMA_REGIME_BEARISH;
     return KAMA_REGIME_NONE;
 }
 
@@ -51,8 +49,7 @@ void TakeKAMA(int kamaColorPrev, int kamaColorCur)
     }
 }
 
-// #8: no atr parameter
-void ManageTakes()
+void ManageTakes(var atr)
 {
     int kamaColorPrev;
     int kamaColorCur;

@@ -10,33 +10,27 @@ int  IndicatorsInit();
 void IndicatorsRelease();
 int  GetATR(var* atr, var* avg);
 void ManageTrailingStop(var atr);
-void ManageTakes();
+void ManageTakes(var atr);
 void EntriesEngine(var atrVal);
 
-// #1: global scope — persists across bars
-int g_initOK;
+int g_initOK = 0;
+
 
 int IsWithinTradingHours()
 {
-    int h;
-    h = hour();
+    int h = hour();
     return (h >= InpStartHour && h < InpEndHour);
 }
 
+
 void run()
 {
-    var atr;
-    var atrAvg;
-    int atrOK;
-
     if(is(INITRUN))
     {
-        // #1: initialize only here
-        g_initOK = 0;
-
         if(!IndicatorsInit())
         {
             printf("Indicator initialization failed");
+            g_initOK = 0;
             return;
         }
 
@@ -57,22 +51,22 @@ void run()
     if(!g_initOK)    return;
     if(is(LOOKBACK)) return;
 
-    // ATR computed ONCE per bar
-    atr    = 0;
-    atrAvg = 0;
-    atrOK  = GetATR(&atr, &atrAvg);
+    // ── ATR computed ONCE per bar ─────────────────────────────
+    var atr = 0, atrAvg = 0;
+    int atrOK = GetATR(&atr, &atrAvg);
 
-    // #2: restore original selective gating
-    // ManageTrailingStop requires ATR; ManageTakes does not
-    if(atrOK)
-        ManageTrailingStop(atr);
+    // ── #3: all management and entry gated under atrOK ────────
+    if(!atrOK) return;
 
-    ManageTakes();
+    // ── Position management (no time filter) ──────────────────
+    // Execution order: ManageTrailingStop first, ManageTakes second.
+    // No shared mutable state between the two loops.
+    ManageTrailingStop(atr);
+    ManageTakes(atr);
 
-    // Entry engine (time-filtered)
+    // ── Entry engine (time-filtered) ──────────────────────────
     if(InpUseTimeFilter && !IsWithinTradingHours())
         return;
 
-    if(atrOK)
-        EntriesEngine(atr);
+    EntriesEngine(atr);
 }
