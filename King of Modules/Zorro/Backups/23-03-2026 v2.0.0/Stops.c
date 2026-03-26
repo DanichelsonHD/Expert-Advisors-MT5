@@ -12,7 +12,7 @@
 // ---------------------------------------------------------
 var CalculateStopLong()
 {
-    var close = g_Close[0];
+    var close = Close[0];
 
     switch(StopMode)
     {
@@ -36,7 +36,7 @@ var CalculateStopLong()
 // ---------------------------------------------------------
 var CalculateStopShort()
 {
-    var close = g_Close[0];
+    var close = Close[0];
 
     switch(StopMode)
     {
@@ -64,7 +64,7 @@ void ManageStops()
     if(StopMode != STOP_TRAILING)
         return;
 
-    var close = g_Close[0];
+    var close = Close[0];
     var atr   = g_ATR14[0];
 
     for(open_trades)

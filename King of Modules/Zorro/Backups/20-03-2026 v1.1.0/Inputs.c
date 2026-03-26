@@ -28,16 +28,16 @@ double InpLotSize          = 0.1;
 
 // ── Equity step lot scaling ───────────────────────────────────
 int    InpUseStepLotScaling = 0;
-double InpStepCapital       = 100.0;
-double InpStepLot           = 0.01;
+double InpStepCapital       = 1050.0;
+double InpStepLot           = 0.05;
 
 // ── Entries ───────────────────────────────────────────────────
 int InpMaxSimultaneousTrades = 4;
 int UseMRStrategy            = SWING_LONG;
-int UseTBStrategy            = SWING_SHORT;
-int UseTPStrategy            = SWING_LONG;
+int UseTBStrategy            = SWING_OFF;
+int UseTPStrategy            = SWING_OFF;
 int UseKTStrategy            = SWING_LONG;
-int UseREStrategy            = SWING_SHORT;
+int UseREStrategy            = SWING_OFF;
 
 // ── Stop loss & trailing ──────────────────────────────────────
 int    InpLongStopMode          = STOP_FIXED;

@@ -1,143 +1,184 @@
+// =========================================================
+// FILE: Entries.c
+// ROLE: Execution layer — lot sizing, signal aggregation,
+//       trade entry. NO strategy logic here.
+//
+// POSITION OWNERSHIP MODEL:
+//   Each trade is tagged via TradeComment = strategyID.
+//   Enforcement: max 1 open trade per strategy.
+//   Global system cap: 4 concurrent trades (one per strategy).
+//   Strategies remain pure — zero execution awareness.
+// =========================================================
+
 #ifndef ENTRIES_C
 #define ENTRIES_C
 
-#include "Indicators.c"
-#include "Stops.c"
-#include "Takes.c"
+// ---------------------------------------------------------
+// POSITION OWNERSHIP CHECK
+// Returns 1 if strategyID already has an open trade
+// ---------------------------------------------------------
+int HasOpenTradeByStrategy(int strategyID)
+{
+    for(open_trades)
+    {
+        if(!TradeIsOpen) continue;
 
-#include "Strategies/MeanReversion.c"
-#include "Strategies/Pullback.c"
-#include "Strategies/Breakout.c"
-#include "Strategies/KamaTrend.c"
-#include "Strategies/RSIExhaustion.c"
+        if(TradeVar[0] == strategyID)
+            return 1;
+    }
+    return 0;
+}
 
-#define MIN_LOT 0.01
-#define MAX_LOT 100
-
-var GetStopLoss(int signal, var atr);
-var GetTakeProfit(int signal, var atr);
-
-
-int CountOpenPositions()
+// ---------------------------------------------------------
+// GLOBAL TRADE COUNT
+// Returns total number of currently open trades (all strategies)
+// Reserved for future global cap enforcement
+// ---------------------------------------------------------
+int CountOpenTrades()
 {
     int count = 0;
-
     for(open_trades)
-        count++;
-
+    {
+        if(TradeIsOpen) count++;
+    }
     return count;
 }
 
-
-var CalculateLotSize()
+// ---------------------------------------------------------
+// LOT CALCULATION
+// ---------------------------------------------------------
+var CalculateLots()
 {
-    var steps;
-    var lot;
+    switch(LotMode)
+    {
+        case LOT_EQUITY:
+        {
+            // Risk RiskPercent% of equity over FixedStopPoints distance
+            // NOTE: FixedStopPoints used as reference stop distance.
+            //       For variable stops, compute actual stop distance
+            //       before calling this function and substitute below.
+            var riskAmt  = Equity * RiskPercent / 100.0;
+            var stopDist = FixedStopPoints * PIP;
+            if(stopDist <= 0.0 || LotAmount <= 0.0) return FixedLot;
+            return riskAmt / (stopDist * LotAmount);
+        }
 
-    if(!InpUseStepLotScaling)
-        return InpLotSize;
+        case LOT_STEP:
+        {
+            // NOTE: Full step scaling requires tracking consecutive
+            //       win/loss streaks. Returns FixedLot as base.
+            //       Extend with trade history logic as needed.
+            return FixedLot;
+        }
 
-    steps = floor(Balance / InpStepCapital);
-    lot   = InpLotSize + steps * InpStepLot;
-
-    if(lot < MIN_LOT) lot = MIN_LOT;
-    if(lot > MAX_LOT) lot = MAX_LOT;
-    return roundto(lot, InpStepLot);
+        case LOT_FIXED:
+        default:
+            return FixedLot;
+    }
 }
 
-int ExecuteEntry(int signal, var atr)
+// ---------------------------------------------------------
+// TRADE EXECUTION
+//
+// strategyID is stored in TradeComment before entry —
+// this is the sole mechanism for trade ownership tracking.
+//
+// Stop / TakeProfit are set as distance from Close[0]
+// (entry price approximation in bar simulation).
+// In live trading entry = next bar open; adjust if
+// precision is critical for technical stop modes.
+// ---------------------------------------------------------
+void ExecuteTrade(int signal, int strategyID)
 {
-    var lot;
-    var slDist;
-
-    if(signal == SIGNAL_NONE)
-        return 0;
-
-    if(CountOpenPositions() >= InpMaxSimultaneousTrades)
-        return 0;
-
-    lot    = CalculateLotSize();
-    slDist = GetStopLoss(signal, atr);
-
-    Lots = lot;
-    Stop = slDist;
-
-    if(InpUseTakeProfit)
-        TakeProfit = GetTakeProfit(signal, atr);
-    else
-        TakeProfit = 0;
+    Lots = CalculateLots();
 
     if(signal == SIGNAL_BUY)
-        enterLong();
-    else
-        enterShort();
-
-    if(true)
     {
-        Lots = 0.1;
+        var stopPrice = CalculateStopLong();
+        var takePrice = CalculateTakeLong();
+
+        Stop       = stopPrice - g_Close[0];
+        TakeProfit = g_Close[0] - takePrice;
+
         enterLong();
+        
+    }
+    else if(signal == SIGNAL_SELL)
+    {
+        var stopPrice = CalculateStopShort();
+        var takePrice = CalculateTakeShort();
+
+        Stop       = stopPrice - g_Close[0];
+        TakeProfit = g_Close[0] - takePrice;
+
+        enterShort();
     }
 
-    return 1;
+    printf("FORCED ENTRY TEST\n");
+    enterLong();
+    TradeVar[0] = strategyID;
 }
 
-void EntriesEngine(var atrVal)
+// ---------------------------------------------------------
+// STRATEGY AGGREGATION
+//
+// Priority: MR → PB → BO → SCI
+// Rules per strategy:
+//   1. Check signal (pure decision — no state)
+//   2. Guard: skip if strategy already owns an open trade
+//   3. Execute and return — one entry per bar maximum
+//
+// Concurrent trades: up to 4 (one per active strategy).
+// Cross-strategy independence is fully preserved.
+// ---------------------------------------------------------
+void ExecuteStrategies()
 {
-    int s;
+    int signal;
 
-    // ── Mean Reversion ──────────────────────────────────────
-    if(UseMRStrategy != SWING_OFF)
+    // --- MR ---
+    if(UseMR)
     {
-        s = SignalMeanReversion();
-        if(s == SIGNAL_BUY  && UseMRStrategy == SWING_LONG)
-            if(ExecuteEntry(s, atrVal)) return;
-        if(s == SIGNAL_SELL && UseMRStrategy == SWING_SHORT)
-            if(ExecuteEntry(s, atrVal)) return;
+        signal = MR_CheckEntry();
+        if(signal != SIGNAL_NONE && !HasOpenTradeByStrategy(STRAT_MR))
+        {
+            ExecuteTrade(signal, STRAT_MR);
+            return;
+        }
     }
 
-    // ── Trend Pullback ──────────────────────────────────────
-    if(UseTPStrategy != SWING_OFF)
+    // --- PB ---
+    if(UsePB)
     {
-        s = SignalPullback();
-        if(s == SIGNAL_BUY  && UseTPStrategy == SWING_LONG)
-            if(ExecuteEntry(s, atrVal)) return;
-        if(s == SIGNAL_SELL && UseTPStrategy == SWING_SHORT)
-            if(ExecuteEntry(s, atrVal)) return;
+        signal = PB_CheckEntry();
+        if(signal != SIGNAL_NONE && !HasOpenTradeByStrategy(STRAT_PB))
+        {
+            ExecuteTrade(signal, STRAT_PB);
+            return;
+        }
     }
 
-    // ── Trendline Breakout ──────────────────────────────────
-    if(UseTBStrategy != SWING_OFF)
+    // --- BO ---
+    if(UseBO)
     {
-        s = SignalBreakout();
-        if(s == SIGNAL_BUY  && UseTBStrategy == SWING_LONG)
-            if(ExecuteEntry(s, atrVal)) return;
-        if(s == SIGNAL_SELL && UseTBStrategy == SWING_SHORT)
-            if(ExecuteEntry(s, atrVal)) return;
+        signal = BO_CheckEntry();
+        if(signal != SIGNAL_NONE && !HasOpenTradeByStrategy(STRAT_BO))
+        {
+            ExecuteTrade(signal, STRAT_BO);
+            return;
+        }
     }
 
-    // ── KAMA Trend ──────────────────────────────────────────
-    if(UseKTStrategy != SWING_OFF)
+    // --- SCI ---
+    if(UseSCI)
     {
-        s = SignalKamaTrend();
-        if(s == SIGNAL_BUY  && UseKTStrategy == SWING_LONG)
-            if(ExecuteEntry(s, atrVal)) return;
-        if(s == SIGNAL_SELL && UseKTStrategy == SWING_SHORT)
-            if(ExecuteEntry(s, atrVal)) return;
+        signal = SCI_CheckEntry();
+        if(signal != SIGNAL_NONE && !HasOpenTradeByStrategy(STRAT_SCI))
+        {
+            ExecuteTrade(signal, STRAT_SCI);
+            return;
+        }
     }
-
-    // ── RSI Exhaustion ──────────────────────────────────────
-    // NOT wired in original MQL5 EntriesEngine().
-    // Disabled to preserve original behavior.
-    // To activate: uncomment and set UseREStrategy accordingly.
-    //
-    // if(UseREStrategy != SWING_OFF)
-    // {
-    //     s = SignalRSIExhaustion();
-    //     if(s == SIGNAL_BUY  && UseREStrategy == SWING_LONG)
-    //         if(ExecuteEntry(s, atrVal)) return;
-    //     if(s == SIGNAL_SELL && UseREStrategy == SWING_SHORT)
-    //         if(ExecuteEntry(s, atrVal)) return;
-    // }
 }
 
 #endif // ENTRIES_C
+

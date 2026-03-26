@@ -12,7 +12,7 @@
 // ---------------------------------------------------------
 var CalculateTakeLong()
 {
-    var close = g_Close[0];
+    var close = Close[0];
     var atr   = g_ATR14[0];
 
     switch(TakeMode)
@@ -37,7 +37,7 @@ var CalculateTakeLong()
 // ---------------------------------------------------------
 var CalculateTakeShort()
 {
-    var close = g_Close[0];
+    var close = Close[0];
     var atr   = g_ATR14[0];
 
     switch(TakeMode)
@@ -67,7 +67,7 @@ var CalculateTakeShort()
 // ---------------------------------------------------------
 void ManageTakes()
 {
-    var close = g_Close[0];
+    var close = Close[0];
     var atr   = g_ATR14[0];
 
     for(open_trades)

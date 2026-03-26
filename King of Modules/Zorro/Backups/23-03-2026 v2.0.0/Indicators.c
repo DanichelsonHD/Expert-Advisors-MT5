@@ -8,6 +8,23 @@
 #define INDICATORS_C
 
 // ---------------------------------------------------------
+// GLOBAL SERIES — all read via getter functions only
+// ---------------------------------------------------------
+vars g_Close;
+vars g_EMA20;
+vars g_EMA50;
+vars g_RSI14;
+vars g_ATR14;
+vars g_ATR50;
+vars g_ADX14;
+vars g_BBUpper;
+vars g_BBLower;
+vars g_KCUpper;
+vars g_KCLower;
+vars g_STValue;
+vars g_STState;
+
+// ---------------------------------------------------------
 // SUPERTREND — internal persistent state
 // ---------------------------------------------------------
 static var _st_prevFinalUpper = 0.0;
@@ -21,19 +38,19 @@ static int _st_initialized    = 0;
 // ---------------------------------------------------------
 var HighestHigh(int period)
 {
-    var hi = g_High[1];
+    var hi = High[1];
     int i;
     for(i = 2; i <= period; i++)
-        if(g_High[i] > hi) hi = g_High[i];
+        if(High[i] > hi) hi = High[i];
     return hi;
 }
 
 var LowestLow(int period)
 {
-    var lo = g_Low[1];
+    var lo = Low[1];
     int i;
     for(i = 2; i <= period; i++)
-        if(g_Low[i] < lo) lo = g_Low[i];
+        if(Low[i] < lo) lo = Low[i];
     return lo;
 }
 
@@ -42,7 +59,7 @@ var LowestLow(int period)
 // ---------------------------------------------------------
 void UpdateSuperTrend()
 {
-    var hl2        = (g_High[0] + g_Low[0]) / 2.0;
+    var hl2        = (High[0] + Low[0]) / 2.0;
     var atrVal     = ATR(ST_Period);
     var basicUpper = hl2 + ST_Mult * atrVal;
     var basicLower = hl2 - ST_Mult * atrVal;
@@ -61,16 +78,16 @@ void UpdateSuperTrend()
     else
     {
         // FinalUpper: only move down, or reset on breach
-        if(basicUpper < _st_prevFinalUpper || g_Close[1] > _st_prevFinalUpper)
-            finalUpper = basicUpper; else finalUpper = _st_prevFinalUpper;
+        finalUpper = (basicUpper < _st_prevFinalUpper || Close[1] > _st_prevFinalUpper)
+                     ? basicUpper : _st_prevFinalUpper;
 
         // FinalLower: only move up, or reset on breach
-        if(basicLower > _st_prevFinalLower || g_Close[1] < _st_prevFinalLower)
-            finalLower = basicLower; else finalLower = _st_prevFinalLower;
+        finalLower = (basicLower > _st_prevFinalLower || Close[1] < _st_prevFinalLower)
+                     ? basicLower : _st_prevFinalLower;
 
         if(_st_prevST == _st_prevFinalUpper)    // previous: bearish
         {
-            if(g_Close[0] > finalUpper) {
+            if(Close[0] > finalUpper) {
                 stVal   = finalLower;            // flip → bullish
                 stState = 1;
             } else {
@@ -80,7 +97,7 @@ void UpdateSuperTrend()
         }
         else                                    // previous: bullish
         {
-            if(g_Close[0] < finalLower) {
+            if(Close[0] < finalLower) {
                 stVal   = finalUpper;            // flip → bearish
                 stState = -1;
             } else {
@@ -106,9 +123,7 @@ void UpdateAllSeries()
     // Wrap Zorro's built-in Close array into a tracked series
     // NOTE: Indicator computations use Close[] directly for
     //       full historical warmup; g_Close provides getter access
-    g_Close = series(priceClose());
-    g_High  = series(priceHigh());
-    g_Low   = series(priceLow());
+    g_Close = series(Close[0]);
 }
 
 // ---------------------------------------------------------
@@ -120,11 +135,11 @@ void UpdateAllSeries()
 void UpdateIndicators()
 {
     // --- EMA ---
-    g_EMA20 = series(EMA(g_Close, EMA_Fast));
-    g_EMA50 = series(EMA(g_Close, EMA_Slow));
+    g_EMA20 = series(EMA(Close, EMA_Fast));
+    g_EMA50 = series(EMA(Close, EMA_Slow));
 
     // --- RSI ---
-    g_RSI14 = series(RSI(g_Close, RSI_Period));
+    g_RSI14 = series(RSI(Close, RSI_Period));
 
     // --- ATR (uses built-in High / Low / Close) ---
     g_ATR14 = series(ATR(ATR_Period_1));
@@ -135,15 +150,15 @@ void UpdateIndicators()
 
     // --- Bollinger Bands ---
     {
-        var bbMid = SMA(g_Close, BB_Period);
-        var bbStd = StdDev(g_Close, BB_Period);
+        var bbMid = SMA(Close, BB_Period);
+        var bbStd = StdDev(Close, BB_Period);
         g_BBUpper = series(bbMid + BB_StdDev * bbStd);
         g_BBLower = series(bbMid - BB_StdDev * bbStd);
     }
 
     // --- Keltner Channel ---
     {
-        var kcMid = EMA(g_Close, KC_Period);
+        var kcMid = EMA(Close, KC_Period);
         var kcAtr = ATR(KC_Period);
         g_KCUpper = series(kcMid + KC_Mult * kcAtr);
         g_KCLower = series(kcMid - KC_Mult * kcAtr);
@@ -199,12 +214,12 @@ int isExpansion() { return !isSqueeze(); }
 // ---------------------------------------------------------
 int isExhaustionBuy()
 {
-    return (g_Close[0] < g_BBLower[0] && g_Close[0] < g_KCLower[0]);
+    return (Close[0] < g_BBLower[0] && Close[0] < g_KCLower[0]);
 }
 
 int isExhaustionSell()
 {
-    return (g_Close[0] > g_BBUpper[0] && g_Close[0] > g_KCUpper[0]);
+    return (Close[0] > g_BBUpper[0] && Close[0] > g_KCUpper[0]);
 }
 
 // ---------------------------------------------------------
@@ -227,8 +242,8 @@ int isSTFlipBear() { return (getSTState() == -1 && getSTPrevState() ==  1); }
 // ---------------------------------------------------------
 // SIGNAL FUNCTIONS — EMA
 // ---------------------------------------------------------
-int isAboveEMA50() { return g_Close[0] > g_EMA50[0]; }
-int isBelowEMA50() { return g_Close[0] < g_EMA50[0]; }
+int isAboveEMA50() { return Close[0] > g_EMA50[0]; }
+int isBelowEMA50() { return Close[0] < g_EMA50[0]; }
 
 // ---------------------------------------------------------
 // SIGNAL FUNCTIONS — EXTENDED (used by specific strategies)
@@ -238,15 +253,15 @@ int isBelowEMA50() { return g_Close[0] < g_EMA50[0]; }
 int isADXRising() { return g_ADX14[0] > g_ADX14[1]; }
 
 // BO: Structure breaks
-int isStructureBreakUp()   { return g_Close[0] > HighestHigh(BO_StructureLookback); }
-int isStructureBreakDown() { return g_Close[0] < LowestLow(BO_StructureLookback);   }
+int isStructureBreakUp()   { return Close[0] > HighestHigh(BO_StructureLookback); }
+int isStructureBreakDown() { return Close[0] < LowestLow(BO_StructureLookback);   }
 
 // PB: Price within PB_EMAProximityPct% of EMA20
 int isPriceNearEMA20()
 {
     var ema  = g_EMA20[0];
     if(ema == 0.0) return 0;
-    var dist = (g_Close[0] - ema);
+    var dist = (Close[0] - ema);
     if(dist < 0.0) dist = -dist;    // fabs
     return (dist / ema * 100.0) <= PB_EMAProximityPct;
 }

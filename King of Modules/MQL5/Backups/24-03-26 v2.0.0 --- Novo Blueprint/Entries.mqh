@@ -9,11 +9,6 @@
 #include "Stops.mqh"
 #include "Takes.mqh"
 
-//--- Cooldown state (defined in Main.mq5)
-extern int      g_consecutive_losses;
-extern datetime g_cooldown_end_time;
-bool IsCooldownActive();
-
 //+------------------------------------------------------------------+
 //| Strategy identifiers                                             |
 //+------------------------------------------------------------------+
@@ -121,11 +116,6 @@ double CalcLotSize(double stopDistancePrice)
 //+------------------------------------------------------------------+
 bool OpenBuy(ENUM_STRATEGY_ID stratId, ENUM_STOP_TYPE stopType, ENUM_TAKE_TYPE takeType)
 {
-   if (IsCooldownActive())
-   {
-      Print("Cooldown active until: ", TimeToString(g_cooldown_end_time));
-      return false;
-   }
    if (CountGlobalTrades()    >= InpMaxGlobalTrades)     return false;
    if (CountStrategyTrades(stratId) >= InpMaxTradesPerStrategy) return false;
 
@@ -156,11 +146,6 @@ bool OpenBuy(ENUM_STRATEGY_ID stratId, ENUM_STOP_TYPE stopType, ENUM_TAKE_TYPE t
 //+------------------------------------------------------------------+
 bool OpenSell(ENUM_STRATEGY_ID stratId, ENUM_STOP_TYPE stopType, ENUM_TAKE_TYPE takeType)
 {
-   if (IsCooldownActive())
-   {
-      Print("Cooldown active until: ", TimeToString(g_cooldown_end_time));
-      return false;
-   }
    if (CountGlobalTrades()    >= InpMaxGlobalTrades)     return false;
    if (CountStrategyTrades(stratId) >= InpMaxTradesPerStrategy) return false;
 
