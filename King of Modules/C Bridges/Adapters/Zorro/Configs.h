@@ -41,26 +41,26 @@ inline ZorroConfig DefaultZorroConfig()
     cfg.risk_per_trade         = 1.0;
     cfg.enable_mean_reversion  = true;
 
-    cfg.kama_period            = 14;
+    cfg.kama_period            = 7;
     cfg.kama_fast_period       = 2;
     cfg.kama_slow_period       = 30;
     cfg.kama_window_period     = 4;
-    cfg.kama_use_filter        = true;
+    cfg.kama_use_filter        = false;
     cfg.kama_filter_strength   = 50.0;
     cfg.kama_filter_diff_pts   = 50.0;
 
     cfg.ema20_period           = 20;
     cfg.ema50_period           = 50;
-    cfg.rsi_period             = 14;
-    cfg.atr_period             = 14;
-    cfg.adx_period             = 14;
-    cfg.bb_period              = 20;
+    cfg.rsi_period             = 4;
+    cfg.atr_period             = 7;
+    cfg.adx_period             = 7;
+    cfg.bb_period              = 14;
     cfg.bb_deviation           = 2.0;
-    cfg.kc_ema_period          = 20;
+    cfg.kc_ema_period          = 7;
     cfg.kc_atr_period          = 14;
     cfg.kc_multiplier          = 1.5;
 
-    cfg.lot_size               = 0.1;
+    cfg.lot_size               = 0.01;
     return cfg;
 }
 

@@ -3,7 +3,6 @@
 
 #include "../Indicators/kama_filter.h"
 
-//--- Shared indicator snapshot
 struct IndicatorData
 {
     double ema20;
@@ -22,14 +21,12 @@ struct IndicatorData
     double low;
 };
 
-//--- Cooldown / risk state
 struct CooldownState
 {
-    int    consecutive_losses;
-    double cooldown_until_unix;
+    int consecutive_losses;
+    int cooldown_bars_remaining;
 };
 
-//--- Trade signal
 struct TradeSignal
 {
     int    direction;
@@ -38,42 +35,45 @@ struct TradeSignal
     double entry;
 };
 
-//--- Engine configuration
 struct EngineConfig
 {
     int    max_consecutive_losses;
+    int    cooldown_bars;
     double cooldown_hours;
+    bool   use_bar_cooldown;
     bool   enable_mean_reversion;
     double risk_per_trade;
 };
 
-bool Engine_IsCoolingDown(const CooldownState &state, double current_unix)
+bool Engine_IsCoolingDown(const CooldownState& state, double current_unix)
 {
-    if (state.consecutive_losses >= 0 && state.cooldown_until_unix > 0.0)
-        return current_unix < state.cooldown_until_unix;
-    return false;
+    return state.cooldown_bars_remaining > 0;
 }
 
-void Engine_OnTradeClose(CooldownState &state, const EngineConfig &cfg,
+void Engine_OnTradeClose(CooldownState& state, const EngineConfig& cfg,
                           bool is_win, double current_unix)
 {
     if (is_win)
     {
-        state.consecutive_losses = 0;
+        state.consecutive_losses      = 0;
+        state.cooldown_bars_remaining = 0;
     }
     else
     {
         state.consecutive_losses++;
         if (state.consecutive_losses >= cfg.max_consecutive_losses)
-            state.cooldown_until_unix = current_unix + cfg.cooldown_hours * 3600.0;
+            state.cooldown_bars_remaining = cfg.cooldown_bars;
     }
 }
 
-bool Engine_CanTrade(const CooldownState &state, const EngineConfig &cfg,
+bool Engine_CanTrade(CooldownState& state, const EngineConfig& cfg,
                       double current_unix)
 {
-    if (state.consecutive_losses >= cfg.max_consecutive_losses)
-        return current_unix >= state.cooldown_until_unix;
+    if (state.cooldown_bars_remaining > 0)
+    {
+        state.cooldown_bars_remaining--;
+        return false;
+    }
     return true;
 }
 

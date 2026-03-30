@@ -84,11 +84,15 @@ static void ExecuteTrade(const TradeSignal& sig)
 // ---------------------------------------------------------------------------
 DLLFUNC int run()
 {
-    BarPeriod = 15;
-    LookBack  = 100;
+    set(PARAMETERS+LOGFILE);
+    set(TICKS);
 
+    BarPeriod = 15;
+    LookBack  = 200;
     StartDate = 2023;
     EndDate   = 2026;
+    NumCores = 4;
+    Capital = 10000;
 
     // --- One-time setup on first call ---
     static bool s_initialized = false;
@@ -97,16 +101,18 @@ DLLFUNC int run()
         g_cfg = DefaultZorroConfig();
 
         g_eng_cfg.max_consecutive_losses = g_cfg.max_consecutive_losses;
+        g_eng_cfg.cooldown_bars          = 96;  // e.g. 96 x 15min bars = 24 hours
         g_eng_cfg.cooldown_hours         = g_cfg.cooldown_hours;
+        g_eng_cfg.use_bar_cooldown       = false;
         g_eng_cfg.enable_mean_reversion  = g_cfg.enable_mean_reversion;
         g_eng_cfg.risk_per_trade         = g_cfg.risk_per_trade;
 
-        g_cooldown.consecutive_losses  = 0;
-        g_cooldown.cooldown_until_unix = 0.0;
+        g_cooldown.consecutive_losses      = 0;
+        g_cooldown.cooldown_bars_remaining = 0;
 
         g_mr_params.adx_threshold  = 20.0;
-        g_mr_params.rsi_oversold   = 35.0;
-        g_mr_params.rsi_overbought = 65.0;
+        g_mr_params.rsi_oversold   = 25.0;
+        g_mr_params.rsi_overbought = 75.0;
         g_mr_params.sl_atr_mult    = 1.5;
         g_mr_params.tp_atr_mult    = 2.5;
 

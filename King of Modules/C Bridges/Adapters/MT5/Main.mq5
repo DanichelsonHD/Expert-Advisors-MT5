@@ -91,12 +91,12 @@ void CheckClosedTrades()
 int OnInit()
 {
     g_cfg.max_consecutive_losses = InpMaxConsecutiveLosses;
-    g_cfg.cooldown_hours         = InpCooldownHours;
+    g_cfg.cooldown_hours         = InpCooldownHours * 4;
     g_cfg.enable_mean_reversion  = InpEnableMeanReversion;
     g_cfg.risk_per_trade         = InpRiskPerTrade;
 
     g_cooldown.consecutive_losses  = 0;
-    g_cooldown.cooldown_until_unix = 0.0;
+    g_cooldown.cooldown_bars_remaining = 0.0;
 
     g_mr_params.adx_threshold  = InpMR_ADX_Threshold;
     g_mr_params.rsi_oversold   = InpMR_RSI_Oversold;
