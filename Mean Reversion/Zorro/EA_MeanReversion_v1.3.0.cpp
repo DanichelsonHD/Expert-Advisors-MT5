@@ -1,5 +1,11 @@
 #include <zorro.h>
 
+#define EXIT_DEFER_MAX 8
+
+// Deferred exits (do not call exitTrade inside forTrade loop)
+int exitSignal = 0;
+TRADE* exitTradePtr[EXIT_DEFER_MAX];
+
 // =============================================================================
 // MeanReversionEA.cpp
 // Mean Reversion EA — RSI(4) + Bollinger Bands + ADX regime + ATR volatility
@@ -45,8 +51,12 @@ vars adxSeries, atrSeries;
 // -----------------------------------------------------------------------------
 // State flags (two-phase entry requires memory across bars)
 // -----------------------------------------------------------------------------
-static bool exhaustedLong  = false;  // RSI < 25 AND price < BB lower seen
-static bool exhaustedShort = false;  // RSI > 75 AND price > BB upper seen
+static bool exhaustedLong  = false;
+static bool exhaustedShort = false;
+int exhaustedLongBars  = 0;
+int exhaustedShortBars = 0;
+
+int MAX_STATE_BARS = 8;
 
 // =============================================================================
 // setupParameters
@@ -62,7 +72,7 @@ void setupParameters()
     //NumWFOCycles = 6;
     NumCores     = 4;
     Slippage     = 2;
-    set(PARAMETERS | PLOTNOW);
+    set(PARAMETERS | PLOTNOW | LOGFILE);
 }
 
 // =============================================================================
@@ -70,30 +80,30 @@ void setupParameters()
 // =============================================================================
 void optimizeCalls()
 {
-    RSI_Period      = optimize(4,   2,  8,   2, 0);
-    RSI_Overbought  = optimize(75, 70, 80,   5, 0);
-    RSI_Oversold    = optimize(25, 20, 30,   5, 0);
+    RSI_Period      = 6;    //optimize(4,   2,  8,   2, 0);
+    RSI_Overbought  = 75;   //optimize(75, 70, 80,   5, 0);
+    RSI_Oversold    = 25;   //optimize(25, 20, 30,   5, 0);
 
     BB_Period       = optimize(21, 14, 28,   7, 0);
     BB_Deviation    = optimize(20, 15, 25,   5, 0) / 10.0;  // 1.5 – 2.5
-    BB_Shift        = 0; //optimize( 2,  0,  3,   1, 0) * -1;
+    BB_Shift        = 0 ;
 
-    SMA_Period      = 21;  // fixed — middle band reference
+    SMA_Period      = BB_Period;  // fixed — middle band reference
 
-    ADX_Period      = optimize(21, 14, 28,   7, 0);
-    ADX_Min         = optimize(17, 14, 20,   3, 0);
-    ADX_Max         = optimize(36, 30, 42,   6, 0);
+    ADX_Period      = optimize(21, 14,  28,  7, 0);
+    ADX_Min         = optimize(17, 11,  20,  3, 0);
+    ADX_Max         = optimize(36, 27,  42,  3, 0);
 
-    ATR_Period      = optimize(14,  7, 21,   7, 0);
+    ATR_Period      = optimize(14,  7,  21,  7, 0);
     ATR_Lookback    = optimize(75, 50, 100, 25, 0);
-    ATR_Percentile  = optimize(37, 25, 50,  12, 0) / 100.0; // 0.25 – 0.50
+    ATR_Percentile  = optimize(35, 25,  65, 10, 0) / 100.0; // 0.25 – 0.50
 
-    Stop_Lookback   = optimize( 3,  1, 10,   1, 0);      // fixed per blueprint
-    Stop_Buffer     = optimize(50, 20, 100, 10, 0) * PIP;
+    BE_Offset       = optimize(10,  1,  10,  1, 0) / 20 * PIP;
+    Profit_Lock     = optimize(65, 25, 200, 25, 0) / 15 * PIP;
+    Final_Target    = optimize(100, 25, 300, 25, 0) / 15 * PIP;
 
-    BE_Offset       = 10.0 * PIP;
-    Profit_Lock     = 200 * PIP; //optimize(200, 100, 300, 50, 0) * PIP;
-    Final_Target    = 350 * PIP; //optimize(300, 150, 450, 50, 0) * PIP;
+    Stop_Lookback   = optimize( 7,  1,  10,  1, 0);      // fixed per blueprint
+    Stop_Buffer     = optimize(65, 10, 150, 10, 0) / 20 * PIP;
 }
 
 // =============================================================================
@@ -149,53 +159,64 @@ bool filtersPass()
 }
 
 // =============================================================================
-// Entry Logic — Two-Phase
-// Phase 1: exhaustion detection (sets flag)
-// Phase 2: confirmation (triggers entry)
-// BB_Shift = 2: we read band values at index [BB_Shift]
+// Entry Logic — Two-Phase state machine
 // =============================================================================
 
 // ---- LONG ----
 bool entryLong()
 {
-    var bbLow  = bbLower[BB_Shift];  // shifted band value
-    var bbLow0 = bbLower[0];         // current band value for close-back check
+    //if (smaSeries[0] < smaSeries[3])
+    //    return false;
 
-    // Phase 1: exhaustion — RSI below oversold AND price below lower band
-    if (rsiSeries[0] < RSI_Oversold && closePrices[0] < bbLow)
-        exhaustedLong = true;
+    var bbLow = bbLower[0];
 
-    // Phase 2: confirmation — RSI crossed back above oversold AND price closed back inside
-    if (exhaustedLong)
+    if (!exhaustedLong && rsiSeries[0] < RSI_Oversold && closePrices[0] < bbLow)
     {
-        if (rsiSeries[0] > RSI_Oversold && closePrices[0] > bbLow0)
-        {
-            exhaustedLong = false;  // reset
-            return filtersPass();
-        }
+        exhaustedLong = true;
+        exhaustedLongBars = 0;
     }
+
+    if (exhaustedLong)
+        exhaustedLongBars++;
+
+    if (exhaustedLong && exhaustedLongBars > MAX_STATE_BARS)
+        exhaustedLong = false;
+
+    if (exhaustedLong && rsiSeries[0] > RSI_Oversold && closePrices[0] > bbLow)
+    {
+        exhaustedLong = false;
+        return filtersPass();
+    }
+
     return false;
 }
 
 // ---- SHORT ----
 bool entryShort()
 {
-    var bbHigh  = bbUpper[BB_Shift];
-    var bbHigh0 = bbUpper[0];
+    //if (smaSeries[0] > smaSeries[3])
+    //    return false;
 
-    // Phase 1: exhaustion
-    if (rsiSeries[0] > RSI_Overbought && closePrices[0] > bbHigh)
-        exhaustedShort = true;
+    var bbHigh = bbUpper[0];
 
-    // Phase 2: confirmation
-    if (exhaustedShort)
+    if (!exhaustedShort && rsiSeries[0] > RSI_Overbought && closePrices[0] > bbHigh)
     {
-        if (rsiSeries[0] < RSI_Overbought && closePrices[0] < bbHigh0)
-        {
-            exhaustedShort = false;
-            return filtersPass();
-        }
+        exhaustedShort = true;
+        exhaustedShortBars = 0;
     }
+
+    if (exhaustedShort)
+        exhaustedShortBars++;
+
+    if (exhaustedShort && exhaustedShortBars > MAX_STATE_BARS)
+        exhaustedShort = false;
+
+    if (exhaustedShort && rsiSeries[0] < RSI_Overbought && closePrices[0] < bbHigh)
+    {
+        exhaustedShort = false;
+        return filtersPass();
+    }
+
     return false;
 }
 
@@ -204,13 +225,15 @@ bool entryShort()
 // =============================================================================
 var initialStopLong()
 {
-    return LL(Stop_Lookback, 0) - Stop_Buffer;
+    return LL(Stop_Lookback, 1) - Stop_Buffer;
 }
 
 var initialStopShort()
 {
-    return HH(Stop_Lookback, 0) + Stop_Buffer;
+    return HH(Stop_Lookback, 1) + Stop_Buffer;
 }
+
+int MAX_BARS_IN_TRADE = 70;
 
 // =============================================================================
 // Trade Management
@@ -225,6 +248,13 @@ void manageTrades()
     {
         if(!(tr->flags & TR_OPEN)) continue;
 
+        if (Bar - tr->nBarOpen > MAX_BARS_IN_TRADE)
+        {
+            if (exitSignal < EXIT_DEFER_MAX)
+                exitTradePtr[exitSignal++] = tr;
+            continue;
+        }
+
         var entry  = tr->fEntryPrice;
         var profit = tr->fResult;
         var stop   = tr->fStopLimit;
@@ -234,11 +264,25 @@ void manageTrades()
         // LONG
         if(!(tr->flags & TR_SHORT))
         {
+            if (priceClose(0) <= sma - 2.0 * atrSeries[0])
+            {
+                if (exitSignal < EXIT_DEFER_MAX)
+                    exitTradePtr[exitSignal++] = tr;
+                continue;
+            }
+
+            if (priceClose(0) >= sma)
+            {
+                var tighter = entry + 5 * PIP;
+                if (tr->fStopLimit < tighter)
+                    tr->fStopLimit = tighter;
+            }
+
             // BE
             if (priceClose(0) >= sma)
             {
                 var be = entry + BE_Offset;
-                if (stop < be)
+                if (tr->fStopLimit < be)
                     tr->fStopLimit = be;
             }
 
@@ -252,6 +296,20 @@ void manageTrades()
         // SHORT
         else
         {
+            if (priceClose(0) >= sma + 2.0 * atrSeries[0])
+            {
+                if (exitSignal < EXIT_DEFER_MAX)
+                    exitTradePtr[exitSignal++] = tr;
+                continue;
+            }
+
+            if (priceClose(0) <= sma)
+            {
+                var tighter = entry - 5 * PIP;
+                if (tr->fStopLimit > tighter || tr->fStopLimit == 0)
+                    tr->fStopLimit = tighter;
+            }
+
             if (priceClose(0) <= sma)
             {
                 var be = entry - BE_Offset;
@@ -266,7 +324,7 @@ void manageTrades()
             }
         }
 
-        plot("Stop", TradeStopLimit, MAIN | LINE | MINV, RED);
+        plot("Stop", tr->fStopLimit, MAIN | LINE, RED);
     }
 }       
 
@@ -288,12 +346,24 @@ DLLFUNC void run()
 
     if (Bar < LookBack) return;
 
+    // Note: do not reset exhaustedLong/Short when NumOpen*==0 — that would clear
+    // the entry state machine every bar while flat. Optional safety reset can
+    // target specific stuck conditions only.
+
     // Trade management — runs every bar on open positions
     manageTrades();
+
+    if (exitSignal > 0)
+    {
+        for (int i = 0; i < exitSignal; i++)
+            exitTrade(exitTradePtr[i]);
+        exitSignal = 0;
+    }
 
     // LONG entry
     if (entryLong())
     {
+        if (NumOpenLong > 0) return;
         Stop       = initialStopLong();
         TakeProfit = priceClose(0) + Final_Target;
         enterLong();
@@ -303,6 +373,7 @@ DLLFUNC void run()
     // SHORT entry
     if (entryShort())
     {
+        if (NumOpenShort > 0) return;
         Stop       = initialStopShort();
         TakeProfit = priceClose(0) - Final_Target;
         enterShort();
