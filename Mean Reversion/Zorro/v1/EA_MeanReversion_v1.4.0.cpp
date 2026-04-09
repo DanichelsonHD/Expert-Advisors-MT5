@@ -63,7 +63,7 @@ int MAX_STATE_BARS = 8;
 // =============================================================================
 void setupParameters()
 {
-    StartDate    = 2023;
+    StartDate    = 2018;
     BarPeriod    = 15;
     LookBack     = 250;
     Hedge        = 2;
